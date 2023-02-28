@@ -61,11 +61,39 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to تنبيه.
+        /// </summary>
+        internal static string CaptionEmptyData {
+            get {
+                return ResourceManager.GetString("CaptionEmptyData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to يرجى إدخال جميع البيانات.
+        /// </summary>
+        internal static string EmptyData {
+            get {
+                return ResourceManager.GetString("EmptyData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap icons8_about_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_about_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_32px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_add_32px_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +134,36 @@ namespace SabreenCompany.Properties {
         internal static System.Drawing.Bitmap icons8_categorize_32px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_categorize_32px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_circled_x_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_circled_x_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Delete_Trash_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Delete_Trash_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Edit_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Edit_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +214,36 @@ namespace SabreenCompany.Properties {
         internal static System.Drawing.Bitmap icons8_sales_performance_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_sales_performance_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_save_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_save_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_save_32px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_save_32px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Search_32px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Search_32px_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

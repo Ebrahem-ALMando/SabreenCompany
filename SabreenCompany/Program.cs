@@ -2,6 +2,7 @@
 using DevExpress.Skins;
 using DevExpress.UserSkins;
 using SabreenCompany.Forms;
+using SabreenCompany.Gui.GuiCategories;
 using System;
 using System.Collections.Generic;
 using System.Linq;

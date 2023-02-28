@@ -114,6 +114,7 @@ namespace SabreenCompany.Forms
             this.BTN_Categoryes.Text = "الاصناف";
             this.BTN_Categoryes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Categoryes.UseVisualStyleBackColor = false;
+            this.BTN_Categoryes.Click += new System.EventHandler(this.BTN_Categoryes_Click);
             // 
             // BTN_Products
             // 

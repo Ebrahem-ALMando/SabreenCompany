@@ -34,7 +34,13 @@ namespace SabreenCompany.Forms
             //==> Load Defulat Home page
             pageManager.LoadPage(Gui.GuiHome.Home_UserControl.Instance(userName));
         }
-        #region
+    
+
+        private void BTN_Categoryes_Click(object sender, EventArgs e)
+        {
+            pageManager.LoadPage(Gui.GuiCategories.Category_UserControl.Instance());
+        }
+        #region Event
         private void BTN_Logout_Click(object sender, EventArgs e)
         {
             message.Style = MessageDialogStyle.Light;
@@ -47,13 +53,13 @@ namespace SabreenCompany.Forms
                 Form_Login login = new Form_Login();
                 login.ShowDialog();
             }
-    
+
         }
 
         private void BTN_Home_Click(object sender, EventArgs e)
         {
 
-            pageManager.LoadPage( Gui.GuiHome.Home_UserControl.Instance(userName));
+            pageManager.LoadPage(Gui.GuiHome.Home_UserControl.Instance(userName));
         }
         #endregion
     }

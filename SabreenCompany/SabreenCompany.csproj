@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ClsMessageCollections.cs" />
     <Compile Include="Classes\Home\Cls_PageManager.cs" />
     <Compile Include="Classes\Login\Cls_Login.cs" />
     <Compile Include="Connection\Cls_AccessLayer_DB.cs" />
@@ -75,6 +76,18 @@
     <Compile Include="Forms\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\GuiCategories\Category_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\GuiCategories\Category_UserControl.Designer.cs">
+      <DependentUpon>Category_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsCategories\Form_AddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsCategories\Form_AddCategory.Designer.cs">
+      <DependentUpon>Form_AddCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\GuiHome\Home_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,9 +102,16 @@
     <EmbeddedResource Include="Forms\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GuiCategories\Category_UserControl.resx">
+      <DependentUpon>Category_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsCategories\Form_AddCategory.resx">
+      <DependentUpon>Form_AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gui\GuiHome\Home_UserControl.resx">
       <DependentUpon>Home_UserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -175,6 +195,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_c_sharp_logo_500px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_32px_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Delete_Trash_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Edit_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_row_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Search_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_circled_x_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

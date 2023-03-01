@@ -1,7 +1,7 @@
 ﻿
-namespace SabreenCompany.Gui.GuiCategories
+namespace SabreenCompany.Gui.GuiSuppliers
 {
-    partial class Category_UserControl
+    partial class Suppliers_UserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -33,10 +33,8 @@ namespace SabreenCompany.Gui.GuiCategories
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Date = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dataGridViewSuppliers = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.BTN_Add = new System.Windows.Forms.Button();
             this.BTN_Update = new System.Windows.Forms.Button();
@@ -44,53 +42,63 @@ namespace SabreenCompany.Gui.GuiCategories
             this.panel1 = new System.Windows.Forms.Panel();
             this.TX_Serarch = new System.Windows.Forms.TextBox();
             this.BTN_Search = new System.Windows.Forms.Button();
-            this.dataGridViewCategory = new System.Windows.Forms.DataGridView();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Date = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSuppliers)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategory)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel3
+            // dataGridViewSuppliers
             // 
-            this.panel3.BackColor = System.Drawing.Color.Indigo;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.Date);
-            this.panel3.Controls.Add(this.pictureBox5);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1278, 55);
-            this.panel3.TabIndex = 5;
-            // 
-            // Date
-            // 
-            this.Date.AutoSize = true;
-            this.Date.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Date.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.Date.Location = new System.Drawing.Point(1161, 0);
-            this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(115, 45);
-            this.Date.TabIndex = 9;
-            this.Date.Text = "DateHear";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox5.Image = global::SabreenCompany.Properties.Resources.الأصناف;
-            this.pictureBox5.Location = new System.Drawing.Point(587, -9);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(130, 76);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.dataGridViewSuppliers.AllowUserToAddRows = false;
+            this.dataGridViewSuppliers.AllowUserToDeleteRows = false;
+            this.dataGridViewSuppliers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewSuppliers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewSuppliers.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSuppliers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewSuppliers.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewSuppliers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewSuppliers.Location = new System.Drawing.Point(0, 128);
+            this.dataGridViewSuppliers.Name = "dataGridViewSuppliers";
+            this.dataGridViewSuppliers.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSuppliers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewSuppliers.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewSuppliers.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewSuppliers.RowTemplate.Height = 26;
+            this.dataGridViewSuppliers.RowTemplate.ReadOnly = true;
+            this.dataGridViewSuppliers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewSuppliers.Size = new System.Drawing.Size(1278, 479);
+            this.dataGridViewSuppliers.StandardTab = true;
+            this.dataGridViewSuppliers.TabIndex = 10;
+            this.dataGridViewSuppliers.SelectionChanged += new System.EventHandler(this.dataGridViewSuppliers_SelectionChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -105,7 +113,7 @@ namespace SabreenCompany.Gui.GuiCategories
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1278, 73);
-            this.flowLayoutPanel1.TabIndex = 6;
+            this.flowLayoutPanel1.TabIndex = 9;
             // 
             // BTN_Add
             // 
@@ -150,6 +158,7 @@ namespace SabreenCompany.Gui.GuiCategories
             this.BTN_Delete.Text = "حذف";
             this.BTN_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Delete.UseVisualStyleBackColor = false;
+            this.BTN_Delete.Click += new System.EventHandler(this.BTN_Delete_Click);
             // 
             // panel1
             // 
@@ -172,6 +181,7 @@ namespace SabreenCompany.Gui.GuiCategories
             this.TX_Serarch.Size = new System.Drawing.Size(330, 57);
             this.TX_Serarch.TabIndex = 9;
             this.TX_Serarch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TX_Serarch.TextChanged += new System.EventHandler(this.TX_Serarch_TextChanged);
             // 
             // BTN_Search
             // 
@@ -189,71 +199,72 @@ namespace SabreenCompany.Gui.GuiCategories
             this.BTN_Search.Text = "بحث";
             this.BTN_Search.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Search.UseVisualStyleBackColor = false;
+            this.BTN_Search.Click += new System.EventHandler(this.BTN_Search_Click);
             // 
-            // dataGridViewCategory
+            // panel3
             // 
-            this.dataGridViewCategory.AllowUserToAddRows = false;
-            this.dataGridViewCategory.AllowUserToDeleteRows = false;
-            this.dataGridViewCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewCategory.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewCategory.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCategory.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewCategory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewCategory.Location = new System.Drawing.Point(0, 128);
-            this.dataGridViewCategory.Name = "dataGridViewCategory";
-            this.dataGridViewCategory.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewCategory.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewCategory.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewCategory.RowTemplate.Height = 26;
-            this.dataGridViewCategory.Size = new System.Drawing.Size(1278, 479);
-            this.dataGridViewCategory.TabIndex = 7;
+            this.panel3.BackColor = System.Drawing.Color.Indigo;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.Date);
+            this.panel3.Controls.Add(this.pictureBox5);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1278, 55);
+            this.panel3.TabIndex = 8;
             // 
-            // Category_UserControl
+            // Date
+            // 
+            this.Date.AutoSize = true;
+            this.Date.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Date.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.Date.Location = new System.Drawing.Point(1161, 0);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(115, 45);
+            this.Date.TabIndex = 9;
+            this.Date.Text = "DateHear";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox5.Image = global::SabreenCompany.Properties.Resources.الموردين;
+            this.pictureBox5.Location = new System.Drawing.Point(587, -9);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(130, 76);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Suppliers_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridViewCategory);
+            this.Controls.Add(this.dataGridViewSuppliers);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Cairo", 12F);
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.Name = "Category_UserControl";
+            this.Name = "Suppliers_UserControl";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Size = new System.Drawing.Size(1278, 607);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSuppliers)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategory)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label Date;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button BTN_Add;
         private System.Windows.Forms.Button BTN_Update;
@@ -261,6 +272,10 @@ namespace SabreenCompany.Gui.GuiCategories
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TX_Serarch;
         private System.Windows.Forms.Button BTN_Search;
-        private System.Windows.Forms.DataGridView dataGridViewCategory;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label Date;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridView dataGridViewSuppliers;
     }
 }

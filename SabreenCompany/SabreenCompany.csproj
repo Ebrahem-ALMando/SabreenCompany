@@ -64,6 +64,12 @@
     <Compile Include="Classes\Login\Cls_Login.cs" />
     <Compile Include="Connection\Cls_AccessLayer_DB.cs" />
     <Compile Include="Connection\Cls_ProcessDB.cs" />
+    <Compile Include="Forms\FormsSuppliers\Form__AddSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsSuppliers\Form__AddSuppliers.Designer.cs">
+      <DependentUpon>Form__AddSuppliers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,8 +100,17 @@
     <Compile Include="Gui\GuiHome\Home_UserControl.Designer.cs">
       <DependentUpon>Home_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\GuiSuppliers\Suppliers_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\GuiSuppliers\Suppliers_UserControl.Designer.cs">
+      <DependentUpon>Suppliers_UserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormsSuppliers\Form__AddSuppliers.resx">
+      <DependentUpon>Form__AddSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\GuiHome\Home_UserControl.resx">
       <DependentUpon>Home_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GuiSuppliers\Suppliers_UserControl.resx">
+      <DependentUpon>Suppliers_UserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -225,6 +243,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_circled_x_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Suppliers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الرئيسية.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الأصناف.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\حول.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

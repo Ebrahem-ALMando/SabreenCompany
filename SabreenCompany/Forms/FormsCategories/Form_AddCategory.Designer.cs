@@ -30,9 +30,10 @@ namespace SabreenCompany.Gui.GuiCategories
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TX_Type_Category = new System.Windows.Forms.TextBox();
+            this.COMP_Name_Supplier = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label4 = new System.Windows.Forms.Label();
             this.RI_Notes = new System.Windows.Forms.RichTextBox();
-            this.TX_Type_Category = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TX_Name_Category = new System.Windows.Forms.TextBox();
@@ -41,10 +42,9 @@ namespace SabreenCompany.Gui.GuiCategories
             this.BTN_Save = new System.Windows.Forms.Button();
             this.BTN_Save_Close = new System.Windows.Forms.Button();
             this.BTN_Close = new System.Windows.Forms.Button();
-            this.COMP_Name_Supplier = new DevExpress.XtraEditors.ComboBoxEdit();
             this.groupBox1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.COMP_Name_Supplier.Properties)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -65,123 +65,12 @@ namespace SabreenCompany.Gui.GuiCategories
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "معلومات الصنف";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(231, 325);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 37);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "ملاحظات";
-            // 
-            // RI_Notes
-            // 
-            this.RI_Notes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RI_Notes.Location = new System.Drawing.Point(17, 365);
-            this.RI_Notes.Name = "RI_Notes";
-            this.RI_Notes.Size = new System.Drawing.Size(503, 113);
-            this.RI_Notes.TabIndex = 7;
-            this.RI_Notes.Text = "";
-            // 
             // TX_Type_Category
             // 
             this.TX_Type_Category.Location = new System.Drawing.Point(17, 277);
             this.TX_Type_Category.Name = "TX_Type_Category";
             this.TX_Type_Category.Size = new System.Drawing.Size(503, 45);
             this.TX_Type_Category.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(218, 237);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 37);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "نوع الصنف";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(214, 139);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 37);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "اسم المورد";
-            // 
-            // TX_Name_Category
-            // 
-            this.TX_Name_Category.Location = new System.Drawing.Point(17, 91);
-            this.TX_Name_Category.Name = "TX_Name_Category";
-            this.TX_Name_Category.Size = new System.Drawing.Size(503, 45);
-            this.TX_Name_Category.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(211, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "اسم الصنف";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(30)))), ((int)(((byte)(103)))));
-            this.flowLayoutPanel1.Controls.Add(this.BTN_Save);
-            this.flowLayoutPanel1.Controls.Add(this.BTN_Save_Close);
-            this.flowLayoutPanel1.Controls.Add(this.BTN_Close);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 543);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5, 5, 30, 5);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(598, 82);
-            this.flowLayoutPanel1.TabIndex = 2;
-            // 
-            // BTN_Save
-            // 
-            this.BTN_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
-            this.BTN_Save.ForeColor = System.Drawing.Color.Indigo;
-            this.BTN_Save.Image = global::SabreenCompany.Properties.Resources.icons8_save_32px_1;
-            this.BTN_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Save.Location = new System.Drawing.Point(393, 10);
-            this.BTN_Save.Margin = new System.Windows.Forms.Padding(5);
-            this.BTN_Save.Name = "BTN_Save";
-            this.BTN_Save.Size = new System.Drawing.Size(165, 55);
-            this.BTN_Save.TabIndex = 2;
-            this.BTN_Save.Text = "حفظ";
-            this.BTN_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Save.UseVisualStyleBackColor = false;
-            // 
-            // BTN_Save_Close
-            // 
-            this.BTN_Save_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
-            this.BTN_Save_Close.ForeColor = System.Drawing.Color.Indigo;
-            this.BTN_Save_Close.Image = global::SabreenCompany.Properties.Resources.icons8_save_32px;
-            this.BTN_Save_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Save_Close.Location = new System.Drawing.Point(218, 10);
-            this.BTN_Save_Close.Margin = new System.Windows.Forms.Padding(5);
-            this.BTN_Save_Close.Name = "BTN_Save_Close";
-            this.BTN_Save_Close.Size = new System.Drawing.Size(165, 55);
-            this.BTN_Save_Close.TabIndex = 3;
-            this.BTN_Save_Close.Text = "حفظ وإغلاق";
-            this.BTN_Save_Close.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Save_Close.UseVisualStyleBackColor = false;
-            // 
-            // BTN_Close
-            // 
-            this.BTN_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
-            this.BTN_Close.ForeColor = System.Drawing.Color.Indigo;
-            this.BTN_Close.Image = global::SabreenCompany.Properties.Resources.icons8_circled_x_32px;
-            this.BTN_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Close.Location = new System.Drawing.Point(43, 10);
-            this.BTN_Close.Margin = new System.Windows.Forms.Padding(5);
-            this.BTN_Close.Name = "BTN_Close";
-            this.BTN_Close.Size = new System.Drawing.Size(165, 55);
-            this.BTN_Close.TabIndex = 4;
-            this.BTN_Close.Text = "إغلاق";
-            this.BTN_Close.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Close.UseVisualStyleBackColor = false;
             // 
             // COMP_Name_Supplier
             // 
@@ -254,6 +143,118 @@ namespace SabreenCompany.Gui.GuiCategories
             this.COMP_Name_Supplier.Size = new System.Drawing.Size(503, 48);
             this.COMP_Name_Supplier.TabIndex = 9;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(231, 325);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 37);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "ملاحظات";
+            // 
+            // RI_Notes
+            // 
+            this.RI_Notes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RI_Notes.Location = new System.Drawing.Point(17, 365);
+            this.RI_Notes.Name = "RI_Notes";
+            this.RI_Notes.Size = new System.Drawing.Size(503, 113);
+            this.RI_Notes.TabIndex = 7;
+            this.RI_Notes.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(218, 237);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 37);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "نوع الصنف";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(214, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 37);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "اسم المورد";
+            // 
+            // TX_Name_Category
+            // 
+            this.TX_Name_Category.Location = new System.Drawing.Point(17, 91);
+            this.TX_Name_Category.Name = "TX_Name_Category";
+            this.TX_Name_Category.Size = new System.Drawing.Size(503, 45);
+            this.TX_Name_Category.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(211, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 37);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "اسم الصنف";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(30)))), ((int)(((byte)(103)))));
+            this.flowLayoutPanel1.Controls.Add(this.BTN_Save);
+            this.flowLayoutPanel1.Controls.Add(this.BTN_Save_Close);
+            this.flowLayoutPanel1.Controls.Add(this.BTN_Close);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 543);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5, 5, 30, 5);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(598, 82);
+            this.flowLayoutPanel1.TabIndex = 2;
+            // 
+            // BTN_Save
+            // 
+            this.BTN_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
+            this.BTN_Save.ForeColor = System.Drawing.Color.Indigo;
+            this.BTN_Save.Image = global::SabreenCompany.Properties.Resources.icons8_save_32px_1;
+            this.BTN_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Save.Location = new System.Drawing.Point(393, 10);
+            this.BTN_Save.Margin = new System.Windows.Forms.Padding(5);
+            this.BTN_Save.Name = "BTN_Save";
+            this.BTN_Save.Size = new System.Drawing.Size(165, 55);
+            this.BTN_Save.TabIndex = 2;
+            this.BTN_Save.Text = "حفظ";
+            this.BTN_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Save.UseVisualStyleBackColor = false;
+            this.BTN_Save.Click += new System.EventHandler(this.BTN_Save_Click);
+            // 
+            // BTN_Save_Close
+            // 
+            this.BTN_Save_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
+            this.BTN_Save_Close.ForeColor = System.Drawing.Color.Indigo;
+            this.BTN_Save_Close.Image = global::SabreenCompany.Properties.Resources.icons8_save_32px;
+            this.BTN_Save_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Save_Close.Location = new System.Drawing.Point(218, 10);
+            this.BTN_Save_Close.Margin = new System.Windows.Forms.Padding(5);
+            this.BTN_Save_Close.Name = "BTN_Save_Close";
+            this.BTN_Save_Close.Size = new System.Drawing.Size(165, 55);
+            this.BTN_Save_Close.TabIndex = 3;
+            this.BTN_Save_Close.Text = "حفظ وإغلاق";
+            this.BTN_Save_Close.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Save_Close.UseVisualStyleBackColor = false;
+            // 
+            // BTN_Close
+            // 
+            this.BTN_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
+            this.BTN_Close.ForeColor = System.Drawing.Color.Indigo;
+            this.BTN_Close.Image = global::SabreenCompany.Properties.Resources.icons8_circled_x_32px;
+            this.BTN_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Close.Location = new System.Drawing.Point(43, 10);
+            this.BTN_Close.Margin = new System.Windows.Forms.Padding(5);
+            this.BTN_Close.Name = "BTN_Close";
+            this.BTN_Close.Size = new System.Drawing.Size(165, 55);
+            this.BTN_Close.TabIndex = 4;
+            this.BTN_Close.Text = "إغلاق";
+            this.BTN_Close.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Close.UseVisualStyleBackColor = false;
+            // 
             // Form_AddCategory
             // 
             this.Appearance.Options.UseFont = true;
@@ -276,8 +277,8 @@ namespace SabreenCompany.Gui.GuiCategories
             this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.COMP_Name_Supplier.Properties)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

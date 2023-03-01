@@ -30,7 +30,6 @@ namespace SabreenCompany.Forms
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelContainer = new System.Windows.Forms.Panel();
             this.BTN_Home = new System.Windows.Forms.Button();
             this.BTN_Suppliers = new System.Windows.Forms.Button();
             this.BTN_Categoryes = new System.Windows.Forms.Button();
@@ -41,6 +40,7 @@ namespace SabreenCompany.Forms
             this.BTN_Setting = new System.Windows.Forms.Button();
             this.BTN_About = new System.Windows.Forms.Button();
             this.BTN_Logout = new System.Windows.Forms.Button();
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,16 +64,6 @@ namespace SabreenCompany.Forms
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1278, 73);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // panelContainer
-            // 
-            this.panelContainer.BackColor = System.Drawing.SystemColors.Control;
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(0, 0);
-            this.panelContainer.MinimumSize = new System.Drawing.Size(1278, 607);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1278, 607);
-            this.panelContainer.TabIndex = 1;
             // 
             // BTN_Home
             // 
@@ -101,6 +91,7 @@ namespace SabreenCompany.Forms
             this.BTN_Suppliers.Text = "الموردين";
             this.BTN_Suppliers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Suppliers.UseVisualStyleBackColor = false;
+            this.BTN_Suppliers.Click += new System.EventHandler(this.BTN_Suppliers_Click);
             // 
             // BTN_Categoryes
             // 
@@ -207,6 +198,16 @@ namespace SabreenCompany.Forms
             this.BTN_Logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Logout.UseVisualStyleBackColor = false;
             this.BTN_Logout.Click += new System.EventHandler(this.BTN_Logout_Click);
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.BackColor = System.Drawing.SystemColors.Control;
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(0, 0);
+            this.panelContainer.MinimumSize = new System.Drawing.Size(1278, 607);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(1278, 607);
+            this.panelContainer.TabIndex = 1;
             // 
             // Form_Main
             // 

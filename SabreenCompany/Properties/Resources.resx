@@ -117,11 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CaptionEmptyData" xml:space="preserve">
+  <data name="CaptionErrorActionData" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="CaptionQuitionAddData" xml:space="preserve">
+    <value>إضافة</value>
+  </data>
+  <data name="CaptionQuitionDeleteData" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="CaptionQuitionUpdateData" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="CaptionSuccessActionData" xml:space="preserve">
+    <value>نجاح</value>
+  </data>
+  <data name="CaptionWarningData" xml:space="preserve">
     <value>تنبيه</value>
   </data>
   <data name="EmptyData" xml:space="preserve">
     <value>يرجى إدخال جميع البيانات</value>
+  </data>
+  <data name="EmptyDataSerarch" xml:space="preserve">
+    <value>!!! حقل البحث فارغ</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="icons8_about_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -189,5 +207,41 @@
   </data>
   <data name="icons8_users_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_users_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuitionAddData" xml:space="preserve">
+    <value>هل تريد الإضافة بالتأكيد</value>
+  </data>
+  <data name="QuitionDeleteData" xml:space="preserve">
+    <value>هل تريد الحذف بالتأكيد</value>
+  </data>
+  <data name="QuitionUpdateData" xml:space="preserve">
+    <value>هل تريد التعديل بالتأكيد</value>
+  </data>
+  <data name="SuccessAddData" xml:space="preserve">
+    <value>تمت الإضافة بنجاح</value>
+  </data>
+  <data name="SuccessDeleteData" xml:space="preserve">
+    <value>تم الحذف بنجاح</value>
+  </data>
+  <data name="SuccessUpdateData" xml:space="preserve">
+    <value>تم التعديل بنجاح</value>
+  </data>
+  <data name="WarningIdSelectData" xml:space="preserve">
+    <value>يرجى تحديد السجل المطلوب</value>
+  </data>
+  <data name="WarningInputJustNumber" xml:space="preserve">
+    <value>يرجى ادخال ارقام فقط</value>
+  </data>
+  <data name="الأصناف" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\الأصناف.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="الرئيسية" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\الرئيسية.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="الموردين" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Suppliers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="حول" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\حول.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

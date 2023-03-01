@@ -30,7 +30,6 @@ namespace SabreenCompany.Gui.GuiHome
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home_UserControl));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -169,6 +168,7 @@ namespace SabreenCompany.Gui.GuiHome
             this.BTN_Add_Supplier.Text = "مورد";
             this.BTN_Add_Supplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Add_Supplier.UseVisualStyleBackColor = false;
+            this.BTN_Add_Supplier.Click += new System.EventHandler(this.BTN_Add_Supplier_Click);
             // 
             // label1
             // 
@@ -258,7 +258,7 @@ namespace SabreenCompany.Gui.GuiHome
             // pictureBox5
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Image = global::SabreenCompany.Properties.Resources.الرئيسية;
             this.pictureBox5.Location = new System.Drawing.Point(576, -9);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(143, 72);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SabreenCompany.Forms.FormsSuppliers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace SabreenCompany.Gui.GuiHome
     public partial class Home_UserControl : UserControl
     {
         private  static Home_UserControl homeUserControl;
+        Form__AddSuppliers addSuppliers = new Form__AddSuppliers();
         static String userName = "";
     
         public Home_UserControl()
@@ -49,6 +51,12 @@ namespace SabreenCompany.Gui.GuiHome
            userName = userName_;
             //==> Freeing resources and not cloning more than once
             return homeUserControl ?? (new Home_UserControl());
+        }
+
+        private void BTN_Add_Supplier_Click(object sender, EventArgs e)
+        {
+            addSuppliers = new Form__AddSuppliers();
+            addSuppliers.ShowDialog();
         }
     }
 }

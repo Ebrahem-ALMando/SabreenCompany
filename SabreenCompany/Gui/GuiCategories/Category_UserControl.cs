@@ -18,22 +18,27 @@ namespace SabreenCompany.Gui.GuiCategories
         {
             InitializeComponent();
         }
+        public static Category_UserControl Instance()
+        {
 
+            //==> Freeing resources and not cloning more than once
+            return categoryUserControl ?? (new Category_UserControl());
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             Date.Text = DateTime.Now.ToString("d/MM/yyyy");
         }
-        public static Category_UserControl Instance()
-        {
- 
-            //==> Freeing resources and not cloning more than once
-            return categoryUserControl ?? (new Category_UserControl());
-        }
+       
 
         private void BTN_Add_Click(object sender, EventArgs e)
         {
             AddCategory = new Form_AddCategory();
-            AddCategory.ShowDialog();
+            AddCategory.Show();
+        }
+
+        private void BTN_Update_Click(object sender, EventArgs e)
+        {
+            Classes.ClsMessageCollections.showEmptyMessageData();
         }
     }
 }

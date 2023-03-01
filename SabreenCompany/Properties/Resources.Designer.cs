@@ -61,11 +61,56 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to خطأ.
+        /// </summary>
+        internal static string CaptionErrorActionData {
+            get {
+                return ResourceManager.GetString("CaptionErrorActionData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to إضافة.
+        /// </summary>
+        internal static string CaptionQuitionAddData {
+            get {
+                return ResourceManager.GetString("CaptionQuitionAddData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to حذف.
+        /// </summary>
+        internal static string CaptionQuitionDeleteData {
+            get {
+                return ResourceManager.GetString("CaptionQuitionDeleteData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تعديل.
+        /// </summary>
+        internal static string CaptionQuitionUpdateData {
+            get {
+                return ResourceManager.GetString("CaptionQuitionUpdateData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to نجاح.
+        /// </summary>
+        internal static string CaptionSuccessActionData {
+            get {
+                return ResourceManager.GetString("CaptionSuccessActionData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to تنبيه.
         /// </summary>
-        internal static string CaptionEmptyData {
+        internal static string CaptionWarningData {
             get {
-                return ResourceManager.GetString("CaptionEmptyData", resourceCulture);
+                return ResourceManager.GetString("CaptionWarningData", resourceCulture);
             }
         }
         
@@ -75,6 +120,15 @@ namespace SabreenCompany.Properties {
         internal static string EmptyData {
             get {
                 return ResourceManager.GetString("EmptyData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to !!! حقل البحث فارغ.
+        /// </summary>
+        internal static string EmptyDataSerarch {
+            get {
+                return ResourceManager.GetString("EmptyDataSerarch", resourceCulture);
             }
         }
         
@@ -294,6 +348,118 @@ namespace SabreenCompany.Properties {
         internal static System.Drawing.Bitmap icons8_users_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_users_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to هل تريد الإضافة بالتأكيد.
+        /// </summary>
+        internal static string QuitionAddData {
+            get {
+                return ResourceManager.GetString("QuitionAddData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to هل تريد الحذف بالتأكيد.
+        /// </summary>
+        internal static string QuitionDeleteData {
+            get {
+                return ResourceManager.GetString("QuitionDeleteData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to هل تريد التعديل بالتأكيد.
+        /// </summary>
+        internal static string QuitionUpdateData {
+            get {
+                return ResourceManager.GetString("QuitionUpdateData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تمت الإضافة بنجاح.
+        /// </summary>
+        internal static string SuccessAddData {
+            get {
+                return ResourceManager.GetString("SuccessAddData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم الحذف بنجاح.
+        /// </summary>
+        internal static string SuccessDeleteData {
+            get {
+                return ResourceManager.GetString("SuccessDeleteData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم التعديل بنجاح.
+        /// </summary>
+        internal static string SuccessUpdateData {
+            get {
+                return ResourceManager.GetString("SuccessUpdateData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to يرجى تحديد السجل المطلوب.
+        /// </summary>
+        internal static string WarningIdSelectData {
+            get {
+                return ResourceManager.GetString("WarningIdSelectData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to يرجى ادخال ارقام فقط.
+        /// </summary>
+        internal static string WarningInputJustNumber {
+            get {
+                return ResourceManager.GetString("WarningInputJustNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap الأصناف {
+            get {
+                object obj = ResourceManager.GetObject("الأصناف", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap الرئيسية {
+            get {
+                object obj = ResourceManager.GetObject("الرئيسية", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap الموردين {
+            get {
+                object obj = ResourceManager.GetObject("الموردين", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap حول {
+            get {
+                object obj = ResourceManager.GetObject("حول", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -61,6 +61,12 @@ namespace SabreenCompany.Forms
 
             pageManager.LoadPage(Gui.GuiHome.Home_UserControl.Instance(userName));
         }
+      
+
+        private void BTN_Suppliers_Click(object sender, EventArgs e)
+        {
+            pageManager.LoadPage(Gui.GuiSuppliers.Suppliers_UserControl.Instance());
+        }
         #endregion
     }
 }

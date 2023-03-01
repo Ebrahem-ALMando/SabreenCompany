@@ -17,5 +17,10 @@ namespace SabreenCompany.Gui.GuiCategories
         {
             InitializeComponent();
         }
+
+        private void BTN_Save_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

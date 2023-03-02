@@ -30,8 +30,8 @@ namespace SabreenCompany.Gui.GuiCategories
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.COMP_Name_Supplier = new System.Windows.Forms.ComboBox();
             this.TX_Type_Category = new System.Windows.Forms.TextBox();
-            this.COMP_Name_Supplier = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label4 = new System.Windows.Forms.Label();
             this.RI_Notes = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,14 +43,13 @@ namespace SabreenCompany.Gui.GuiCategories
             this.BTN_Save_Close = new System.Windows.Forms.Button();
             this.BTN_Close = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.COMP_Name_Supplier.Properties)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.TX_Type_Category);
             this.groupBox1.Controls.Add(this.COMP_Name_Supplier);
+            this.groupBox1.Controls.Add(this.TX_Type_Category);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.RI_Notes);
             this.groupBox1.Controls.Add(this.label3);
@@ -65,83 +64,27 @@ namespace SabreenCompany.Gui.GuiCategories
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "معلومات الصنف";
             // 
+            // COMP_Name_Supplier
+            // 
+            this.COMP_Name_Supplier.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.COMP_Name_Supplier.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.COMP_Name_Supplier.BackColor = System.Drawing.SystemColors.Window;
+            this.COMP_Name_Supplier.DropDownHeight = 170;
+            this.COMP_Name_Supplier.FormattingEnabled = true;
+            this.COMP_Name_Supplier.IntegralHeight = false;
+            this.COMP_Name_Supplier.Location = new System.Drawing.Point(17, 189);
+            this.COMP_Name_Supplier.MaxDropDownItems = 5;
+            this.COMP_Name_Supplier.Name = "COMP_Name_Supplier";
+            this.COMP_Name_Supplier.Size = new System.Drawing.Size(503, 45);
+            this.COMP_Name_Supplier.Sorted = true;
+            this.COMP_Name_Supplier.TabIndex = 11;
+            // 
             // TX_Type_Category
             // 
             this.TX_Type_Category.Location = new System.Drawing.Point(17, 277);
             this.TX_Type_Category.Name = "TX_Type_Category";
             this.TX_Type_Category.Size = new System.Drawing.Size(503, 45);
             this.TX_Type_Category.TabIndex = 5;
-            // 
-            // COMP_Name_Supplier
-            // 
-            this.COMP_Name_Supplier.Location = new System.Drawing.Point(17, 190);
-            this.COMP_Name_Supplier.Name = "COMP_Name_Supplier";
-            this.COMP_Name_Supplier.Properties.Appearance.Font = new System.Drawing.Font("Cairo", 13F);
-            this.COMP_Name_Supplier.Properties.Appearance.Options.UseFont = true;
-            this.COMP_Name_Supplier.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.COMP_Name_Supplier.Properties.AppearanceDisabled.Options.UseFont = true;
-            this.COMP_Name_Supplier.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.COMP_Name_Supplier.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.COMP_Name_Supplier.Properties.AppearanceFocused.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.COMP_Name_Supplier.Properties.AppearanceFocused.Options.UseFont = true;
-            this.COMP_Name_Supplier.Properties.AppearanceItemDisabled.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.COMP_Name_Supplier.Properties.AppearanceItemDisabled.Options.UseFont = true;
-            this.COMP_Name_Supplier.Properties.AppearanceItemHighlight.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.COMP_Name_Supplier.Properties.AppearanceItemHighlight.Options.UseFont = true;
-            this.COMP_Name_Supplier.Properties.AppearanceItemSelected.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.COMP_Name_Supplier.Properties.AppearanceItemSelected.Options.UseFont = true;
-            this.COMP_Name_Supplier.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.COMP_Name_Supplier.Properties.AppearanceReadOnly.Options.UseFont = true;
-            this.COMP_Name_Supplier.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.COMP_Name_Supplier.Properties.Items.AddRange(new object[] {
-            "ابراهيم",
-            "ابراهيم",
-            "ابراهيم",
-            "ابراهيم",
-            "احمد",
-            "احمد",
-            "احمد",
-            "احمد",
-            "جميل",
-            "جميل",
-            "جميل",
-            "جميل",
-            "سعيد",
-            "سعيد",
-            "سعيدو",
-            "سعيدو",
-            "علي",
-            "علي",
-            "علي",
-            "علي",
-            "فؤاد",
-            "فؤاد",
-            "فؤاد",
-            "فؤاد",
-            "محمد",
-            "محمد",
-            "محمد",
-            "محمد",
-            "محمود",
-            "محمود",
-            "محمود",
-            "محمود",
-            "مراد",
-            "مراد",
-            "مراد",
-            "مراد",
-            "مراد",
-            "مراد",
-            "مراد",
-            "مراد",
-            "يوسف",
-            "يوسف",
-            "يوسف",
-            "يوسف"});
-            this.COMP_Name_Supplier.Properties.Sorted = true;
-            this.COMP_Name_Supplier.Size = new System.Drawing.Size(503, 48);
-            this.COMP_Name_Supplier.TabIndex = 9;
             // 
             // label4
             // 
@@ -239,6 +182,7 @@ namespace SabreenCompany.Gui.GuiCategories
             this.BTN_Save_Close.Text = "حفظ وإغلاق";
             this.BTN_Save_Close.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Save_Close.UseVisualStyleBackColor = false;
+            this.BTN_Save_Close.Click += new System.EventHandler(this.BTN_Save_Close_Click);
             // 
             // BTN_Close
             // 
@@ -254,6 +198,7 @@ namespace SabreenCompany.Gui.GuiCategories
             this.BTN_Close.Text = "إغلاق";
             this.BTN_Close.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Close.UseVisualStyleBackColor = false;
+            this.BTN_Close.Click += new System.EventHandler(this.BTN_Close_Click);
             // 
             // Form_AddCategory
             // 
@@ -274,10 +219,8 @@ namespace SabreenCompany.Gui.GuiCategories
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "اضافة /تعديل صنف";
-            this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.COMP_Name_Supplier.Properties)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -292,10 +235,10 @@ namespace SabreenCompany.Gui.GuiCategories
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TX_Name_Category;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.ComboBoxEdit COMP_Name_Supplier;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button BTN_Save;
         private System.Windows.Forms.Button BTN_Save_Close;
         private System.Windows.Forms.Button BTN_Close;
+        private System.Windows.Forms.ComboBox COMP_Name_Supplier;
     }
 }

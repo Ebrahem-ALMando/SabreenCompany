@@ -140,6 +140,7 @@ namespace SabreenCompany.Gui.GuiHome
             this.BTN_Add_Product.Text = "منتج";
             this.BTN_Add_Product.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Add_Product.UseVisualStyleBackColor = false;
+            this.BTN_Add_Product.Click += new System.EventHandler(this.BTN_Add_Product_Click);
             // 
             // BTN_Add_Category
             // 
@@ -154,6 +155,7 @@ namespace SabreenCompany.Gui.GuiHome
             this.BTN_Add_Category.Text = "صنف";
             this.BTN_Add_Category.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Add_Category.UseVisualStyleBackColor = false;
+            this.BTN_Add_Category.Click += new System.EventHandler(this.BTN_Add_Category_Click);
             // 
             // BTN_Add_Supplier
             // 

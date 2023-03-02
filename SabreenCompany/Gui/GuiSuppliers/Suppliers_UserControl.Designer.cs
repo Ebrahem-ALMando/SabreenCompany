@@ -89,7 +89,7 @@ namespace SabreenCompany.Gui.GuiSuppliers
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewSuppliers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewSuppliers.RowHeadersWidth = 51;
+            this.dataGridViewSuppliers.RowHeadersWidth = 20;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewSuppliers.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewSuppliers.RowTemplate.Height = 26;
@@ -98,6 +98,7 @@ namespace SabreenCompany.Gui.GuiSuppliers
             this.dataGridViewSuppliers.Size = new System.Drawing.Size(1278, 479);
             this.dataGridViewSuppliers.StandardTab = true;
             this.dataGridViewSuppliers.TabIndex = 10;
+            this.dataGridViewSuppliers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSuppliers_CellDoubleClick);
             this.dataGridViewSuppliers.SelectionChanged += new System.EventHandler(this.dataGridViewSuppliers_SelectionChanged);
             // 
             // flowLayoutPanel1

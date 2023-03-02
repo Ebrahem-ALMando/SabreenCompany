@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\..\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.BonusSkins.v22.2" />
     <Reference Include="DevExpress.Data.Desktop.v22.2" />
     <Reference Include="DevExpress.Data.v22.2" />
@@ -48,6 +51,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -60,10 +64,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ClsMessageCollections.cs" />
+    <Compile Include="Classes\Connection\CategoryProcess\Cls_CategoryDB.cs" />
+    <Compile Include="Classes\Connection\Cls_AccessLayer_DB.cs" />
+    <Compile Include="Classes\Connection\ProductsProcess\Cls_ProductDB.cs" />
+    <Compile Include="Classes\Connection\SuplliersProcess\Cls_SuppliersDB.cs" />
     <Compile Include="Classes\Home\Cls_PageManager.cs" />
     <Compile Include="Classes\Login\Cls_Login.cs" />
-    <Compile Include="Connection\Cls_AccessLayer_DB.cs" />
-    <Compile Include="Connection\Cls_ProcessDB.cs" />
+    <Compile Include="Forms\FormsProducts\Form_AddProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsProducts\Form_AddProducts.Designer.cs">
+      <DependentUpon>Form_AddProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormsSuppliers\Form__AddSuppliers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,12 @@
     <Compile Include="Gui\GuiHome\Home_UserControl.Designer.cs">
       <DependentUpon>Home_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\GuiProducts\Products_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\GuiProducts\Products_UserControl.Designer.cs">
+      <DependentUpon>Products_UserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\GuiSuppliers\Suppliers_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,6 +126,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormsProducts\Form_AddProducts.resx">
+      <DependentUpon>Form_AddProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsSuppliers\Form__AddSuppliers.resx">
       <DependentUpon>Form__AddSuppliers.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\GuiHome\Home_UserControl.resx">
       <DependentUpon>Home_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GuiProducts\Products_UserControl.resx">
+      <DependentUpon>Products_UserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\GuiSuppliers\Suppliers_UserControl.resx">
       <DependentUpon>Suppliers_UserControl.cs</DependentUpon>
@@ -255,6 +279,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\حول.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\المنتجات.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_image_file_add_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Remove_Image_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_aliexpress_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_aliexpress_500px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

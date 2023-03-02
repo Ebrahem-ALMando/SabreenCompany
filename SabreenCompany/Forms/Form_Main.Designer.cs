@@ -119,6 +119,7 @@ namespace SabreenCompany.Forms
             this.BTN_Products.Text = "المنتجات";
             this.BTN_Products.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Products.UseVisualStyleBackColor = false;
+            this.BTN_Products.Click += new System.EventHandler(this.BTN_Products_Click);
             // 
             // BTN_Customers
             // 

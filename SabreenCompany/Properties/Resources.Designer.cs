@@ -165,6 +165,16 @@ namespace SabreenCompany.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_aliexpress_500px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_aliexpress_500px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_c_sharp_logo_500px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_c_sharp_logo_500px_1", resourceCulture);
@@ -235,6 +245,16 @@ namespace SabreenCompany.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_image_file_add_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_image_file_add_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_logout_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_logout_32px", resourceCulture);
@@ -258,6 +278,16 @@ namespace SabreenCompany.Properties {
         internal static System.Drawing.Bitmap icons8_office_96px {
             get {
                 object obj = ResourceManager.GetObject("icons8_office_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Remove_Image_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Remove_Image_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -416,6 +446,15 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to خطأ في نوع الملف.
+        /// </summary>
+        internal static string WarningInputImage {
+            get {
+                return ResourceManager.GetString("WarningInputImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to يرجى ادخال ارقام فقط.
         /// </summary>
         internal static string WarningInputJustNumber {
@@ -440,6 +479,16 @@ namespace SabreenCompany.Properties {
         internal static System.Drawing.Bitmap الرئيسية {
             get {
                 object obj = ResourceManager.GetObject("الرئيسية", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap المنتجات {
+            get {
+                object obj = ResourceManager.GetObject("المنتجات", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

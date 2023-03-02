@@ -15,32 +15,55 @@ namespace SabreenCompany.Gui.GuiSuppliers
     public partial class Suppliers_UserControl : UserControl
     {
         //==> Var Info To Update Or Delete 
-
+        #region Variables
         private int id;
         private string name="";
         private string phone="";
         private string locition="";
-        //==>
         private static Suppliers_UserControl suppliers_UserControl;
         Form__AddSuppliers addSuppliers;
-        Cls_ProcessDB action = new Cls_ProcessDB();
-      static  Cls_ProcessDB actionLoadData = new Cls_ProcessDB();
+        Cls_SuppliersDB action = new Cls_SuppliersDB();
+        #endregion
+        //<============================================>
+        //<============================================>
+        //<============================================>
         public Suppliers_UserControl()
         {
             InitializeComponent();
             getData();
-          
         }
-        public  void getData()
+        #region Method
+        public void getData()
         {
             dataGridViewSuppliers.DataSource = action.getDataSuppliers();
         }
         public static Suppliers_UserControl Instance()
         {
-
             //==> Freeing resources and not cloning more than once
             return suppliers_UserControl ?? (new Suppliers_UserControl());
         }
+        private void updateData()
+        {
+            try
+            {
+                if (id != 0)
+                {
+                    addSuppliers = new Form__AddSuppliers(id, name, phone, locition);
+                    addSuppliers.ShowDialog();
+                    getData();
+                }
+                else
+                {
+                    ClsMessageCollections.showWarningIdSelectMessageData();
+                }
+            }
+            catch
+            {
+                ClsMessageCollections.showWarningIdSelectMessageData();
+            }
+        }
+        #endregion
+        #region Event
         private void BTN_Add_Click(object sender, EventArgs e)
         {
             addSuppliers = new Form__AddSuppliers();
@@ -48,7 +71,6 @@ namespace SabreenCompany.Gui.GuiSuppliers
             getData();
 
         }
-
         private void dataGridViewSuppliers_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridViewSuppliers.CurrentRow != null)
@@ -59,7 +81,6 @@ namespace SabreenCompany.Gui.GuiSuppliers
                 locition = dataGridViewSuppliers.CurrentRow.Cells[3].Value.ToString();
             }
         }
-
         private void BTN_Delete_Click(object sender, EventArgs e)
         {
             try
@@ -84,33 +105,14 @@ namespace SabreenCompany.Gui.GuiSuppliers
                 ClsMessageCollections.showWarningIdSelectMessageData();
             }
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             Date.Text = DateTime.Now.ToString("d/MM/yyyy");
         }
-
         private void BTN_Update_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (id != 0)
-                {
-                        addSuppliers = new Form__AddSuppliers(id, name, phone, locition);
-                        addSuppliers.ShowDialog();
-                        getData();
-                }
-                else
-                {
-                    ClsMessageCollections.showWarningIdSelectMessageData();
-                }
-            }
-            catch
-            {
-                ClsMessageCollections.showWarningIdSelectMessageData();
-            }
+            updateData();
         }
-
         private void TX_Serarch_TextChanged(object sender, EventArgs e)
         {
             if (TX_Serarch.Text != "")
@@ -123,7 +125,6 @@ namespace SabreenCompany.Gui.GuiSuppliers
                 getData();
             }
         }
-
         private void BTN_Search_Click(object sender, EventArgs e)
         {
             if (TX_Serarch.Text != "")
@@ -136,5 +137,12 @@ namespace SabreenCompany.Gui.GuiSuppliers
                 ClsMessageCollections.showEmptySearchMessageData();
             }
         }
+        private void dataGridViewSuppliers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            updateData();
+        }
+        #endregion
+
+
     }
 }

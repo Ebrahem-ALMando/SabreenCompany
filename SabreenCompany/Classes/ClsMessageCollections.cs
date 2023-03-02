@@ -27,6 +27,13 @@ namespace SabreenCompany.Classes
             messageShow.Icon = MessageDialogIcon.Warning;
             messageShow.Show(Resources.EmptyDataSerarch + "\n ", Resources.CaptionWarningData);
         }
+        public static void showWarningInputImageMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Light;
+            messageShow.Icon = MessageDialogIcon.Warning;
+            messageShow.Show(Resources.WarningInputImage + "\n ", Resources.CaptionWarningData);
+        }
         //==>Show Message Success Add Data
         public static void showSuccessAddMessageData()
         {

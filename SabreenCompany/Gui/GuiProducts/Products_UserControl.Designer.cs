@@ -1,7 +1,7 @@
 ﻿
-namespace SabreenCompany.Gui.GuiCategories
+namespace SabreenCompany.Gui.GuiProducts
 {
-    partial class Category_UserControl
+    partial class Products_UserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -34,10 +34,6 @@ namespace SabreenCompany.Gui.GuiCategories
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Date = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.BTN_Add = new System.Windows.Forms.Button();
             this.BTN_Update = new System.Windows.Forms.Button();
@@ -45,53 +41,17 @@ namespace SabreenCompany.Gui.GuiCategories
             this.panel1 = new System.Windows.Forms.Panel();
             this.TX_Serarch = new System.Windows.Forms.TextBox();
             this.BTN_Search = new System.Windows.Forms.Button();
-            this.dataGridViewCategory = new System.Windows.Forms.DataGridView();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Date = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategory)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Indigo;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.Date);
-            this.panel3.Controls.Add(this.pictureBox5);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1278, 55);
-            this.panel3.TabIndex = 5;
-            // 
-            // Date
-            // 
-            this.Date.AutoSize = true;
-            this.Date.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Date.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.Date.Location = new System.Drawing.Point(1161, 0);
-            this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(115, 45);
-            this.Date.TabIndex = 9;
-            this.Date.Text = "DateHear";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox5.Image = global::SabreenCompany.Properties.Resources.الأصناف;
-            this.pictureBox5.Location = new System.Drawing.Point(587, -9);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(130, 76);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // flowLayoutPanel1
             // 
@@ -106,7 +66,7 @@ namespace SabreenCompany.Gui.GuiCategories
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1278, 73);
-            this.flowLayoutPanel1.TabIndex = 6;
+            this.flowLayoutPanel1.TabIndex = 12;
             // 
             // BTN_Add
             // 
@@ -194,13 +154,53 @@ namespace SabreenCompany.Gui.GuiCategories
             this.BTN_Search.UseVisualStyleBackColor = false;
             this.BTN_Search.Click += new System.EventHandler(this.BTN_Search_Click);
             // 
-            // dataGridViewCategory
+            // panel3
             // 
-            this.dataGridViewCategory.AllowUserToAddRows = false;
-            this.dataGridViewCategory.AllowUserToDeleteRows = false;
-            this.dataGridViewCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewCategory.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewCategory.BackgroundColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.Indigo;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.Date);
+            this.panel3.Controls.Add(this.pictureBox5);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1278, 55);
+            this.panel3.TabIndex = 11;
+            // 
+            // Date
+            // 
+            this.Date.AutoSize = true;
+            this.Date.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Date.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.Date.Location = new System.Drawing.Point(1161, 0);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(115, 45);
+            this.Date.TabIndex = 9;
+            this.Date.Text = "DateHear";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox5.Image = global::SabreenCompany.Properties.Resources.المنتجات;
+            this.pictureBox5.Location = new System.Drawing.Point(587, -9);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(130, 76);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // dataGridViewProducts
+            // 
+            this.dataGridViewProducts.AllowUserToAddRows = false;
+            this.dataGridViewProducts.AllowUserToDeleteRows = false;
+            this.dataGridViewProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewProducts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewProducts.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo", 12F);
@@ -208,8 +208,8 @@ namespace SabreenCompany.Gui.GuiCategories
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo", 12F);
@@ -217,11 +217,11 @@ namespace SabreenCompany.Gui.GuiCategories
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCategory.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewCategory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewCategory.Location = new System.Drawing.Point(0, 128);
-            this.dataGridViewCategory.Name = "dataGridViewCategory";
-            this.dataGridViewCategory.ReadOnly = true;
+            this.dataGridViewProducts.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewProducts.Location = new System.Drawing.Point(0, 128);
+            this.dataGridViewProducts.Name = "dataGridViewProducts";
+            this.dataGridViewProducts.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo", 12F);
@@ -229,48 +229,43 @@ namespace SabreenCompany.Gui.GuiCategories
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewCategory.RowHeadersWidth = 51;
+            this.dataGridViewProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewProducts.RowHeadersWidth = 20;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewCategory.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewCategory.RowTemplate.Height = 26;
-            this.dataGridViewCategory.RowTemplate.ReadOnly = true;
-            this.dataGridViewCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCategory.Size = new System.Drawing.Size(1278, 479);
-            this.dataGridViewCategory.StandardTab = true;
-            this.dataGridViewCategory.TabIndex = 11;
-            this.dataGridViewCategory.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCategory_CellDoubleClick);
-            this.dataGridViewCategory.SelectionChanged += new System.EventHandler(this.dataGridViewCategory_SelectionChanged);
+            this.dataGridViewProducts.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewProducts.RowTemplate.Height = 26;
+            this.dataGridViewProducts.RowTemplate.ReadOnly = true;
+            this.dataGridViewProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewProducts.Size = new System.Drawing.Size(1278, 479);
+            this.dataGridViewProducts.StandardTab = true;
+            this.dataGridViewProducts.TabIndex = 13;
+            this.dataGridViewProducts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProducts_CellDoubleClick);
+            this.dataGridViewProducts.SelectionChanged += new System.EventHandler(this.dataGridViewProducts_SelectionChanged);
             // 
-            // Category_UserControl
+            // Products_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridViewCategory);
+            this.Controls.Add(this.dataGridViewProducts);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Cairo", 12F);
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.Name = "Category_UserControl";
+            this.Name = "Products_UserControl";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Size = new System.Drawing.Size(1278, 607);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategory)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label Date;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button BTN_Add;
         private System.Windows.Forms.Button BTN_Update;
@@ -278,6 +273,10 @@ namespace SabreenCompany.Gui.GuiCategories
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TX_Serarch;
         private System.Windows.Forms.Button BTN_Search;
-        private System.Windows.Forms.DataGridView dataGridViewCategory;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label Date;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridView dataGridViewProducts;
     }
 }

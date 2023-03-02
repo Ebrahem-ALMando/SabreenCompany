@@ -25,34 +25,28 @@ namespace SabreenCompany
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
-
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
         private void Login_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
         private void Wellcome_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
         private void BTN_Login_Click(object sender, EventArgs e)
         {
             message.Buttons = MessageDialogButtons.OK;
@@ -102,7 +96,6 @@ namespace SabreenCompany
                 TX_Password.UseSystemPasswordChar = true;
             }
         }
-
         private void TX_Password_Leave(object sender, EventArgs e)
         {
             if (TX_Password.Text == "")
@@ -130,7 +123,6 @@ namespace SabreenCompany
             }
          
         }
-
         private void TX_Password_KeyPress(object sender, KeyPressEventArgs e)
         {
             message.Style = MessageDialogStyle.Light;
@@ -148,7 +140,6 @@ namespace SabreenCompany
                 e.Handled = false;
             }
         }
-
         private void TX_UserName_TextChanged(object sender, EventArgs e)
         {
             userName = TX_UserName.Text;

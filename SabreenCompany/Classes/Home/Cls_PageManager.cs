@@ -12,7 +12,6 @@ namespace SabreenCompany.Classes.Home
    public class Cls_PageManager
     {
         private readonly Form_Main main;
-
         public Cls_PageManager(Form_Main main)
         {
             this.main = main;

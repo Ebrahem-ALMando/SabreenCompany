@@ -34,8 +34,6 @@ namespace SabreenCompany.Forms
             //==> Load Defulat Home page
             pageManager.LoadPage(Gui.GuiHome.Home_UserControl.Instance(userName));
         }
-    
-
         private void BTN_Categoryes_Click(object sender, EventArgs e)
         {
             pageManager.LoadPage(Gui.GuiCategories.Category_UserControl.Instance());
@@ -55,18 +53,20 @@ namespace SabreenCompany.Forms
             }
 
         }
-
         private void BTN_Home_Click(object sender, EventArgs e)
         {
-
             pageManager.LoadPage(Gui.GuiHome.Home_UserControl.Instance(userName));
         }
-      
-
         private void BTN_Suppliers_Click(object sender, EventArgs e)
         {
             pageManager.LoadPage(Gui.GuiSuppliers.Suppliers_UserControl.Instance());
         }
+        private void BTN_Products_Click(object sender, EventArgs e)
+        {
+            pageManager.LoadPage(Gui.GuiProducts.Products_UserControl.Instance());
+        }
         #endregion
+
+
     }
 }

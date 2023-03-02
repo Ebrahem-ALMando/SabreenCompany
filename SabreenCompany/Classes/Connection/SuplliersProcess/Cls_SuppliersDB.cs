@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace SabreenCompany.Connection
 {
-    class Cls_ProcessDB
+    class Cls_SuppliersDB
     {
         Cls_AccessLayer_DB connection = new Cls_AccessLayer_DB();
         //==> Process Suppliers Forms
 
+//    <=============== Method ======================>
+
         //==> 1 getData To Suppliers
-        
         public DataTable getDataSuppliers()
         {
             DataTable dataSuppliers = new DataTable();
@@ -100,7 +101,6 @@ namespace SabreenCompany.Connection
             DataTable dataSuppliers = new DataTable();
             try
             {
-          
                 connection.open();
                 SqlParameter[] param = new SqlParameter[1];
                 param[0] = new SqlParameter("@textSearch", SqlDbType.NVarChar);
@@ -113,9 +113,6 @@ namespace SabreenCompany.Connection
             {
                 return dataSuppliers;
             }
-
-
-
         }
     }
 }

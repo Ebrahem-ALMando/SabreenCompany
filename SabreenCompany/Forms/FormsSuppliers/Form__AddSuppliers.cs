@@ -16,8 +16,7 @@ namespace SabreenCompany.Forms.FormsSuppliers
 {
     public partial class Form__AddSuppliers : DevExpress.XtraEditors.XtraForm
     {
-        
-        Cls_ProcessDB action = new Cls_ProcessDB();
+        Cls_SuppliersDB action = new Cls_SuppliersDB();
         private int id;
         private bool isClose;
         Guna2MessageDialog message = new Guna2MessageDialog();
@@ -123,7 +122,6 @@ namespace SabreenCompany.Forms.FormsSuppliers
             saveData();
 
         }
-
         private void TX_Phone_Supplier_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -142,12 +140,10 @@ namespace SabreenCompany.Forms.FormsSuppliers
                 e.Handled = false;
             }
         }
-
         private void BTN_Close_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void  BTN_Save_Close_Click(object sender, EventArgs e)
         {
             isClose = true;

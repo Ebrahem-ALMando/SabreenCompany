@@ -10,6 +10,7 @@ namespace SabreenCompany.Classes.Login
 {
     class Cls_Login:Cls_AccessLayer_DB
     {
+  
         public bool isLoogin(string User_Name, string Pass)
         {
             using (var conction = GetConction())
@@ -27,7 +28,7 @@ namespace SabreenCompany.Classes.Login
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
- 
+                     
                         return true;
                     }
                     else

@@ -2,6 +2,7 @@
 using SabreenCompany.Classes;
 using SabreenCompany.Classes.Connection.CategoryProcess;
 using SabreenCompany.Connection;
+using SabreenCompany.Forms.FormsSuppliers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -143,6 +144,13 @@ namespace SabreenCompany.Gui.GuiCategories
             isClose = true;
             saveData();
         }
+        private void new_Supplier_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form__AddSuppliers addSuppliers = new Form__AddSuppliers();
+            addSuppliers.ShowDialog();
+            loadSuppliers();
+        }
+
         #endregion
 
 

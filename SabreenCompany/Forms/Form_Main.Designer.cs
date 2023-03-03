@@ -35,6 +35,7 @@ namespace SabreenCompany.Forms
             this.BTN_Categoryes = new System.Windows.Forms.Button();
             this.BTN_Products = new System.Windows.Forms.Button();
             this.BTN_Customers = new System.Windows.Forms.Button();
+            this.BTN_Invioce = new System.Windows.Forms.Button();
             this.BTN_Incomes = new System.Windows.Forms.Button();
             this.BTN_BoxMoney = new System.Windows.Forms.Button();
             this.BTN_Setting = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@ namespace SabreenCompany.Forms
             this.flowLayoutPanel1.Controls.Add(this.BTN_Categoryes);
             this.flowLayoutPanel1.Controls.Add(this.BTN_Products);
             this.flowLayoutPanel1.Controls.Add(this.BTN_Customers);
+            this.flowLayoutPanel1.Controls.Add(this.BTN_Invioce);
             this.flowLayoutPanel1.Controls.Add(this.BTN_Incomes);
             this.flowLayoutPanel1.Controls.Add(this.BTN_BoxMoney);
             this.flowLayoutPanel1.Controls.Add(this.BTN_Setting);
@@ -133,13 +135,27 @@ namespace SabreenCompany.Forms
             this.BTN_Customers.Text = "الزبائن";
             this.BTN_Customers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Customers.UseVisualStyleBackColor = false;
+            this.BTN_Customers.Click += new System.EventHandler(this.BTN_Customers_Click);
+            // 
+            // BTN_Invioce
+            // 
+            this.BTN_Invioce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
+            this.BTN_Invioce.Image = global::SabreenCompany.Properties.Resources.icons8_cheque_32px;
+            this.BTN_Invioce.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Invioce.Location = new System.Drawing.Point(224, 8);
+            this.BTN_Invioce.Name = "BTN_Invioce";
+            this.BTN_Invioce.Size = new System.Drawing.Size(165, 55);
+            this.BTN_Invioce.TabIndex = 10;
+            this.BTN_Invioce.Text = "الفواتير";
+            this.BTN_Invioce.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Invioce.UseVisualStyleBackColor = false;
             // 
             // BTN_Incomes
             // 
             this.BTN_Incomes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
             this.BTN_Incomes.Image = global::SabreenCompany.Properties.Resources.icons8_sales_performance_32px;
             this.BTN_Incomes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Incomes.Location = new System.Drawing.Point(224, 8);
+            this.BTN_Incomes.Location = new System.Drawing.Point(53, 8);
             this.BTN_Incomes.Name = "BTN_Incomes";
             this.BTN_Incomes.Size = new System.Drawing.Size(165, 55);
             this.BTN_Incomes.TabIndex = 5;
@@ -152,7 +168,7 @@ namespace SabreenCompany.Forms
             this.BTN_BoxMoney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
             this.BTN_BoxMoney.Image = global::SabreenCompany.Properties.Resources.icons8_money_bag_32px_3;
             this.BTN_BoxMoney.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_BoxMoney.Location = new System.Drawing.Point(53, 8);
+            this.BTN_BoxMoney.Location = new System.Drawing.Point(1079, 69);
             this.BTN_BoxMoney.Name = "BTN_BoxMoney";
             this.BTN_BoxMoney.Size = new System.Drawing.Size(165, 55);
             this.BTN_BoxMoney.TabIndex = 6;
@@ -165,20 +181,21 @@ namespace SabreenCompany.Forms
             this.BTN_Setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
             this.BTN_Setting.Image = global::SabreenCompany.Properties.Resources.icons8_settings_32px_2;
             this.BTN_Setting.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Setting.Location = new System.Drawing.Point(1079, 69);
+            this.BTN_Setting.Location = new System.Drawing.Point(908, 69);
             this.BTN_Setting.Name = "BTN_Setting";
             this.BTN_Setting.Size = new System.Drawing.Size(165, 55);
             this.BTN_Setting.TabIndex = 7;
             this.BTN_Setting.Text = "الإعدادات";
             this.BTN_Setting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Setting.UseVisualStyleBackColor = false;
+            this.BTN_Setting.Click += new System.EventHandler(this.BTN_Setting_Click);
             // 
             // BTN_About
             // 
             this.BTN_About.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
             this.BTN_About.Image = global::SabreenCompany.Properties.Resources.icons8_about_32px;
             this.BTN_About.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_About.Location = new System.Drawing.Point(908, 69);
+            this.BTN_About.Location = new System.Drawing.Point(737, 69);
             this.BTN_About.Name = "BTN_About";
             this.BTN_About.Size = new System.Drawing.Size(165, 55);
             this.BTN_About.TabIndex = 8;
@@ -191,7 +208,7 @@ namespace SabreenCompany.Forms
             this.BTN_Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
             this.BTN_Logout.Image = global::SabreenCompany.Properties.Resources.icons8_logout_32px;
             this.BTN_Logout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Logout.Location = new System.Drawing.Point(737, 69);
+            this.BTN_Logout.Location = new System.Drawing.Point(566, 69);
             this.BTN_Logout.Name = "BTN_Logout";
             this.BTN_Logout.Size = new System.Drawing.Size(165, 55);
             this.BTN_Logout.TabIndex = 9;
@@ -244,5 +261,6 @@ namespace SabreenCompany.Forms
         private System.Windows.Forms.Button BTN_About;
         private System.Windows.Forms.Button BTN_Logout;
         public System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.Button BTN_Invioce;
     }
 }

@@ -165,6 +165,16 @@ namespace SabreenCompany.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Admin_Settings_Male_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Admin_Settings_Male_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_aliexpress_500px {
             get {
                 object obj = ResourceManager.GetObject("icons8_aliexpress_500px", resourceCulture);
@@ -178,6 +188,16 @@ namespace SabreenCompany.Properties {
         internal static System.Drawing.Bitmap icons8_c_sharp_logo_500px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_c_sharp_logo_500px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancel_32px_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_cancel_32px_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -205,9 +225,49 @@ namespace SabreenCompany.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Checkmark_32px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Checkmark_32px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_cheque_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_cheque_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_circled_x_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_circled_x_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_data_backup_32px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_data_backup_32px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_database_restore_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_database_restore_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -446,6 +506,15 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to لم تقم بتغيير كلمة السر.
+        /// </summary>
+        internal static string WarningInputAlreadyPassword {
+            get {
+                return ResourceManager.GetString("WarningInputAlreadyPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to خطأ في نوع الملف.
         /// </summary>
         internal static string WarningInputImage {
@@ -460,6 +529,25 @@ namespace SabreenCompany.Properties {
         internal static string WarningInputJustNumber {
             get {
                 return ResourceManager.GetString("WarningInputJustNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to كلمة المرور الجديدة قصيرة جدا.
+        /// </summary>
+        internal static string WarningInputPasswordlesslenth {
+            get {
+                return ResourceManager.GetString("WarningInputPasswordlesslenth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap اعدادات_المستخدم {
+            get {
+                object obj = ResourceManager.GetObject("اعدادات_المستخدم", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -479,6 +567,16 @@ namespace SabreenCompany.Properties {
         internal static System.Drawing.Bitmap الرئيسية {
             get {
                 object obj = ResourceManager.GetObject("الرئيسية", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap الزبائن {
+            get {
+                object obj = ResourceManager.GetObject("الزبائن", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

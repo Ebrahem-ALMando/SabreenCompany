@@ -2,6 +2,7 @@
 using SabreenCompany.Classes;
 using SabreenCompany.Classes.Connection.CategoryProcess;
 using SabreenCompany.Classes.Connection.ProductsProcess;
+using SabreenCompany.Gui.GuiCategories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -250,6 +251,14 @@ namespace SabreenCompany.Forms.FormsProducts
                 e.Handled = false;
             }
         }
+        private void new_Category_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form_AddCategory form_AddCategory = new Form_AddCategory();
+            form_AddCategory.ShowDialog();
+            loadCategory();
+        }
         #endregion
+
+
     }
 }

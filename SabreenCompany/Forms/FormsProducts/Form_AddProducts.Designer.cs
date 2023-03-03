@@ -50,6 +50,7 @@ namespace SabreenCompany.Forms.FormsProducts
             this.BTN_Save = new System.Windows.Forms.Button();
             this.BTN_Save_Close = new System.Windows.Forms.Button();
             this.BTN_Close = new System.Windows.Forms.Button();
+            this.new_Category = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePhoto_Product)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -57,6 +58,8 @@ namespace SabreenCompany.Forms.FormsProducts
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.COMP_Name_Category);
+            this.groupBox1.Controls.Add(this.new_Category);
             this.groupBox1.Controls.Add(this.BTN_RemoveImage);
             this.groupBox1.Controls.Add(this.picturePhoto_Product);
             this.groupBox1.Controls.Add(this.label7);
@@ -69,7 +72,6 @@ namespace SabreenCompany.Forms.FormsProducts
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.TX_Number_Product);
             this.groupBox1.Controls.Add(this.TX_Price_Product);
-            this.groupBox1.Controls.Add(this.COMP_Name_Category);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.TX_Name_Product);
             this.groupBox1.Controls.Add(this.label1);
@@ -308,6 +310,17 @@ namespace SabreenCompany.Forms.FormsProducts
             this.BTN_Close.UseVisualStyleBackColor = false;
             this.BTN_Close.Click += new System.EventHandler(this.BTN_Close_Click);
             // 
+            // new_Category
+            // 
+            this.new_Category.AutoSize = true;
+            this.new_Category.Location = new System.Drawing.Point(17, 133);
+            this.new_Category.Name = "new_Category";
+            this.new_Category.Size = new System.Drawing.Size(55, 37);
+            this.new_Category.TabIndex = 25;
+            this.new_Category.TabStop = true;
+            this.new_Category.Text = "جديد";
+            this.new_Category.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.new_Category_LinkClicked);
+            // 
             // Form_AddProducts
             // 
             this.Appearance.Options.UseFont = true;
@@ -357,5 +370,6 @@ namespace SabreenCompany.Forms.FormsProducts
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox RI_Notes;
+        private System.Windows.Forms.LinkLabel new_Category;
     }
 }

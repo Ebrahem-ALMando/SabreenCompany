@@ -1,4 +1,5 @@
 ﻿using SabreenCompany.Forms;
+using SabreenCompany.Forms.FormsCustomers;
 using SabreenCompany.Forms.FormsProducts;
 using SabreenCompany.Forms.FormsSuppliers;
 using SabreenCompany.Gui.GuiCategories;
@@ -20,6 +21,7 @@ namespace SabreenCompany.Gui.GuiHome
         Form__AddSuppliers addSuppliers;
         Form_AddCategory addCategory;
         Form_AddProducts addProduct;
+        Form_AddCustomer addCustomer;
         static String userName = "";
         public Home_UserControl()
         {
@@ -66,6 +68,12 @@ namespace SabreenCompany.Gui.GuiHome
         {
             addProduct = new Form_AddProducts();
             addProduct.ShowDialog();
+        }
+
+        private void BTN_Add_Customer_Click(object sender, EventArgs e)
+        {
+            addCustomer = new Form_AddCustomer();
+            addCustomer.ShowDialog();
         }
     }
 }

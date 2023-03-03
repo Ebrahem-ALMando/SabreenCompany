@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using SabreenCompany.Classes.Connection.SettingsProcess;
 using SabreenCompany.Classes.Login;
 using SabreenCompany.Forms;
 
@@ -47,7 +48,7 @@ namespace SabreenCompany
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        private void BTN_Login_Click(object sender, EventArgs e)
+        private  void BTN_Login_Click(object sender, EventArgs e)
         {
             message.Buttons = MessageDialogButtons.OK;
             message.Style = MessageDialogStyle.Light;
@@ -69,6 +70,7 @@ namespace SabreenCompany
                     main = new Form_Main(userName);
                     this.Hide();
                     main.ShowDialog();
+                    main.Dispose();
 
                 }
                 else
@@ -143,6 +145,7 @@ namespace SabreenCompany
         private void TX_UserName_TextChanged(object sender, EventArgs e)
         {
             userName = TX_UserName.Text;
+            DataUser.userName = TX_UserName.Text;
         }
     }
 }

@@ -66,15 +66,30 @@
     <Compile Include="Classes\ClsMessageCollections.cs" />
     <Compile Include="Classes\Connection\CategoryProcess\Cls_CategoryDB.cs" />
     <Compile Include="Classes\Connection\Cls_AccessLayer_DB.cs" />
+    <Compile Include="Classes\Connection\CustomerProcess\Cls_CustomerDB.cs" />
     <Compile Include="Classes\Connection\ProductsProcess\Cls_ProductDB.cs" />
+    <Compile Include="Classes\Connection\SettingsProcess\Cls_SettingsDB.cs" />
+    <Compile Include="Classes\Connection\SettingsProcess\DataUser.cs" />
     <Compile Include="Classes\Connection\SuplliersProcess\Cls_SuppliersDB.cs" />
     <Compile Include="Classes\Home\Cls_PageManager.cs" />
     <Compile Include="Classes\Login\Cls_Login.cs" />
+    <Compile Include="Forms\FormsCustomers\Form_AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsCustomers\Form_AddCustomer.Designer.cs">
+      <DependentUpon>Form_AddCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormsProducts\Form_AddProducts.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormsProducts\Form_AddProducts.Designer.cs">
       <DependentUpon>Form_AddProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsSettings\Form_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsSettings\Form_Settings.Designer.cs">
+      <DependentUpon>Form_Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormsSuppliers\Form__AddSuppliers.cs">
       <SubType>Form</SubType>
@@ -106,6 +121,12 @@
     <Compile Include="Forms\FormsCategories\Form_AddCategory.Designer.cs">
       <DependentUpon>Form_AddCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\GuiCustomer\CustomerUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\GuiCustomer\CustomerUserControl.Designer.cs">
+      <DependentUpon>CustomerUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\GuiHome\Home_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,6 +139,12 @@
     <Compile Include="Gui\GuiProducts\Products_UserControl.Designer.cs">
       <DependentUpon>Products_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\GuiSettings\SettingsAccount_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\GuiSettings\SettingsAccount_UserControl.Designer.cs">
+      <DependentUpon>SettingsAccount_UserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\GuiSuppliers\Suppliers_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -126,8 +153,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormsCustomers\Form_AddCustomer.resx">
+      <DependentUpon>Form_AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsProducts\Form_AddProducts.resx">
       <DependentUpon>Form_AddProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsSettings\Form_Settings.resx">
+      <DependentUpon>Form_Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsSuppliers\Form__AddSuppliers.resx">
       <DependentUpon>Form__AddSuppliers.cs</DependentUpon>
@@ -144,11 +177,17 @@
     <EmbeddedResource Include="Forms\FormsCategories\Form_AddCategory.resx">
       <DependentUpon>Form_AddCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GuiCustomer\CustomerUserControl.resx">
+      <DependentUpon>CustomerUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gui\GuiHome\Home_UserControl.resx">
       <DependentUpon>Home_UserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\GuiProducts\Products_UserControl.resx">
       <DependentUpon>Products_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GuiSettings\SettingsAccount_UserControl.resx">
+      <DependentUpon>SettingsAccount_UserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\GuiSuppliers\Suppliers_UserControl.resx">
       <DependentUpon>Suppliers_UserControl.cs</DependentUpon>
@@ -294,6 +333,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_aliexpress_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الزبائن.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bill_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bill_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bill_32px_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bill_32px_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_receipt_dollar_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cheque_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Admin_Settings_Male_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_data_backup_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_database_restore_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_data_backup_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\اعدادات المستخدم.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Checkmark_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancel_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Checkmark_32px_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

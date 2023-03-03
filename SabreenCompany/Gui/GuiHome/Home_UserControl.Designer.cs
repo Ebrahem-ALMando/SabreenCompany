@@ -33,6 +33,7 @@ namespace SabreenCompany.Gui.GuiHome
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BTN_Invioce = new System.Windows.Forms.Button();
             this.BTN_Add_Income = new System.Windows.Forms.Button();
             this.BTN_Add_Customer = new System.Windows.Forms.Button();
             this.BTN_Add_Product = new System.Windows.Forms.Button();
@@ -86,28 +87,46 @@ namespace SabreenCompany.Gui.GuiHome
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.BTN_Invioce);
             this.groupBox1.Controls.Add(this.BTN_Add_Income);
             this.groupBox1.Controls.Add(this.BTN_Add_Customer);
             this.groupBox1.Controls.Add(this.BTN_Add_Product);
             this.groupBox1.Controls.Add(this.BTN_Add_Category);
             this.groupBox1.Controls.Add(this.BTN_Add_Supplier);
+            this.groupBox1.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(158, 69);
+            this.groupBox1.Location = new System.Drawing.Point(74, 69);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(970, 122);
+            this.groupBox1.Size = new System.Drawing.Size(1126, 122);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "إضافة";
             // 
+            // BTN_Invioce
+            // 
+            this.BTN_Invioce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
+            this.BTN_Invioce.Font = new System.Drawing.Font("Cairo", 12F);
+            this.BTN_Invioce.ForeColor = System.Drawing.Color.Black;
+            this.BTN_Invioce.Image = global::SabreenCompany.Properties.Resources.icons8_cheque_32px;
+            this.BTN_Invioce.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Invioce.Location = new System.Drawing.Point(205, 44);
+            this.BTN_Invioce.Name = "BTN_Invioce";
+            this.BTN_Invioce.Size = new System.Drawing.Size(160, 55);
+            this.BTN_Invioce.TabIndex = 11;
+            this.BTN_Invioce.Text = "الفواتير";
+            this.BTN_Invioce.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Invioce.UseVisualStyleBackColor = false;
+            // 
             // BTN_Add_Income
             // 
             this.BTN_Add_Income.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
+            this.BTN_Add_Income.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Add_Income.ForeColor = System.Drawing.Color.Black;
             this.BTN_Add_Income.Image = global::SabreenCompany.Properties.Resources.icons8_sales_performance_32px;
             this.BTN_Add_Income.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Add_Income.Location = new System.Drawing.Point(36, 44);
+            this.BTN_Add_Income.Location = new System.Drawing.Point(17, 44);
             this.BTN_Add_Income.Name = "BTN_Add_Income";
-            this.BTN_Add_Income.Size = new System.Drawing.Size(165, 55);
+            this.BTN_Add_Income.Size = new System.Drawing.Size(160, 55);
             this.BTN_Add_Income.TabIndex = 5;
             this.BTN_Add_Income.Text = "ايراد";
             this.BTN_Add_Income.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -116,26 +135,29 @@ namespace SabreenCompany.Gui.GuiHome
             // BTN_Add_Customer
             // 
             this.BTN_Add_Customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
+            this.BTN_Add_Customer.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Add_Customer.ForeColor = System.Drawing.Color.Black;
             this.BTN_Add_Customer.Image = global::SabreenCompany.Properties.Resources.icons8_users_32px;
             this.BTN_Add_Customer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Add_Customer.Location = new System.Drawing.Point(220, 44);
+            this.BTN_Add_Customer.Location = new System.Drawing.Point(393, 44);
             this.BTN_Add_Customer.Name = "BTN_Add_Customer";
-            this.BTN_Add_Customer.Size = new System.Drawing.Size(165, 55);
+            this.BTN_Add_Customer.Size = new System.Drawing.Size(160, 55);
             this.BTN_Add_Customer.TabIndex = 4;
             this.BTN_Add_Customer.Text = "زبون";
             this.BTN_Add_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Add_Customer.UseVisualStyleBackColor = false;
+            this.BTN_Add_Customer.Click += new System.EventHandler(this.BTN_Add_Customer_Click);
             // 
             // BTN_Add_Product
             // 
             this.BTN_Add_Product.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
+            this.BTN_Add_Product.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Add_Product.ForeColor = System.Drawing.Color.Black;
             this.BTN_Add_Product.Image = global::SabreenCompany.Properties.Resources.icons8_add_shopping_cart_32px;
             this.BTN_Add_Product.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Add_Product.Location = new System.Drawing.Point(404, 44);
+            this.BTN_Add_Product.Location = new System.Drawing.Point(581, 44);
             this.BTN_Add_Product.Name = "BTN_Add_Product";
-            this.BTN_Add_Product.Size = new System.Drawing.Size(165, 55);
+            this.BTN_Add_Product.Size = new System.Drawing.Size(160, 55);
             this.BTN_Add_Product.TabIndex = 3;
             this.BTN_Add_Product.Text = "منتج";
             this.BTN_Add_Product.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,12 +167,13 @@ namespace SabreenCompany.Gui.GuiHome
             // BTN_Add_Category
             // 
             this.BTN_Add_Category.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
+            this.BTN_Add_Category.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Add_Category.ForeColor = System.Drawing.Color.Black;
             this.BTN_Add_Category.Image = global::SabreenCompany.Properties.Resources.icons8_categorize_32px_1;
             this.BTN_Add_Category.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Add_Category.Location = new System.Drawing.Point(588, 44);
+            this.BTN_Add_Category.Location = new System.Drawing.Point(769, 44);
             this.BTN_Add_Category.Name = "BTN_Add_Category";
-            this.BTN_Add_Category.Size = new System.Drawing.Size(165, 55);
+            this.BTN_Add_Category.Size = new System.Drawing.Size(160, 55);
             this.BTN_Add_Category.TabIndex = 2;
             this.BTN_Add_Category.Text = "صنف";
             this.BTN_Add_Category.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -160,12 +183,13 @@ namespace SabreenCompany.Gui.GuiHome
             // BTN_Add_Supplier
             // 
             this.BTN_Add_Supplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
+            this.BTN_Add_Supplier.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Add_Supplier.ForeColor = System.Drawing.Color.Black;
             this.BTN_Add_Supplier.Image = global::SabreenCompany.Properties.Resources.icons8_supplier_32px;
             this.BTN_Add_Supplier.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Add_Supplier.Location = new System.Drawing.Point(772, 44);
+            this.BTN_Add_Supplier.Location = new System.Drawing.Point(957, 44);
             this.BTN_Add_Supplier.Name = "BTN_Add_Supplier";
-            this.BTN_Add_Supplier.Size = new System.Drawing.Size(165, 55);
+            this.BTN_Add_Supplier.Size = new System.Drawing.Size(160, 55);
             this.BTN_Add_Supplier.TabIndex = 1;
             this.BTN_Add_Supplier.Text = "مورد";
             this.BTN_Add_Supplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -176,11 +200,11 @@ namespace SabreenCompany.Gui.GuiHome
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cairo", 19F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(535, -2);
+            this.label1.Location = new System.Drawing.Point(534, -5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 56);
+            this.label1.Size = new System.Drawing.Size(220, 60);
             this.label1.TabIndex = 0;
             this.label1.Text = "الوصول السريع";
             // 
@@ -329,5 +353,6 @@ namespace SabreenCompany.Gui.GuiHome
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button BTN_Invioce;
     }
 }

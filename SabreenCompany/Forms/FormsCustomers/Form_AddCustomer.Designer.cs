@@ -1,7 +1,7 @@
 ﻿
-namespace SabreenCompany.Gui.GuiCategories
+namespace SabreenCompany.Forms.FormsCustomers
 {
-    partial class Form_AddCategory
+    partial class Form_AddCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -30,115 +30,84 @@ namespace SabreenCompany.Gui.GuiCategories
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.COMP_Name_Supplier = new System.Windows.Forms.ComboBox();
-            this.TX_Type_Category = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.RI_Notes = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.TX_Locition_Customer = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.TX_Name_Category = new System.Windows.Forms.TextBox();
+            this.TX_Phone_Customer = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TX_Name_Customer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.BTN_Save = new System.Windows.Forms.Button();
             this.BTN_Save_Close = new System.Windows.Forms.Button();
             this.BTN_Close = new System.Windows.Forms.Button();
-            this.new_Supplier = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.COMP_Name_Supplier);
-            this.groupBox1.Controls.Add(this.new_Supplier);
-            this.groupBox1.Controls.Add(this.TX_Type_Category);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.RI_Notes);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.TX_Locition_Customer);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.TX_Name_Category);
+            this.groupBox1.Controls.Add(this.TX_Phone_Customer);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.TX_Name_Customer);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.Color.Indigo;
-            this.groupBox1.Location = new System.Drawing.Point(12, 3);
+            this.groupBox1.Location = new System.Drawing.Point(12, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(560, 514);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "معلومات الصنف";
+            this.groupBox1.Text = "معلومات الزبون";
             // 
-            // COMP_Name_Supplier
+            // TX_Locition_Customer
             // 
-            this.COMP_Name_Supplier.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.COMP_Name_Supplier.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.COMP_Name_Supplier.BackColor = System.Drawing.SystemColors.Window;
-            this.COMP_Name_Supplier.DropDownHeight = 170;
-            this.COMP_Name_Supplier.FormattingEnabled = true;
-            this.COMP_Name_Supplier.IntegralHeight = false;
-            this.COMP_Name_Supplier.Location = new System.Drawing.Point(17, 189);
-            this.COMP_Name_Supplier.MaxDropDownItems = 5;
-            this.COMP_Name_Supplier.Name = "COMP_Name_Supplier";
-            this.COMP_Name_Supplier.Size = new System.Drawing.Size(503, 45);
-            this.COMP_Name_Supplier.Sorted = true;
-            this.COMP_Name_Supplier.TabIndex = 11;
-            // 
-            // TX_Type_Category
-            // 
-            this.TX_Type_Category.Location = new System.Drawing.Point(17, 277);
-            this.TX_Type_Category.Name = "TX_Type_Category";
-            this.TX_Type_Category.Size = new System.Drawing.Size(503, 45);
-            this.TX_Type_Category.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(231, 325);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 37);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "ملاحظات";
-            // 
-            // RI_Notes
-            // 
-            this.RI_Notes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RI_Notes.Location = new System.Drawing.Point(17, 365);
-            this.RI_Notes.Name = "RI_Notes";
-            this.RI_Notes.Size = new System.Drawing.Size(503, 113);
-            this.RI_Notes.TabIndex = 7;
-            this.RI_Notes.Text = "";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(218, 237);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 37);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "نوع الصنف";
+            this.TX_Locition_Customer.Location = new System.Drawing.Point(17, 327);
+            this.TX_Locition_Customer.Name = "TX_Locition_Customer";
+            this.TX_Locition_Customer.Size = new System.Drawing.Size(503, 45);
+            this.TX_Locition_Customer.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(214, 139);
+            this.label2.Location = new System.Drawing.Point(203, 273);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 37);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "اسم المورد";
+            this.label2.Size = new System.Drawing.Size(118, 37);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "موقع الزبون";
             // 
-            // TX_Name_Category
+            // TX_Phone_Customer
             // 
-            this.TX_Name_Category.Location = new System.Drawing.Point(17, 91);
-            this.TX_Name_Category.Name = "TX_Name_Category";
-            this.TX_Name_Category.Size = new System.Drawing.Size(503, 45);
-            this.TX_Name_Category.TabIndex = 1;
+            this.TX_Phone_Customer.Location = new System.Drawing.Point(17, 211);
+            this.TX_Phone_Customer.Name = "TX_Phone_Customer";
+            this.TX_Phone_Customer.Size = new System.Drawing.Size(503, 45);
+            this.TX_Phone_Customer.TabIndex = 5;
+            this.TX_Phone_Customer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TX_Phone_Customer_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(211, 157);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 37);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "رقم الهاتف";
+            // 
+            // TX_Name_Customer
+            // 
+            this.TX_Name_Customer.Location = new System.Drawing.Point(17, 95);
+            this.TX_Name_Customer.Name = "TX_Name_Customer";
+            this.TX_Name_Customer.Size = new System.Drawing.Size(503, 45);
+            this.TX_Name_Customer.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(211, 41);
+            this.label1.Location = new System.Drawing.Point(210, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 37);
+            this.label1.Size = new System.Drawing.Size(103, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "اسم الصنف";
+            this.label1.Text = "اسم الزبون";
             // 
             // flowLayoutPanel1
             // 
@@ -152,7 +121,7 @@ namespace SabreenCompany.Gui.GuiCategories
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5, 5, 30, 5);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(598, 82);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.flowLayoutPanel1.TabIndex = 6;
             // 
             // BTN_Save
             // 
@@ -202,36 +171,24 @@ namespace SabreenCompany.Gui.GuiCategories
             this.BTN_Close.UseVisualStyleBackColor = false;
             this.BTN_Close.Click += new System.EventHandler(this.BTN_Close_Click);
             // 
-            // new_Supplier
-            // 
-            this.new_Supplier.AutoSize = true;
-            this.new_Supplier.Location = new System.Drawing.Point(17, 155);
-            this.new_Supplier.Name = "new_Supplier";
-            this.new_Supplier.Size = new System.Drawing.Size(55, 37);
-            this.new_Supplier.TabIndex = 26;
-            this.new_Supplier.TabStop = true;
-            this.new_Supplier.Text = "جديد";
-            this.new_Supplier.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.new_Supplier_LinkClicked);
-            // 
-            // Form_AddCategory
+            // Form_AddCustomer
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 625);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.groupBox1);
-            this.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Font = new System.Drawing.Font("Cairo", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.IconOptions.ShowIcon = false;
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form_AddCategory";
+            this.Name = "Form_AddCustomer";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "اضافة /تعديل صنف";
+            this.Text = "اضافة /تعديل زبون";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -240,19 +197,17 @@ namespace SabreenCompany.Gui.GuiCategories
         }
 
         #endregion
+
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox RI_Notes;
-        private System.Windows.Forms.TextBox TX_Type_Category;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TX_Locition_Customer;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TX_Name_Category;
+        private System.Windows.Forms.TextBox TX_Phone_Customer;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TX_Name_Customer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button BTN_Save;
         private System.Windows.Forms.Button BTN_Save_Close;
         private System.Windows.Forms.Button BTN_Close;
-        private System.Windows.Forms.ComboBox COMP_Name_Supplier;
-        private System.Windows.Forms.LinkLabel new_Supplier;
     }
 }

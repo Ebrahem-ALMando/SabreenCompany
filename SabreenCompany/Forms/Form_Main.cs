@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using SabreenCompany.Classes.Home;
+using SabreenCompany.Forms.FormsSettings;
 
 namespace SabreenCompany.Forms
 {
@@ -18,6 +19,7 @@ namespace SabreenCompany.Forms
         Guna2MessageDialog message = new Guna2MessageDialog();
         private readonly Cls_PageManager pageManager;
         private string userName = "";
+        Form_Settings form_Settings;
         public Form_Main()
         {
             InitializeComponent();
@@ -38,6 +40,16 @@ namespace SabreenCompany.Forms
         {
             pageManager.LoadPage(Gui.GuiCategories.Category_UserControl.Instance());
         }
+        private void BTN_Customers_Click(object sender, EventArgs e)
+        {
+            pageManager.LoadPage(Gui.GuiCustomer.CustomerUserControl.Instance());
+        }
+        private void BTN_Setting_Click(object sender, EventArgs e)
+        {
+             form_Settings = new Form_Settings();
+             form_Settings.ShowDialog();
+             form_Settings.Dispose();
+        }
         #region Event
         private void BTN_Logout_Click(object sender, EventArgs e)
         {
@@ -47,9 +59,9 @@ namespace SabreenCompany.Forms
             DialogResult check = message.Show("هل تريد تسجيل الخروج \n ", "خروج");
             if (check == DialogResult.Yes)
             {
-                this.Hide();
-                Form_Login login = new Form_Login();
-                login.ShowDialog();
+                this.Close();
+                Application.OpenForms["Form_Login"].Show();
+
             }
 
         }
@@ -65,8 +77,10 @@ namespace SabreenCompany.Forms
         {
             pageManager.LoadPage(Gui.GuiProducts.Products_UserControl.Instance());
         }
+
+
         #endregion
 
-
+      
     }
 }

@@ -27,6 +27,22 @@ namespace SabreenCompany.Classes
             messageShow.Icon = MessageDialogIcon.Warning;
             messageShow.Show(Resources.EmptyDataSerarch + "\n ", Resources.CaptionWarningData);
         }
+        //==>Show Message Warning Input less length Password  
+        public static void showWarningInputlesslengthPasswordMessage()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Light;
+            messageShow.Icon = MessageDialogIcon.Warning;
+            messageShow.Show(Resources.WarningInputPasswordlesslenth + "\n ", Resources.CaptionWarningData);
+        }
+        //===>Show Warning InputAlready Password Message
+        public static void showWarningInputAlreadyPasswordMessage()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Light;
+            messageShow.Icon = MessageDialogIcon.Warning;
+            messageShow.Show(Resources.WarningInputAlreadyPassword + "\n ", Resources.CaptionWarningData);
+        }
         public static void showWarningInputImageMessageData()
         {
             messageShow.Buttons = MessageDialogButtons.OK;

@@ -13,7 +13,7 @@ namespace SabreenCompany.Connection
         private readonly string Server_Conction_R;
         public Cls_AccessLayer_DB()
         {
-            Server_Conction_R = @"server=DESKTOP-OVV6TDC\EBRAHEMSQLSERVER;database=Sabreen_DB; integrated security = true; ";
+            Server_Conction_R = @"server=.\EBRAHEMSQLSERVER;database=Sabreen_DB; integrated security = true; ";
             conction = new SqlConnection(Server_Conction_R);
         }
         protected SqlConnection GetConction()

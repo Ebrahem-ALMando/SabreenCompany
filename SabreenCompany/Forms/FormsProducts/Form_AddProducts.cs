@@ -105,7 +105,9 @@ namespace SabreenCompany.Forms.FormsProducts
                 {
                     if (ClsMessageCollections.showQuitionAddMessageData() == DialogResult.OK)
                     {
-                        action.insertProduct(Convert.ToInt32(COMP_Name_Category.SelectedValue), TX_Name_Product.Text
+                        int id_Category;
+                        Int32.TryParse(COMP_Name_Category.SelectedValue.ToString(), out id_Category);
+                        action.insertProduct(id_Category, TX_Name_Product.Text
                        , Convert.ToSingle(TX_Price_Product.Text), Convert.ToSingle(TX_Number_Product.Text), RI_Notes.Text, saveImage());
                         ClsMessageCollections.showSuccessAddMessageData();
                         clearField();
@@ -134,7 +136,9 @@ namespace SabreenCompany.Forms.FormsProducts
                 {
                     if (ClsMessageCollections.showQuitionUpdateMessageData() == DialogResult.OK)
                     {
-                        action.updateProduct(id,Convert.ToInt32(COMP_Name_Category.SelectedValue), TX_Name_Product.Text
+                        int id_Category;
+                        Int32.TryParse(COMP_Name_Category.SelectedValue.ToString(), out id_Category);
+                        action.updateProduct(id, id_Category, TX_Name_Product.Text
                        , Convert.ToSingle(TX_Price_Product.Text), Convert.ToSingle(TX_Number_Product.Text), RI_Notes.Text, saveImage());
                         ClsMessageCollections.showSuccessUpdateMessageData();
                         if (isClose)
@@ -255,6 +259,7 @@ namespace SabreenCompany.Forms.FormsProducts
         {
             Form_AddCategory form_AddCategory = new Form_AddCategory();
             form_AddCategory.ShowDialog();
+            form_AddCategory.Dispose();
             loadCategory();
         }
         #endregion

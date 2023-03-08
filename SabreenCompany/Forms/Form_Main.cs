@@ -50,6 +50,10 @@ namespace SabreenCompany.Forms
              form_Settings.ShowDialog();
              form_Settings.Dispose();
         }
+        private void BTN_Invioce_Click(object sender, EventArgs e)
+        {
+            pageManager.LoadPage(Gui.GuiInvoice.Invoice_UserControl.Instance());
+        }
         #region Event
         private void BTN_Logout_Click(object sender, EventArgs e)
         {
@@ -77,6 +81,7 @@ namespace SabreenCompany.Forms
         {
             pageManager.LoadPage(Gui.GuiProducts.Products_UserControl.Instance());
         }
+
 
 
         #endregion

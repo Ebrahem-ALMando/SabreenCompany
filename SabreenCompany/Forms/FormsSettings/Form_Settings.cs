@@ -21,7 +21,6 @@ namespace SabreenCompany.Forms.FormsSettings
             pageManager = new Cls_PageManager(this);
             //==> Load Defulat Settings Account page
             pageManager.LoadPageSettings(Gui.GuiSettings.SettingsAccount_UserControl.Instance());
-
         }
         #region Event
         private void BTN_Settings_Account_Click(object sender, EventArgs e)
@@ -30,11 +29,12 @@ namespace SabreenCompany.Forms.FormsSettings
         }
         private void BTN_Settings_Backup_Click(object sender, EventArgs e)
         {
+            pageManager.LoadPageSettings(Gui.GuiSettings.BackupdData_UserControl.Instance());
 
         }
         private void BTN_Settings_Restore_Backup_Click(object sender, EventArgs e)
         {
-
+            pageManager.LoadPageSettings(Gui.GuiSettings.RestorebackupDataUserControl.Instance());
         }
         #endregion
     }

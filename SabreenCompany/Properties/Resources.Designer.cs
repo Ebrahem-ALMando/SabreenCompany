@@ -124,11 +124,29 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to يرجى إدخال بيانات المنتج.
+        /// </summary>
+        internal static string EmptyDataProduct {
+            get {
+                return ResourceManager.GetString("EmptyDataProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to !!! حقل البحث فارغ.
         /// </summary>
         internal static string EmptyDataSerarch {
             get {
                 return ResourceManager.GetString("EmptyDataSerarch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;C&quot; لا يمكن وضع النسخة على القرص .
+        /// </summary>
+        internal static string ErrorSaveBackupIndesk_C {
+            get {
+                return ResourceManager.GetString("ErrorSaveBackupIndesk_C", resourceCulture);
             }
         }
         
@@ -278,6 +296,16 @@ namespace SabreenCompany.Properties {
         internal static System.Drawing.Bitmap icons8_Delete_Trash_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_Delete_Trash_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_Download_From_Cloud_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Download_From_Cloud_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -435,6 +463,16 @@ namespace SabreenCompany.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_upload_to_cloud_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_upload_to_cloud_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_users_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_users_32px", resourceCulture);
@@ -488,11 +526,38 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to تمت استعادة النسخة الاحتياطية بنجاح.
+        /// </summary>
+        internal static string SuccessRestoreBackup {
+            get {
+                return ResourceManager.GetString("SuccessRestoreBackup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم اجراء السنخة الاحتياطية بنجاح.
+        /// </summary>
+        internal static string SuccessSaveBackup {
+            get {
+                return ResourceManager.GetString("SuccessSaveBackup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to تم التعديل بنجاح.
         /// </summary>
         internal static string SuccessUpdateData {
             get {
                 return ResourceManager.GetString("SuccessUpdateData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to المبلغ المقبوض اكبر من الكلي.
+        /// </summary>
+        internal static string WarningAmountReceivedGreaterTotalAmount {
+            get {
+                return ResourceManager.GetString("WarningAmountReceivedGreaterTotalAmount", resourceCulture);
             }
         }
         
@@ -533,11 +598,29 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to العدد اكبر من الكمية المتاحة.
+        /// </summary>
+        internal static string WarningInputNumberProducts {
+            get {
+                return ResourceManager.GetString("WarningInputNumberProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to كلمة المرور الجديدة قصيرة جدا.
         /// </summary>
         internal static string WarningInputPasswordlesslenth {
             get {
                 return ResourceManager.GetString("WarningInputPasswordlesslenth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to يرجى تحديد المسار اولاً.
+        /// </summary>
+        internal static string WarningInputPathToBackup {
+            get {
+                return ResourceManager.GetString("WarningInputPathToBackup", resourceCulture);
             }
         }
         
@@ -584,6 +667,16 @@ namespace SabreenCompany.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap الفواتير {
+            get {
+                object obj = ResourceManager.GetObject("الفواتير", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap المنتجات {
             get {
                 object obj = ResourceManager.GetObject("المنتجات", resourceCulture);
@@ -597,6 +690,16 @@ namespace SabreenCompany.Properties {
         internal static System.Drawing.Bitmap الموردين {
             get {
                 object obj = ResourceManager.GetObject("الموردين", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap النسخ_الاحتياطي {
+            get {
+                object obj = ResourceManager.GetObject("النسخ_الاحتياطي", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

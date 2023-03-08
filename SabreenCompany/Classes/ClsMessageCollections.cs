@@ -19,6 +19,20 @@ namespace SabreenCompany.Classes
             messageShow.Icon = MessageDialogIcon.Warning;
             messageShow.Show(Resources.EmptyData+"\n ",Resources.CaptionWarningData);
         }
+        public static void showEmptyProductMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Light;
+            messageShow.Icon = MessageDialogIcon.Warning;
+            messageShow.Show(Resources.EmptyDataProduct + "\n ", Resources.CaptionWarningData);
+        }
+        public static void showWarningNumberProductMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Light;
+            messageShow.Icon = MessageDialogIcon.Warning;
+            messageShow.Show(Resources.WarningInputNumberProducts+ "\n ", Resources.CaptionWarningData);
+        }
         //==>Show Message Empty Data Serach
         public static void showEmptySearchMessageData()
         {
@@ -34,6 +48,13 @@ namespace SabreenCompany.Classes
             messageShow.Style = MessageDialogStyle.Light;
             messageShow.Icon = MessageDialogIcon.Warning;
             messageShow.Show(Resources.WarningInputPasswordlesslenth + "\n ", Resources.CaptionWarningData);
+        }
+        public static void WarningAmountReceivedGreaterTotalAmountMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Light;
+            messageShow.Icon = MessageDialogIcon.Warning;
+            messageShow.Show(Resources.WarningAmountReceivedGreaterTotalAmount + "\n ", Resources.CaptionWarningData);
         }
         //===>Show Warning InputAlready Password Message
         public static void showWarningInputAlreadyPasswordMessage()
@@ -117,6 +138,35 @@ namespace SabreenCompany.Classes
             messageShow.Style = MessageDialogStyle.Dark;
             messageShow.Icon = MessageDialogIcon.Information;
             messageShow.Show(Resources.SuccessUpdateData + "\n ", Resources.CaptionSuccessActionData);
+        }
+        //==>Show Message SaveBackup  Data
+        public static void showSuccessSaveBackupData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Dark;
+            messageShow.Icon = MessageDialogIcon.Information;
+            messageShow.Show(Resources.SuccessSaveBackup + "\n ", Resources.CaptionSuccessActionData);
+        }
+        public static void showErroeSaveBackupIn_C_DiskMessage()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Light;
+            messageShow.Icon = MessageDialogIcon.Error;
+            messageShow.Show(Resources.ErrorSaveBackupIndesk_C + "\n ", Resources.CaptionWarningData);
+        }
+        public static void showWarningInputPathBackupMessage()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Light;
+            messageShow.Icon = MessageDialogIcon.Error;
+            messageShow.Show(Resources.WarningInputPathToBackup + "\n ", Resources.CaptionWarningData);
+        }
+        public static void showSuccessRestoreBackupData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Dark;
+            messageShow.Icon = MessageDialogIcon.Information;
+            messageShow.Show(Resources.SuccessRestoreBackup + "\n ", Resources.CaptionSuccessActionData);
         }
     }
 }

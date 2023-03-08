@@ -33,6 +33,23 @@ namespace SabreenCompany.Connection
             }
             
         }
+        public DataTable getSuppliers()
+        {
+            DataTable dataSuppliers = new DataTable();
+            try
+            {
+                connection.open();
+                dataSuppliers = connection.Read_Data("getSuppliers", null);
+                connection.cloes();
+                return dataSuppliers;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return dataSuppliers;
+            }
+
+        }
         //==> 2 Insert To Suppliers
         public void insertSupplier(string name,string phone,string locition)
         {

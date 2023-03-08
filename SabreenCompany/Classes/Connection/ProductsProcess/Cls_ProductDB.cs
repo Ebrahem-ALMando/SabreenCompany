@@ -126,5 +126,44 @@ namespace SabreenCompany.Classes.Connection.ProductsProcess
                 return dataCategory;
             }
         }
+        //==> 5 getproductIndividual To Products
+        public DataTable getproductIndividualData(int id)
+        {
+            DataTable dataProduct = new DataTable();
+            try
+            {
+                connection.open();
+                SqlParameter[] param = new SqlParameter[1];
+                param[0] = new SqlParameter("@id", SqlDbType.Int);
+                param[0].Value = id;
+                dataProduct = connection.Read_Data("getproductIndividualData", param);
+                connection.cloes();
+                return dataProduct;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return dataProduct;
+            }
+        }
+        //==> 6 Update Set Number Product  To Invoice
+        public void updateSetNumberProduct(int id, float numberNew)
+        {
+            try
+            {
+                connection.open();
+                SqlParameter[] param = new SqlParameter[2];
+                param[0] = new SqlParameter("@id", SqlDbType.Int);
+                param[0].Value = id;
+                param[1] = new SqlParameter("@numberNew", SqlDbType.Float);
+                param[1].Value = numberNew;
+                connection.process("updateSetNumberProduct", param);
+                connection.cloes();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }

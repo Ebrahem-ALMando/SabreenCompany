@@ -69,7 +69,9 @@ namespace SabreenCompany.Gui.GuiCategories
                 {
                     if (ClsMessageCollections.showQuitionAddMessageData()== DialogResult.OK)
                     {
-                        action.insertCategory(Convert.ToInt32(COMP_Name_Supplier.SelectedValue), TX_Name_Category.Text,
+                        int idSupplier;
+                        Int32.TryParse(COMP_Name_Supplier.SelectedValue.ToString(), out idSupplier);
+                        action.insertCategory(idSupplier, TX_Name_Category.Text,
                         TX_Type_Category.Text, RI_Notes.Text, DateTime.Now);
                         ClsMessageCollections.showSuccessAddMessageData();
                         clearField();
@@ -99,8 +101,10 @@ namespace SabreenCompany.Gui.GuiCategories
                 {
                     if (ClsMessageCollections.showQuitionUpdateMessageData() == DialogResult.OK)
                     {
+                        int idSupplier;
+                        Int32.TryParse(COMP_Name_Supplier.SelectedValue.ToString(), out idSupplier);
                         action.updateCategory(Convert.ToInt32(id),
-                            Convert.ToInt32(COMP_Name_Supplier.SelectedValue)
+                            idSupplier
                             , TX_Name_Category.Text,TX_Type_Category.Text, RI_Notes.Text, DateTime.Now);
 
                         ClsMessageCollections.showSuccessUpdateMessageData();

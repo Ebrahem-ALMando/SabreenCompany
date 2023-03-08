@@ -67,6 +67,7 @@
     <Compile Include="Classes\Connection\CategoryProcess\Cls_CategoryDB.cs" />
     <Compile Include="Classes\Connection\Cls_AccessLayer_DB.cs" />
     <Compile Include="Classes\Connection\CustomerProcess\Cls_CustomerDB.cs" />
+    <Compile Include="Classes\Connection\InvoiceProcess\Cls_IvoiceDB.cs" />
     <Compile Include="Classes\Connection\ProductsProcess\Cls_ProductDB.cs" />
     <Compile Include="Classes\Connection\SettingsProcess\Cls_SettingsDB.cs" />
     <Compile Include="Classes\Connection\SettingsProcess\DataUser.cs" />
@@ -78,6 +79,12 @@
     </Compile>
     <Compile Include="Forms\FormsCustomers\Form_AddCustomer.Designer.cs">
       <DependentUpon>Form_AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsInvoice\Form_AddInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsInvoice\Form_AddInvoice.Designer.cs">
+      <DependentUpon>Form_AddInvoice.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormsProducts\Form_AddProducts.cs">
       <SubType>Form</SubType>
@@ -133,11 +140,29 @@
     <Compile Include="Gui\GuiHome\Home_UserControl.Designer.cs">
       <DependentUpon>Home_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\GuiInvoice\Invoice_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\GuiInvoice\Invoice_UserControl.Designer.cs">
+      <DependentUpon>Invoice_UserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\GuiProducts\Products_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Gui\GuiProducts\Products_UserControl.Designer.cs">
       <DependentUpon>Products_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\GuiSettings\BackupdData_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\GuiSettings\BackupdData_UserControl.Designer.cs">
+      <DependentUpon>BackupdData_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\GuiSettings\RestorebackupDataUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\GuiSettings\RestorebackupDataUserControl.Designer.cs">
+      <DependentUpon>RestorebackupDataUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Gui\GuiSettings\SettingsAccount_UserControl.cs">
       <SubType>UserControl</SubType>
@@ -155,6 +180,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FormsCustomers\Form_AddCustomer.resx">
       <DependentUpon>Form_AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsInvoice\Form_AddInvoice.resx">
+      <DependentUpon>Form_AddInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsProducts\Form_AddProducts.resx">
       <DependentUpon>Form_AddProducts.cs</DependentUpon>
@@ -183,8 +211,17 @@
     <EmbeddedResource Include="Gui\GuiHome\Home_UserControl.resx">
       <DependentUpon>Home_UserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GuiInvoice\Invoice_UserControl.resx">
+      <DependentUpon>Invoice_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gui\GuiProducts\Products_UserControl.resx">
       <DependentUpon>Products_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GuiSettings\BackupdData_UserControl.resx">
+      <DependentUpon>BackupdData_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GuiSettings\RestorebackupDataUserControl.resx">
+      <DependentUpon>RestorebackupDataUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\GuiSettings\SettingsAccount_UserControl.resx">
       <DependentUpon>SettingsAccount_UserControl.cs</DependentUpon>
@@ -381,6 +418,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Checkmark_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\النسخ الاحتياطي.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_upload_to_cloud_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Download_From_Cloud_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الفواتير.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

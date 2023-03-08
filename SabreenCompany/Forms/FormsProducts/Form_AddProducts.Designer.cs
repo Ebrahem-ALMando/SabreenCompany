@@ -30,6 +30,8 @@ namespace SabreenCompany.Forms.FormsProducts
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.COMP_Name_Category = new System.Windows.Forms.ComboBox();
+            this.new_Category = new System.Windows.Forms.LinkLabel();
             this.BTN_RemoveImage = new System.Windows.Forms.Button();
             this.picturePhoto_Product = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -42,7 +44,6 @@ namespace SabreenCompany.Forms.FormsProducts
             this.label5 = new System.Windows.Forms.Label();
             this.TX_Number_Product = new System.Windows.Forms.TextBox();
             this.TX_Price_Product = new System.Windows.Forms.TextBox();
-            this.COMP_Name_Category = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TX_Name_Product = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@ namespace SabreenCompany.Forms.FormsProducts
             this.BTN_Save = new System.Windows.Forms.Button();
             this.BTN_Save_Close = new System.Windows.Forms.Button();
             this.BTN_Close = new System.Windows.Forms.Button();
-            this.new_Category = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePhoto_Product)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -82,6 +82,31 @@ namespace SabreenCompany.Forms.FormsProducts
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "معلومات المنتج ";
+            // 
+            // COMP_Name_Category
+            // 
+            this.COMP_Name_Category.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.COMP_Name_Category.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.COMP_Name_Category.BackColor = System.Drawing.SystemColors.Window;
+            this.COMP_Name_Category.DropDownHeight = 170;
+            this.COMP_Name_Category.FormattingEnabled = true;
+            this.COMP_Name_Category.IntegralHeight = false;
+            this.COMP_Name_Category.Location = new System.Drawing.Point(17, 166);
+            this.COMP_Name_Category.MaxDropDownItems = 5;
+            this.COMP_Name_Category.Name = "COMP_Name_Category";
+            this.COMP_Name_Category.Size = new System.Drawing.Size(503, 45);
+            this.COMP_Name_Category.TabIndex = 13;
+            // 
+            // new_Category
+            // 
+            this.new_Category.AutoSize = true;
+            this.new_Category.Location = new System.Drawing.Point(17, 133);
+            this.new_Category.Name = "new_Category";
+            this.new_Category.Size = new System.Drawing.Size(55, 37);
+            this.new_Category.TabIndex = 25;
+            this.new_Category.TabStop = true;
+            this.new_Category.Text = "جديد";
+            this.new_Category.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.new_Category_LinkClicked);
             // 
             // BTN_RemoveImage
             // 
@@ -208,21 +233,6 @@ namespace SabreenCompany.Forms.FormsProducts
             this.TX_Price_Product.TextChanged += new System.EventHandler(this.TX_Price_Product_TextChanged);
             this.TX_Price_Product.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TX_Price_Product_KeyPress);
             // 
-            // COMP_Name_Category
-            // 
-            this.COMP_Name_Category.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.COMP_Name_Category.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.COMP_Name_Category.BackColor = System.Drawing.SystemColors.Window;
-            this.COMP_Name_Category.DropDownHeight = 170;
-            this.COMP_Name_Category.FormattingEnabled = true;
-            this.COMP_Name_Category.IntegralHeight = false;
-            this.COMP_Name_Category.Location = new System.Drawing.Point(17, 166);
-            this.COMP_Name_Category.MaxDropDownItems = 5;
-            this.COMP_Name_Category.Name = "COMP_Name_Category";
-            this.COMP_Name_Category.Size = new System.Drawing.Size(503, 45);
-            this.COMP_Name_Category.Sorted = true;
-            this.COMP_Name_Category.TabIndex = 13;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -309,17 +319,6 @@ namespace SabreenCompany.Forms.FormsProducts
             this.BTN_Close.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Close.UseVisualStyleBackColor = false;
             this.BTN_Close.Click += new System.EventHandler(this.BTN_Close_Click);
-            // 
-            // new_Category
-            // 
-            this.new_Category.AutoSize = true;
-            this.new_Category.Location = new System.Drawing.Point(17, 133);
-            this.new_Category.Name = "new_Category";
-            this.new_Category.Size = new System.Drawing.Size(55, 37);
-            this.new_Category.TabIndex = 25;
-            this.new_Category.TabStop = true;
-            this.new_Category.Text = "جديد";
-            this.new_Category.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.new_Category_LinkClicked);
             // 
             // Form_AddProducts
             // 

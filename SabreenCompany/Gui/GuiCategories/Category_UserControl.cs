@@ -63,7 +63,6 @@ namespace SabreenCompany.Gui.GuiCategories
                 ClsMessageCollections.showWarningIdSelectMessageData();
             }
         }
-
         #endregion
         #region Event
         private void timer1_Tick(object sender, EventArgs e)

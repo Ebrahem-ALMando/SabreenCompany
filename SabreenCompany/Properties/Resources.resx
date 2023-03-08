@@ -138,8 +138,14 @@
   <data name="EmptyData" xml:space="preserve">
     <value>يرجى إدخال جميع البيانات</value>
   </data>
+  <data name="EmptyDataProduct" xml:space="preserve">
+    <value>يرجى إدخال بيانات المنتج</value>
+  </data>
   <data name="EmptyDataSerarch" xml:space="preserve">
     <value>!!! حقل البحث فارغ</value>
+  </data>
+  <data name="ErrorSaveBackupIndesk_C" xml:space="preserve">
+    <value>"C" لا يمكن وضع النسخة على القرص </value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="icons8_about_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -187,6 +193,9 @@
   <data name="icons8_Delete_Trash_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Delete_Trash_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_Download_From_Cloud_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_Download_From_Cloud_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_Edit_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Edit_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -232,6 +241,9 @@
   <data name="icons8_supplier_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_supplier_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_upload_to_cloud_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_upload_to_cloud_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_users_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_users_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -250,8 +262,17 @@
   <data name="SuccessDeleteData" xml:space="preserve">
     <value>تم الحذف بنجاح</value>
   </data>
+  <data name="SuccessRestoreBackup" xml:space="preserve">
+    <value>تمت استعادة النسخة الاحتياطية بنجاح</value>
+  </data>
+  <data name="SuccessSaveBackup" xml:space="preserve">
+    <value>تم اجراء السنخة الاحتياطية بنجاح</value>
+  </data>
   <data name="SuccessUpdateData" xml:space="preserve">
     <value>تم التعديل بنجاح</value>
+  </data>
+  <data name="WarningAmountReceivedGreaterTotalAmount" xml:space="preserve">
+    <value>المبلغ المقبوض اكبر من الكلي</value>
   </data>
   <data name="WarningIdSelectData" xml:space="preserve">
     <value>يرجى تحديد السجل المطلوب</value>
@@ -265,8 +286,14 @@
   <data name="WarningInputJustNumber" xml:space="preserve">
     <value>يرجى ادخال ارقام فقط</value>
   </data>
+  <data name="WarningInputNumberProducts" xml:space="preserve">
+    <value>العدد اكبر من الكمية المتاحة</value>
+  </data>
   <data name="WarningInputPasswordlesslenth" xml:space="preserve">
     <value>كلمة المرور الجديدة قصيرة جدا</value>
+  </data>
+  <data name="WarningInputPathToBackup" xml:space="preserve">
+    <value>يرجى تحديد المسار اولاً</value>
   </data>
   <data name="اعدادات_المستخدم" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\اعدادات المستخدم.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,11 +307,17 @@
   <data name="الزبائن" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\الزبائن.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="الفواتير" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\الفواتير.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="المنتجات" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\المنتجات.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="الموردين" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Suppliers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="النسخ_الاحتياطي" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\النسخ الاحتياطي.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="حول" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\حول.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

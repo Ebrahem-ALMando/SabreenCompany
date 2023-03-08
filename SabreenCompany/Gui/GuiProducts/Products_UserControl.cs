@@ -38,12 +38,13 @@ namespace SabreenCompany.Gui.GuiProducts
             InitializeComponent();
             getData();
         }
+
+        #region Method
         public static Products_UserControl Instance()
         {
             //==> Freeing resources and not cloning more than once
             return products_UserControl ?? (new Products_UserControl());
         }
-        #region Method
         private void getData()
         {
             dataGridViewProducts.DataSource = action.getDataProducts();

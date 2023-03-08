@@ -20,8 +20,9 @@ namespace SabreenCompany
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Login());
+            Application.Run(new Forms.FormsInvoice.Form_AddInvoice());
         }
+        
         /*Forms.FormsProducts.Form_AddProducts()*/
         /*    Forms.FormsSuppliers.Form__AddSuppliers()*/
     }

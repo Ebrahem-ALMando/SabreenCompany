@@ -31,6 +31,7 @@ namespace SabreenCompany.Gui.GuiCategories
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.COMP_Name_Supplier = new System.Windows.Forms.ComboBox();
+            this.new_Supplier = new System.Windows.Forms.LinkLabel();
             this.TX_Type_Category = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.RI_Notes = new System.Windows.Forms.RichTextBox();
@@ -42,7 +43,6 @@ namespace SabreenCompany.Gui.GuiCategories
             this.BTN_Save = new System.Windows.Forms.Button();
             this.BTN_Save_Close = new System.Windows.Forms.Button();
             this.BTN_Close = new System.Windows.Forms.Button();
-            this.new_Supplier = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -78,8 +78,18 @@ namespace SabreenCompany.Gui.GuiCategories
             this.COMP_Name_Supplier.MaxDropDownItems = 5;
             this.COMP_Name_Supplier.Name = "COMP_Name_Supplier";
             this.COMP_Name_Supplier.Size = new System.Drawing.Size(503, 45);
-            this.COMP_Name_Supplier.Sorted = true;
             this.COMP_Name_Supplier.TabIndex = 11;
+            // 
+            // new_Supplier
+            // 
+            this.new_Supplier.AutoSize = true;
+            this.new_Supplier.Location = new System.Drawing.Point(17, 155);
+            this.new_Supplier.Name = "new_Supplier";
+            this.new_Supplier.Size = new System.Drawing.Size(55, 37);
+            this.new_Supplier.TabIndex = 26;
+            this.new_Supplier.TabStop = true;
+            this.new_Supplier.Text = "جديد";
+            this.new_Supplier.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.new_Supplier_LinkClicked);
             // 
             // TX_Type_Category
             // 
@@ -201,17 +211,6 @@ namespace SabreenCompany.Gui.GuiCategories
             this.BTN_Close.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Close.UseVisualStyleBackColor = false;
             this.BTN_Close.Click += new System.EventHandler(this.BTN_Close_Click);
-            // 
-            // new_Supplier
-            // 
-            this.new_Supplier.AutoSize = true;
-            this.new_Supplier.Location = new System.Drawing.Point(17, 155);
-            this.new_Supplier.Name = "new_Supplier";
-            this.new_Supplier.Size = new System.Drawing.Size(55, 37);
-            this.new_Supplier.TabIndex = 26;
-            this.new_Supplier.TabStop = true;
-            this.new_Supplier.Text = "جديد";
-            this.new_Supplier.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.new_Supplier_LinkClicked);
             // 
             // Form_AddCategory
             // 

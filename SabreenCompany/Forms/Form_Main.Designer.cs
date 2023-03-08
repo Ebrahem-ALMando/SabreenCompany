@@ -149,6 +149,7 @@ namespace SabreenCompany.Forms
             this.BTN_Invioce.Text = "الفواتير";
             this.BTN_Invioce.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Invioce.UseVisualStyleBackColor = false;
+            this.BTN_Invioce.Click += new System.EventHandler(this.BTN_Invioce_Click);
             // 
             // BTN_Incomes
             // 

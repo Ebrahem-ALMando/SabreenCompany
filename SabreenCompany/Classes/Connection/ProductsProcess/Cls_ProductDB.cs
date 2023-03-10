@@ -165,5 +165,24 @@ namespace SabreenCompany.Classes.Connection.ProductsProcess
                 Console.WriteLine(ex.Message);
             }
         }
+        //==> 7 Update Rollback Set Number Product  To Invoice
+        public void updateRollbackSetNumberProduct(int id, float numberNew)
+        {
+            try
+            {
+                connection.open();
+                SqlParameter[] param = new SqlParameter[2];
+                param[0] = new SqlParameter("@id", SqlDbType.Int);
+                param[0].Value = id;
+                param[1] = new SqlParameter("@numberNew", SqlDbType.Float);
+                param[1].Value = numberNew;
+                connection.process("updateRollbackSetNumberProduct", param);
+                connection.cloes();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }

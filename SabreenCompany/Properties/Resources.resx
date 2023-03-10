@@ -129,6 +129,9 @@
   <data name="CaptionQuitionUpdateData" xml:space="preserve">
     <value>تعديل</value>
   </data>
+  <data name="CaptionSaveData" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
   <data name="CaptionSuccessActionData" xml:space="preserve">
     <value>نجاح</value>
   </data>
@@ -214,6 +217,9 @@
   <data name="icons8_office_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_office_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_print_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_print_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_Remove_Image_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Remove_Image_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -247,11 +253,17 @@
   <data name="icons8_users_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_users_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_x_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_x_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="QuitionAddData" xml:space="preserve">
     <value>هل تريد الإضافة بالتأكيد</value>
   </data>
   <data name="QuitionDeleteData" xml:space="preserve">
     <value>هل تريد الحذف بالتأكيد</value>
+  </data>
+  <data name="QuitionSaveInvoiceData" xml:space="preserve">
+    <value>هل تريد حفظ الفاتورة؟</value>
   </data>
   <data name="QuitionUpdateData" xml:space="preserve">
     <value>هل تريد التعديل بالتأكيد</value>
@@ -274,8 +286,14 @@
   <data name="WarningAmountReceivedGreaterTotalAmount" xml:space="preserve">
     <value>المبلغ المقبوض اكبر من الكلي</value>
   </data>
+  <data name="WarningDiscountGreaterTotalAmount" xml:space="preserve">
+    <value>مبلغ الحسم اكبر او يساوي الكلي</value>
+  </data>
   <data name="WarningIdSelectData" xml:space="preserve">
     <value>يرجى تحديد السجل المطلوب</value>
+  </data>
+  <data name="WarningIgnoreCountProduct" xml:space="preserve">
+    <value>تم تجاهل القطع المضافة</value>
   </data>
   <data name="WarningInputAlreadyPassword" xml:space="preserve">
     <value>لم تقم بتغيير كلمة السر</value>

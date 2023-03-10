@@ -29,15 +29,16 @@ namespace SabreenCompany.Forms.FormsInvoice
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.COM_Name_Cus_Inv = new System.Windows.Forms.ComboBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.BTN_UpdateProduct_Invoice = new System.Windows.Forms.Button();
@@ -87,14 +88,15 @@ namespace SabreenCompany.Forms.FormsInvoice
             this.BTN_Save = new System.Windows.Forms.Button();
             this.BTN_Save_Close = new System.Windows.Forms.Button();
             this.BTN_Close = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.BTN_CloseControl = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductsInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePhoto_Product)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -113,7 +115,7 @@ namespace SabreenCompany.Forms.FormsInvoice
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.ForeColor = System.Drawing.Color.Indigo;
-            this.groupBox1.Location = new System.Drawing.Point(12, -11);
+            this.groupBox1.Location = new System.Drawing.Point(12, 46);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1633, 659);
             this.groupBox1.TabIndex = 5;
@@ -185,6 +187,30 @@ namespace SabreenCompany.Forms.FormsInvoice
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "معلومات المنتج ";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.SystemColors.Window;
+            this.label22.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Crimson;
+            this.label22.Location = new System.Drawing.Point(710, 578);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(0, 32);
+            this.label22.TabIndex = 50;
+            this.label22.Visible = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Crimson;
+            this.label21.Location = new System.Drawing.Point(877, 274);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(275, 32);
+            this.label21.TabIndex = 49;
+            this.label21.Text = "الكمية المتاحة  في حال اهمال المنتج ";
+            this.label21.Visible = false;
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -248,6 +274,7 @@ namespace SabreenCompany.Forms.FormsInvoice
             this.TX_AmountReceived.Size = new System.Drawing.Size(345, 45);
             this.TX_AmountReceived.TabIndex = 38;
             this.TX_AmountReceived.TextChanged += new System.EventHandler(this.TX_AmountReceived_TextChanged);
+            this.TX_AmountReceived.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TX_AmountReceived_KeyPress);
             // 
             // label13
             // 
@@ -261,10 +288,9 @@ namespace SabreenCompany.Forms.FormsInvoice
             // 
             // COM_TypePayment
             // 
-            this.COM_TypePayment.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.COM_TypePayment.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.COM_TypePayment.BackColor = System.Drawing.SystemColors.Window;
             this.COM_TypePayment.DropDownHeight = 170;
+            this.COM_TypePayment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.COM_TypePayment.FormattingEnabled = true;
             this.COM_TypePayment.IntegralHeight = false;
             this.COM_TypePayment.Items.AddRange(new object[] {
@@ -334,14 +360,14 @@ namespace SabreenCompany.Forms.FormsInvoice
             this.dataGridViewProductsInvoice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewProductsInvoice.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewProductsInvoice.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Cairo", 12F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProductsInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cairo", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProductsInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewProductsInvoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProductsInvoice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -349,29 +375,29 @@ namespace SabreenCompany.Forms.FormsInvoice
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Cairo", 12F);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewProductsInvoice.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Cairo", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewProductsInvoice.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewProductsInvoice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewProductsInvoice.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewProductsInvoice.Name = "dataGridViewProductsInvoice";
             this.dataGridViewProductsInvoice.ReadOnly = true;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Cairo", 12F);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProductsInvoice.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Cairo", 12F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProductsInvoice.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewProductsInvoice.RowHeadersWidth = 51;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewProductsInvoice.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewProductsInvoice.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewProductsInvoice.RowTemplate.Height = 26;
             this.dataGridViewProductsInvoice.RowTemplate.ReadOnly = true;
             this.dataGridViewProductsInvoice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -383,9 +409,6 @@ namespace SabreenCompany.Forms.FormsInvoice
             // 
             // Column1
             // 
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle22;
             this.Column1.HeaderText = "الاسم";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
@@ -709,7 +732,7 @@ namespace SabreenCompany.Forms.FormsInvoice
             this.flowLayoutPanel1.Controls.Add(this.BTN_Save_Close);
             this.flowLayoutPanel1.Controls.Add(this.BTN_Close);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 654);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 710);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5, 5, 550, 5);
@@ -761,49 +784,54 @@ namespace SabreenCompany.Forms.FormsInvoice
             this.BTN_Close.Text = "إغلاق";
             this.BTN_Close.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Close.UseVisualStyleBackColor = false;
+            this.BTN_Close.Click += new System.EventHandler(this.BTN_Close_Click);
             // 
-            // label21
+            // panel2
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.Crimson;
-            this.label21.Location = new System.Drawing.Point(877, 274);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(275, 32);
-            this.label21.TabIndex = 49;
-            this.label21.Text = "الكمية المتاحة  في حال اهمال المنتج ";
-            this.label21.Visible = false;
+            this.panel2.BackColor = System.Drawing.Color.Indigo;
+            this.panel2.Controls.Add(this.BTN_CloseControl);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1669, 40);
+            this.panel2.TabIndex = 7;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
-            // label22
+            // BTN_CloseControl
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.SystemColors.Window;
-            this.label22.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Crimson;
-            this.label22.Location = new System.Drawing.Point(752, 578);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(0, 32);
-            this.label22.TabIndex = 50;
-            this.label22.Visible = false;
+            this.BTN_CloseControl.BackColor = System.Drawing.Color.Indigo;
+            this.BTN_CloseControl.FlatAppearance.BorderSize = 0;
+            this.BTN_CloseControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_CloseControl.Image = global::SabreenCompany.Properties.Resources.icons8_x_32px;
+            this.BTN_CloseControl.Location = new System.Drawing.Point(1613, 1);
+            this.BTN_CloseControl.Name = "BTN_CloseControl";
+            this.BTN_CloseControl.Size = new System.Drawing.Size(51, 36);
+            this.BTN_CloseControl.TabIndex = 51;
+            this.BTN_CloseControl.UseVisualStyleBackColor = false;
+            this.BTN_CloseControl.Click += new System.EventHandler(this.BTN_CloseControl_Click);
+            this.BTN_CloseControl.MouseEnter += new System.EventHandler(this.BTN_CloseControl_MouseEnter);
+            this.BTN_CloseControl.MouseLeave += new System.EventHandler(this.BTN_CloseControl_MouseLeave);
             // 
             // Form_AddInvoice
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1669, 725);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1669, 781);
+            this.ControlBox = false;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Cairo", 12F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_AddInvoice";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "اضافة /تعديل فاتورة";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_AddInvoice_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -812,6 +840,7 @@ namespace SabreenCompany.Forms.FormsInvoice
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProductsInvoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePhoto_Product)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -866,12 +895,14 @@ namespace SabreenCompany.Forms.FormsInvoice
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button BTN_CloseControl;
     }
 }

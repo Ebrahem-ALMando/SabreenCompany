@@ -56,6 +56,20 @@ namespace SabreenCompany.Classes
             messageShow.Icon = MessageDialogIcon.Warning;
             messageShow.Show(Resources.WarningAmountReceivedGreaterTotalAmount + "\n ", Resources.CaptionWarningData);
         }
+        public static void WarningDiscountGreaterTotalAmountMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Light;
+            messageShow.Icon = MessageDialogIcon.Warning;
+            messageShow.Show(Resources.WarningDiscountGreaterTotalAmount + "\n ", Resources.CaptionWarningData);
+        }
+        public static void WarningIgnoreCountProductMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Light;
+            messageShow.Icon = MessageDialogIcon.Warning;
+            messageShow.Show(Resources.WarningIgnoreCountProduct + "\n ", Resources.CaptionWarningData);
+        }
         //===>Show Warning InputAlready Password Message
         public static void showWarningInputAlreadyPasswordMessage()
         {
@@ -103,6 +117,14 @@ namespace SabreenCompany.Classes
             messageShow.Style = MessageDialogStyle.Dark;
             messageShow.Icon = MessageDialogIcon.Question;
             DialogResult check = messageShow.Show(Resources.QuitionDeleteData + "\n ", Resources.CaptionQuitionDeleteData);
+            return check;
+        }
+        public static DialogResult showQuitionSaveInvoiceMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OKCancel;
+            messageShow.Style = MessageDialogStyle.Dark;
+            messageShow.Icon = MessageDialogIcon.Question;
+            DialogResult check = messageShow.Show(Resources.QuitionSaveInvoiceData + "\n ", Resources.CaptionSaveData);
             return check;
         }
         //==>Show Message Success Delete Data

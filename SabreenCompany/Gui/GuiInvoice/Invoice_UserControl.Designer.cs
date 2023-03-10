@@ -39,6 +39,7 @@ namespace SabreenCompany.Gui.GuiInvoice
             this.BTN_Add = new System.Windows.Forms.Button();
             this.BTN_Update = new System.Windows.Forms.Button();
             this.BTN_Delete = new System.Windows.Forms.Button();
+            this.BTN_Print = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TX_Serarch = new System.Windows.Forms.TextBox();
             this.BTN_Search = new System.Windows.Forms.Button();
@@ -98,6 +99,9 @@ namespace SabreenCompany.Gui.GuiInvoice
             this.dataGridViewInvoice.Size = new System.Drawing.Size(1278, 479);
             this.dataGridViewInvoice.StandardTab = true;
             this.dataGridViewInvoice.TabIndex = 19;
+            this.dataGridViewInvoice.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewInvoice_CellFormatting);
+            this.dataGridViewInvoice.SelectionChanged += new System.EventHandler(this.dataGridViewInvoice_SelectionChanged);
+            this.dataGridViewInvoice.Click += new System.EventHandler(this.dataGridViewInvoice_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -106,6 +110,7 @@ namespace SabreenCompany.Gui.GuiInvoice
             this.flowLayoutPanel1.Controls.Add(this.BTN_Add);
             this.flowLayoutPanel1.Controls.Add(this.BTN_Update);
             this.flowLayoutPanel1.Controls.Add(this.BTN_Delete);
+            this.flowLayoutPanel1.Controls.Add(this.BTN_Print);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 55);
@@ -127,6 +132,7 @@ namespace SabreenCompany.Gui.GuiInvoice
             this.BTN_Add.Text = "إضافة";
             this.BTN_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Add.UseVisualStyleBackColor = false;
+            this.BTN_Add.Click += new System.EventHandler(this.BTN_Add_Click);
             // 
             // BTN_Update
             // 
@@ -155,13 +161,28 @@ namespace SabreenCompany.Gui.GuiInvoice
             this.BTN_Delete.Text = "حذف";
             this.BTN_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Delete.UseVisualStyleBackColor = false;
+            this.BTN_Delete.Click += new System.EventHandler(this.BTN_Delete_Click);
+            // 
+            // BTN_Print
+            // 
+            this.BTN_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
+            this.BTN_Print.ForeColor = System.Drawing.Color.Indigo;
+            this.BTN_Print.Image = global::SabreenCompany.Properties.Resources.icons8_print_32px;
+            this.BTN_Print.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Print.Location = new System.Drawing.Point(587, 8);
+            this.BTN_Print.Name = "BTN_Print";
+            this.BTN_Print.Size = new System.Drawing.Size(165, 55);
+            this.BTN_Print.TabIndex = 8;
+            this.BTN_Print.Text = "طباعة";
+            this.BTN_Print.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Print.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.TX_Serarch);
             this.panel1.Controls.Add(this.BTN_Search);
-            this.panel1.Location = new System.Drawing.Point(326, 8);
+            this.panel1.Location = new System.Drawing.Point(155, 8);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(426, 55);
@@ -272,5 +293,6 @@ namespace SabreenCompany.Gui.GuiInvoice
         private System.Windows.Forms.Label Date;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button BTN_Print;
     }
 }

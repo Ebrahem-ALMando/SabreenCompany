@@ -97,6 +97,15 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to حفظ.
+        /// </summary>
+        internal static string CaptionSaveData {
+            get {
+                return ResourceManager.GetString("CaptionSaveData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to نجاح.
         /// </summary>
         internal static string CaptionSuccessActionData {
@@ -373,6 +382,16 @@ namespace SabreenCompany.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_print_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_print_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Remove_Image_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_Remove_Image_32px", resourceCulture);
@@ -481,6 +500,16 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_x_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_x_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to هل تريد الإضافة بالتأكيد.
         /// </summary>
         internal static string QuitionAddData {
@@ -495,6 +524,15 @@ namespace SabreenCompany.Properties {
         internal static string QuitionDeleteData {
             get {
                 return ResourceManager.GetString("QuitionDeleteData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to هل تريد حفظ الفاتورة؟.
+        /// </summary>
+        internal static string QuitionSaveInvoiceData {
+            get {
+                return ResourceManager.GetString("QuitionSaveInvoiceData", resourceCulture);
             }
         }
         
@@ -562,11 +600,29 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to مبلغ الحسم اكبر او يساوي الكلي.
+        /// </summary>
+        internal static string WarningDiscountGreaterTotalAmount {
+            get {
+                return ResourceManager.GetString("WarningDiscountGreaterTotalAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to يرجى تحديد السجل المطلوب.
         /// </summary>
         internal static string WarningIdSelectData {
             get {
                 return ResourceManager.GetString("WarningIdSelectData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم تجاهل القطع المضافة.
+        /// </summary>
+        internal static string WarningIgnoreCountProduct {
+            get {
+                return ResourceManager.GetString("WarningIgnoreCountProduct", resourceCulture);
             }
         }
         

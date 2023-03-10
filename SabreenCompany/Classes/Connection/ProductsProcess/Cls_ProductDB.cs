@@ -126,7 +126,7 @@ namespace SabreenCompany.Classes.Connection.ProductsProcess
                 return dataCategory;
             }
         }
-        //==> 5 getproductIndividual To Products
+        //==> 5 Get Product Individual To Invoice
         public DataTable getproductIndividualData(int id)
         {
             DataTable dataProduct = new DataTable();
@@ -182,6 +182,43 @@ namespace SabreenCompany.Classes.Connection.ProductsProcess
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+        }
+        //==> 8 Get Products  To Invoice
+        public DataTable getProductsToInvoice(int id)
+        {
+            DataTable dataProducts = new DataTable();
+            try
+            {
+                connection.open();
+                SqlParameter[] param = new SqlParameter[1];
+                param[0] = new SqlParameter("@id", SqlDbType.Int);
+                param[0].Value = id;
+                dataProducts = connection.Read_Data("getProductsToInvoice", param);
+                connection.cloes();
+                return dataProducts;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return dataProducts;
+            }
+        }
+        //==> 9 Get ID To Current Products
+        public DataTable getIdcurrentProduct()
+        {
+            DataTable dataProducts = new DataTable();
+            try
+            {
+                connection.open();
+                dataProducts = connection.Read_Data("getIdcurrentProduct", null);
+                connection.cloes();
+                return dataProducts;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return dataProducts;
             }
         }
     }

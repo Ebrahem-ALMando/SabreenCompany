@@ -21,6 +21,8 @@ namespace SabreenCompany.Forms.FormsInvoice
     {
         //==> Var Info To Update Or Delete 
         # region Variables
+        private int id;
+     
         private int idInvoice=0;
         private int processNumberProduct;
         private float countProduct;
@@ -30,6 +32,7 @@ namespace SabreenCompany.Forms.FormsInvoice
         private float amountReceived = 0;
         private string nameProduct;
         private bool isSaveProduct = false;
+        private bool isClose;
         Cls_CustomerDB custmoer = new Cls_CustomerDB();
         Cls_ProductDB products = new Cls_ProductDB();
         Cls_IvoiceDB action = new Cls_IvoiceDB();
@@ -42,12 +45,53 @@ namespace SabreenCompany.Forms.FormsInvoice
             loadproducts();
 
         }
+        public Form_AddInvoice(int id, string name_Cus, string totalAm, string discount, string receivedAm,
+            string remainingAm, string typePay, string desc, string note, string date, int isPayDone)
+        {
+            InitializeComponent();
+            loadCustomer();
+            loadproducts();
+            loadData(id, name_Cus, totalAm, discount, receivedAm, remainingAm, typePay, desc, note, date, isPayDone);
+
+        }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         #region Method
         // ========>  Load Data <======= 
+        private void loadData(int id,string name_Cus,string totalAm, string discount,string receivedAm,
+            string remainingAm, string typePay, string desc, string note, string date, int isPayDone)
+        {
+            this.id = id;
+            COM_Name_Cus_Inv.Text = name_Cus;
+            dateTimePicker_Invoic.Value = Convert.ToDateTime(date);
+            RI_TypeProduct_Invoice.Text = desc;
+            RI_Notes_Invoice.Text = note;
+            TX_Discount.Text = discount;
+            this.discount = Convert.ToSingle(discount.Replace('$', ' '));
+            TX_TotalAmountInvoice.Text = totalAm;
+            lastToatlPrice = Convert.ToSingle(totalAm.Replace('$', ' '));
+            TX_AmountReceived.Text = receivedAm;
+            float totalAmpont= Convert.ToSingle(totalAm.Replace('$',' ')) -Convert.ToSingle(discount);
+            label22.Text = "المبلغ المتبقي" + " (  " + remainingAm + ")";
+            label22.BackColor = Color.FromArgb(240, 240, 240);
+            label22.Visible = true;
+            COM_TypePayment.Text = typePay;
+            loadProductToInvoice();
+        }
+
+        private void loadProductToInvoice()
+        {
+            int n = products.getProductsToInvoice(id).Rows.Count;
+            for(int i = 0; i < n; i++)
+            {
+                dataGridViewProductsInvoice.Rows.Add(products.getProductsToInvoice(id).Rows[i][0].ToString(),
+                products.getProductsToInvoice(id).Rows[i][1], products.getProductsToInvoice(id).Rows[i][2],
+                products.getProductsToInvoice(id).Rows[i][3], products.getProductsToInvoice(id).Rows[i][4]);
+            }
+     
+        }
         private void loadCustomer()
         {
             COM_Name_Cus_Inv.DataSource = custmoer.getDataCustomer();
@@ -187,6 +231,17 @@ namespace SabreenCompany.Forms.FormsInvoice
             idInvoice = Convert.ToInt32(action.getIDInvoiceToAddProduct().Rows[0][0]);
         }
         // ========>  Check and Clear Data Products <======= 
+        private void checkIsPayment()
+        {
+            if (COM_TypePayment.SelectedIndex == 0)
+            {
+                isPaymentDone = 1;
+            }
+            else
+            {
+                isPaymentDone = 0;
+            }
+        }
         private void checkTypePayment()
         {
             try
@@ -308,9 +363,18 @@ namespace SabreenCompany.Forms.FormsInvoice
                 {
                     if (ClsMessageCollections.showQuitionSaveInvoiceMessageData() == DialogResult.OK)
                     {
+                        checkIsPayment();
                         if (checkEmptyFieldsInvoice())
                         {
-                            this.Close();
+                                isSaveProduct = true;
+                                action.insertInvoice(getCustomerID(), dateTimePicker_Invoic.Value,
+                                lastToatlPrice, discount, amountReceived,
+                                RI_TypeProduct_Invoice.Text, RI_Notes_Invoice.Text, COM_TypePayment.Text, isPaymentDone);
+                                getIDInvoiceCurrent();
+                                insertProductToInvoice();
+                                clearFieldsIvoice();
+                                ClsMessageCollections.showSuccessAddMessageData();
+                                this.Close();
                         };
                     }
                     else
@@ -420,6 +484,63 @@ namespace SabreenCompany.Forms.FormsInvoice
            
         }
         //================== Action Data ===============
+        private void addData()
+        {
+            checkIsPayment();
+            if (checkEmptyFieldsInvoice())
+            {
+                if (ClsMessageCollections.showQuitionAddMessageData() == DialogResult.OK)
+                {
+                    isSaveProduct = true;
+                    action.insertInvoice(getCustomerID(), dateTimePicker_Invoic.Value,
+                    lastToatlPrice, discount, amountReceived,
+                    RI_TypeProduct_Invoice.Text, RI_Notes_Invoice.Text, COM_TypePayment.Text, isPaymentDone);
+                    getIDInvoiceCurrent();
+                    insertProductToInvoice();
+                    clearFieldsIvoice();
+                    ClsMessageCollections.showSuccessAddMessageData();
+                    if (isClose)
+                    {
+                        this.Close();
+                    }
+                }
+
+            };
+        }
+        private void updateData()
+        {
+            checkIsPayment();
+            if (checkEmptyFieldsInvoice())
+            {
+                if (ClsMessageCollections.showQuitionUpdateMessageData() == DialogResult.OK)
+                {
+                    isSaveProduct = true;
+                    action.updateInvoice(id,getCustomerID(), dateTimePicker_Invoic.Value,
+                    lastToatlPrice, discount, amountReceived,
+                    RI_TypeProduct_Invoice.Text, RI_Notes_Invoice.Text, COM_TypePayment.Text, isPaymentDone);
+                    getIDInvoiceCurrent();
+                 /*   insertProductToInvoice();*/
+                    clearFieldsIvoice();
+                    ClsMessageCollections.showSuccessUpdateMessageData();
+                    if (isClose)
+                    {
+                        this.Close();
+                    }
+                }
+
+            };
+        }
+        private void saveData()
+        {
+            if (id != 0)
+            {
+                updateData();
+            }
+            else
+            {
+                addData();
+            }
+        }
         private void insertProductToInvoice()
         {
             float price = 0, number = 0, tatalAmount = 0;
@@ -437,29 +558,10 @@ namespace SabreenCompany.Forms.FormsInvoice
         #endregion
         private void BTN_Save_Click(object sender, EventArgs e)
         {
-            if (COM_TypePayment.SelectedIndex == 0)
-            {
-                isPaymentDone = 1;
-            }
-            else
-            {
-                isPaymentDone = 0;
-            }
-            if (checkEmptyFieldsInvoice())
-            {
-                if (ClsMessageCollections.showQuitionAddMessageData() == DialogResult.OK)
-                {
-                    isSaveProduct = true;
-                    action.insertInvoice(getCustomerID(), dateTimePicker_Invoic.Value,
-                    lastToatlPrice, discount, amountReceived,
-                    RI_TypeProduct_Invoice.Text, RI_Notes_Invoice.Text, COM_TypePayment.Text, isPaymentDone);
-                    getIDInvoiceCurrent();
-                    insertProductToInvoice();
-                    clearFieldsIvoice();
-                    ClsMessageCollections.showSuccessAddMessageData();
-                }
+            isClose = false;
+            saveData();
 
-            };
+
         }
         private void COM_Name_Product_Invoice_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -643,5 +745,11 @@ namespace SabreenCompany.Forms.FormsInvoice
         {
             checkSaveProduct();
         }
+
+        private void BTN_Save_Close_Click(object sender, EventArgs e)
+        {
+            isClose = true;
+            saveData();
+        }
     }
-}
+} 

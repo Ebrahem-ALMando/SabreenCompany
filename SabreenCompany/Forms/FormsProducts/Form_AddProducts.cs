@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using SabreenCompany.Classes;
+using SabreenCompany.Classes.Connection.BoxMoneyProcess;
 using SabreenCompany.Classes.Connection.CategoryProcess;
 using SabreenCompany.Classes.Connection.ProductsProcess;
 using SabreenCompany.Gui.GuiCategories;
@@ -20,27 +21,61 @@ namespace SabreenCompany.Forms.FormsProducts
     {
         private bool isClose;
         private  int id;
+        private int idBox;
+        private float totalAmount;
+        private float totalAmountBox;
+        private float totalToUpdate;
         Cls_CategoryDB category = new Cls_CategoryDB();
         Cls_ProductDB action = new Cls_ProductDB();
+        Cls_BoxMoneyDB boxMoneyDB = new Cls_BoxMoneyDB();
         public Form_AddProducts()
         {
             InitializeComponent();
             loadCategory();
+            loadTotalAmountBoxMoney();
         }
         public Form_AddProducts(int id,string name,string cat,string pri, string num, string totalAmount,string desc, MemoryStream m)
         {
             InitializeComponent();
             loadCategory();
             loadData(id, name, cat, pri, num, totalAmount, desc, m);
+            loadTotalAmountBoxMoney();
+            totalToUpdate = Convert.ToSingle(totalAmount.Replace('$', ' '));
         }
         #region method
+        private void loadTotalAmountBoxMoney()
+        {
+            label9.Text = boxMoneyDB.getDataBoxMoney().Rows[0][2].ToString();
+            totalAmountBox=Convert.ToSingle(boxMoneyDB.getDataBoxMoney().Rows[0][2].ToString().Replace('$',' '));
+            idBox = Convert.ToInt32(boxMoneyDB.getDataBoxMoney().Rows[0][0]);
+            
+        }
+        private int getIdcurrentProduct() {
+            if (id != 0)
+            {
+              
+                return id;
+            }
+            else
+            {
+                return Convert.ToInt32(action.getIdcurrentProduct().Rows[0][0]);
+            }
+        }
+        private void setTotalAmountToBoxMony()
+        {
+              boxMoneyDB.withdrawalBoxMony(idBox, 0, getIdcurrentProduct(),
+              totalAmount, 0, 1);
+              totalAmount = 0;
+        }
         private void loadCategory()
         {
             COMP_Name_Category.DataSource = category.getDataCategory();
             COMP_Name_Category.DisplayMember = "الاسم";
             COMP_Name_Category.ValueMember = "المعرف";
             COMP_Name_Category.SelectedIndex = -1;
+           
         }
+
         private void loadTotalAmount()
         {
             if (TX_Price_Product.Text != "" && TX_Number_Product.Text != "")
@@ -49,10 +84,12 @@ namespace SabreenCompany.Forms.FormsProducts
                 price = Convert.ToSingle(TX_Price_Product.Text);
                 number = Convert.ToSingle(TX_Number_Product.Text);
                 TX_TotalAmount_Product.Text = " $ "+(price * number).ToString();
+                totalAmount = price * number;
             }
             else
             {
                 TX_TotalAmount_Product.Text = "";
+                
             }
         }
         private void loadData(int id,string name, string cat, string pri, string num, string totalAmount, string desc, MemoryStream me)
@@ -97,25 +134,35 @@ namespace SabreenCompany.Forms.FormsProducts
         {
             try
             {
+
                 if (TX_Name_Product.Text == "" || TX_Number_Product.Text == "" || TX_Price_Product.Text == ""||COMP_Name_Category.SelectedIndex==-1)
                 {
                     ClsMessageCollections.showEmptyMessageData();
                 }
                 else
                 {
-                    if (ClsMessageCollections.showQuitionAddMessageData() == DialogResult.OK)
+                    if (totalAmountBox >= totalAmount)
                     {
-                        int id_Category;
-                        Int32.TryParse(COMP_Name_Category.SelectedValue.ToString(), out id_Category);
-                        action.insertProduct(id_Category, TX_Name_Product.Text
-                       , Convert.ToSingle(TX_Price_Product.Text), Convert.ToSingle(TX_Number_Product.Text), RI_Notes.Text, saveImage());
-                        ClsMessageCollections.showSuccessAddMessageData();
-                        clearField();
-                        if (isClose)
+                        if (ClsMessageCollections.showQuitionAddMessageData() == DialogResult.OK)
                         {
-                            this.Close();
+                            int id_Category;
+                            Int32.TryParse(COMP_Name_Category.SelectedValue.ToString(), out id_Category);
+                            action.insertProduct(id_Category, TX_Name_Product.Text
+                           , Convert.ToSingle(TX_Price_Product.Text), Convert.ToSingle(TX_Number_Product.Text), RI_Notes.Text, saveImage());
+                            setTotalAmountToBoxMony();
+                            loadTotalAmountBoxMoney();
+                            ClsMessageCollections.showSuccessAddMessageData();
+                            clearField();
+                           
+                            if (isClose)
+                            {
+                                this.Close();
+                            }
+
                         }
                     }
+                    else { ClsMessageCollections.showWarningNotEnoughAmountMessageData(); }
+                  
                 }
             }
             catch(Exception ex)
@@ -134,18 +181,29 @@ namespace SabreenCompany.Forms.FormsProducts
                 }
                 else
                 {
-                    if (ClsMessageCollections.showQuitionUpdateMessageData() == DialogResult.OK)
+                    if (totalAmountBox+totalToUpdate >= totalAmount)
                     {
-                        int id_Category;
-                        Int32.TryParse(COMP_Name_Category.SelectedValue.ToString(), out id_Category);
-                        action.updateProduct(id, id_Category, TX_Name_Product.Text
-                       , Convert.ToSingle(TX_Price_Product.Text), Convert.ToSingle(TX_Number_Product.Text), RI_Notes.Text, saveImage());
-                        ClsMessageCollections.showSuccessUpdateMessageData();
-                        if (isClose)
+                        if (ClsMessageCollections.showQuitionUpdateMessageData() == DialogResult.OK)
                         {
-                            this.Close();
+                            int id_Category;
+                            Int32.TryParse(COMP_Name_Category.SelectedValue.ToString(), out id_Category);
+                            action.updateProduct(id, id_Category, TX_Name_Product.Text
+                           , Convert.ToSingle(TX_Price_Product.Text), Convert.ToSingle(TX_Number_Product.Text), RI_Notes.Text, saveImage());
+                            ClsMessageCollections.showSuccessUpdateMessageData();
+                            boxMoneyDB.depositBoxMony(idBox, 0, getIdcurrentProduct(),
+                                 totalToUpdate, 1, 0);
+                            setTotalAmountToBoxMony();
+                            loadTotalAmountBoxMoney();
+                            totalToUpdate = Convert.ToSingle(TX_TotalAmount_Product.Text.Replace('$', ' '));
+                            totalAmount = totalToUpdate;
+                            if (isClose)
+                            {
+                                this.Close();
+                            }
                         }
                     }
+                    else { ClsMessageCollections.showWarningNotEnoughAmountMessageData(); }
+                 
                 }
             }
             catch (Exception ex)
@@ -156,14 +214,20 @@ namespace SabreenCompany.Forms.FormsProducts
         }
         private void saveData()
         {
+          
             if (id != 0)
             {
+                
                 updateDate();
+               /* totalAmountBox += totalAmount;*/
             }
             else
             {
                 addDate();
+              
             }
+           
+           
         }
         #endregion
         #region Event
@@ -223,37 +287,11 @@ namespace SabreenCompany.Forms.FormsProducts
         }
         private void TX_Price_Product_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar >= 'A' && e.KeyChar <= 'Z' || e.KeyChar >= 'a' && e.KeyChar <= 'z' ||
-             e.KeyChar >= 'ا' && e.KeyChar <= 'ي' || e.KeyChar == ' ' || e.KeyChar == '`'
-              || e.KeyChar == '-' || e.KeyChar == '*' || e.KeyChar == '@'
-             || e.KeyChar == '!' || e.KeyChar == '^' || e.KeyChar == '&' || e.KeyChar == '('
-             || e.KeyChar == ')' || e.KeyChar == '_' || e.KeyChar == '~'
-             || e.KeyChar == '/' || e.KeyChar == ';')
-            {
-                e.Handled = true;
-                ClsMessageCollections.showWarningInputJustNumberMessageData();
-            }
-            else
-            {
-                e.Handled = false;
-            }
+            ClsMessageCollections.checkInputTextBoxNumber(sender, e);
         }
         private void TX_Number_Product_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar >= 'A' && e.KeyChar <= 'Z' || e.KeyChar >= 'a' && e.KeyChar <= 'z' ||
-             e.KeyChar >= 'ا' && e.KeyChar <= 'ي' || e.KeyChar == ' ' || e.KeyChar == '`'
-              || e.KeyChar == '-' || e.KeyChar == '*' || e.KeyChar == '@'
-             || e.KeyChar == '!' || e.KeyChar == '^' || e.KeyChar == '&' || e.KeyChar == '('
-             || e.KeyChar == ')' || e.KeyChar == '_' || e.KeyChar == '~'
-             || e.KeyChar == '/' || e.KeyChar == ';')
-            {
-                e.Handled = true;
-                ClsMessageCollections.showWarningInputJustNumberMessageData();
-            }
-            else
-            {
-                e.Handled = false;
-            }
+            ClsMessageCollections.checkInputTextBoxNumber(sender, e);
         }
         private void new_Category_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

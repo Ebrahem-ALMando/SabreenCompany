@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ClsMessageCollections.cs" />
+    <Compile Include="Classes\Connection\BoxMoneyProcess\Cls_BoxMoneyDB.cs" />
     <Compile Include="Classes\Connection\CategoryProcess\Cls_CategoryDB.cs" />
     <Compile Include="Classes\Connection\Cls_AccessLayer_DB.cs" />
     <Compile Include="Classes\Connection\CustomerProcess\Cls_CustomerDB.cs" />
@@ -74,6 +75,12 @@
     <Compile Include="Classes\Connection\SuplliersProcess\Cls_SuppliersDB.cs" />
     <Compile Include="Classes\Home\Cls_PageManager.cs" />
     <Compile Include="Classes\Login\Cls_Login.cs" />
+    <Compile Include="Forms\FormsBoxMoney\Form_BoxMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsBoxMoney\Form_BoxMoney.Designer.cs">
+      <DependentUpon>Form_BoxMoney.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormsCustomers\Form_AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +185,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormsBoxMoney\Form_BoxMoney.resx">
+      <DependentUpon>Form_BoxMoney.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsCustomers\Form_AddCustomer.resx">
       <DependentUpon>Form_AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -436,6 +446,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_print_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الصندوق.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_deposit_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_withdrawal_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Withdrawal_32px_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -103,6 +103,44 @@ namespace SabreenCompany.Classes
             return check;
         }
         //==>Show Message Quition Add Data
+        public static DialogResult showQuitionDepositMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OKCancel;
+            messageShow.Style = MessageDialogStyle.Dark;
+            messageShow.Icon = MessageDialogIcon.Question;
+            DialogResult check = messageShow.Show(Resources.QuitionDepositData + "\n ", Resources.CaptionQuitionDepositData);
+            return check;
+        }
+        public static DialogResult showQuitionWithdrawalMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OKCancel;
+            messageShow.Style = MessageDialogStyle.Dark;
+            messageShow.Icon = MessageDialogIcon.Question;
+            DialogResult check = messageShow.Show(Resources.QuitionWithdrawalData + "\n ", Resources.CaptionQuitionwithdrawalData);
+            return check;
+        }
+        public static void showSuccessWithdrawalMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Dark;
+            messageShow.Icon = MessageDialogIcon.Information;
+            messageShow.Show(Resources.SuccessWithdrawalData + "\n ", Resources.CaptionSuccessActionData);
+        }
+        public static void showSuccessDepositMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Dark;
+            messageShow.Icon = MessageDialogIcon.Information;
+            messageShow.Show(Resources.SuccessDepositData + "\n ", Resources.CaptionSuccessActionData);
+        }
+        public static void showWarningNotEnoughAmountMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Light;
+            messageShow.Icon = MessageDialogIcon.Warning;
+            messageShow.Show(Resources.WarningNotEnoughAmount + "\n ", Resources.CaptionWarningData);
+        }
+        //==>Show Message Quition Add Data
         public static void showWarningInputJustNumberMessageData()
         {
             messageShow.Style = MessageDialogStyle.Light;
@@ -189,6 +227,25 @@ namespace SabreenCompany.Classes
             messageShow.Style = MessageDialogStyle.Dark;
             messageShow.Icon = MessageDialogIcon.Information;
             messageShow.Show(Resources.SuccessRestoreBackup + "\n ", Resources.CaptionSuccessActionData);
+        }
+        //---------------------------
+        //==========================
+        public static void checkInputTextBoxNumber(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar >= 'A' && e.KeyChar <= 'Z' || e.KeyChar >= 'a' && e.KeyChar <= 'z' ||
+                e.KeyChar >= 'ا' && e.KeyChar <= 'ي' || e.KeyChar == ' ' || e.KeyChar == '`'
+                 || e.KeyChar == '-' || e.KeyChar == '*' || e.KeyChar == '@'
+                || e.KeyChar == '!' || e.KeyChar == '^' || e.KeyChar == '&' || e.KeyChar == '('
+                || e.KeyChar == ')' || e.KeyChar == '_' || e.KeyChar == '~'
+                || e.KeyChar == '/' || e.KeyChar == ';' || e.KeyChar == '+')
+            {
+                e.Handled = true;
+                showWarningInputJustNumberMessageData();
+            }
+            else
+            {
+                e.Handled = false;
+            }
         }
     }
 }

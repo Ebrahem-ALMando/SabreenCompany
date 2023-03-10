@@ -126,8 +126,14 @@
   <data name="CaptionQuitionDeleteData" xml:space="preserve">
     <value>حذف</value>
   </data>
+  <data name="CaptionQuitionDepositData" xml:space="preserve">
+    <value>ايداع</value>
+  </data>
   <data name="CaptionQuitionUpdateData" xml:space="preserve">
     <value>تعديل</value>
+  </data>
+  <data name="CaptionQuitionwithdrawalData" xml:space="preserve">
+    <value>سحب</value>
   </data>
   <data name="CaptionSaveData" xml:space="preserve">
     <value>حفظ</value>
@@ -196,6 +202,9 @@
   <data name="icons8_Delete_Trash_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Delete_Trash_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_deposit_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_deposit_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_Download_From_Cloud_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_Download_From_Cloud_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -253,6 +262,9 @@
   <data name="icons8_users_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_users_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_Withdrawal_32px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_Withdrawal_32px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_x_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_x_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -262,17 +274,26 @@
   <data name="QuitionDeleteData" xml:space="preserve">
     <value>هل تريد الحذف بالتأكيد</value>
   </data>
+  <data name="QuitionDepositData" xml:space="preserve">
+    <value>هل تريد ايداع المبلغ بالتأكيد</value>
+  </data>
   <data name="QuitionSaveInvoiceData" xml:space="preserve">
     <value>هل تريد حفظ الفاتورة؟</value>
   </data>
   <data name="QuitionUpdateData" xml:space="preserve">
     <value>هل تريد التعديل بالتأكيد</value>
   </data>
+  <data name="QuitionWithdrawalData" xml:space="preserve">
+    <value>هل تريد سحب المبلغ بالتأكيد</value>
+  </data>
   <data name="SuccessAddData" xml:space="preserve">
     <value>تمت الإضافة بنجاح</value>
   </data>
   <data name="SuccessDeleteData" xml:space="preserve">
     <value>تم الحذف بنجاح</value>
+  </data>
+  <data name="SuccessDepositData" xml:space="preserve">
+    <value>تم الايداع بنجاح</value>
   </data>
   <data name="SuccessRestoreBackup" xml:space="preserve">
     <value>تمت استعادة النسخة الاحتياطية بنجاح</value>
@@ -282,6 +303,9 @@
   </data>
   <data name="SuccessUpdateData" xml:space="preserve">
     <value>تم التعديل بنجاح</value>
+  </data>
+  <data name="SuccessWithdrawalData" xml:space="preserve">
+    <value>تم السحب بنجاح</value>
   </data>
   <data name="WarningAmountReceivedGreaterTotalAmount" xml:space="preserve">
     <value>المبلغ المقبوض اكبر من الكلي</value>
@@ -313,6 +337,9 @@
   <data name="WarningInputPathToBackup" xml:space="preserve">
     <value>يرجى تحديد المسار اولاً</value>
   </data>
+  <data name="WarningNotEnoughAmount" xml:space="preserve">
+    <value>لا يوجد مبلغ كافي</value>
+  </data>
   <data name="اعدادات_المستخدم" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\اعدادات المستخدم.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -324,6 +351,9 @@
   </data>
   <data name="الزبائن" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\الزبائن.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="الصندوق" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\الصندوق.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="الفواتير" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\الفواتير.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

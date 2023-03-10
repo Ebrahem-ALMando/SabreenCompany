@@ -192,6 +192,7 @@ namespace SabreenCompany
             this.TX_Password.Size = new System.Drawing.Size(270, 36);
             this.TX_Password.TabIndex = 3;
             this.TX_Password.Enter += new System.EventHandler(this.TX_Password_Enter);
+            this.TX_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TX_Password_KeyDown);
             this.TX_Password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TX_Password_KeyPress);
             this.TX_Password.Leave += new System.EventHandler(this.TX_Password_Leave);
             // 
@@ -218,6 +219,7 @@ namespace SabreenCompany
             this.TX_UserName.Size = new System.Drawing.Size(270, 36);
             this.TX_UserName.TabIndex = 2;
             this.TX_UserName.TextChanged += new System.EventHandler(this.TX_UserName_TextChanged);
+            this.TX_UserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TX_UserName_KeyDown);
             this.TX_UserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TX_UserName_KeyPress);
             // 
             // BTN_Login

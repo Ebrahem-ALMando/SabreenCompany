@@ -141,11 +141,28 @@ namespace SabreenCompany
             {
                 e.Handled = false;
             }
+            
         }
         private void TX_UserName_TextChanged(object sender, EventArgs e)
         {
             userName = TX_UserName.Text;
             DataUser.userName = TX_UserName.Text;
+        }
+
+        private void TX_Password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                BTN_Login.PerformClick();
+            }
+        }
+
+        private void TX_UserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                BTN_Login.PerformClick();
+            }
         }
     }
 }

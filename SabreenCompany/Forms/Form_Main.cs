@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using SabreenCompany.Classes.Home;
 using SabreenCompany.Forms.FormsSettings;
+using SabreenCompany.Forms.FormsBoxMoney;
 
 namespace SabreenCompany.Forms
 {
@@ -20,6 +21,7 @@ namespace SabreenCompany.Forms
         private readonly Cls_PageManager pageManager;
         private string userName = "";
         Form_Settings form_Settings;
+        Form_BoxMoney form_BoxMoney;
         public Form_Main()
         {
             InitializeComponent();
@@ -54,6 +56,12 @@ namespace SabreenCompany.Forms
         {
             pageManager.LoadPage(Gui.GuiInvoice.Invoice_UserControl.Instance());
         }
+        private void BTN_BoxMoney_Click(object sender, EventArgs e)
+        {
+            form_BoxMoney = new Form_BoxMoney();
+            form_BoxMoney.ShowDialog();
+            form_BoxMoney.Dispose();
+        }
         #region Event
         private void BTN_Logout_Click(object sender, EventArgs e)
         {
@@ -81,6 +89,7 @@ namespace SabreenCompany.Forms
         {
             pageManager.LoadPage(Gui.GuiProducts.Products_UserControl.Instance());
         }
+
 
 
 

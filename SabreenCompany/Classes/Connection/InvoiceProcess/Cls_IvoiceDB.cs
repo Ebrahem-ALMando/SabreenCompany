@@ -112,7 +112,41 @@ namespace SabreenCompany.Classes.Connection.InvoiceProcess
             }
         }
         //==> 5 Update To Invoice
-
+        public void updateInvoice(int id,int id_Cus, DateTime date, float totalPrice, float discount, float amountReceived,
+          string desc, string note, string typePayment, int isPaymentDone)
+        {
+            try
+            {
+                connection.open();
+                SqlParameter[] param = new SqlParameter[10];
+                param[0] = new SqlParameter("@id_Cus", SqlDbType.Int);
+                param[0].Value = id_Cus;
+                param[1] = new SqlParameter("@date", SqlDbType.Date);
+                param[1].Value = date;
+                param[2] = new SqlParameter("@totalPrice", SqlDbType.Float);
+                param[2].Value = totalPrice;
+                param[3] = new SqlParameter("@discount", SqlDbType.Float);
+                param[3].Value = discount;
+                param[4] = new SqlParameter("@amountReceived", SqlDbType.Float);
+                param[4].Value = amountReceived;
+                param[5] = new SqlParameter("@desc", SqlDbType.NVarChar);
+                param[5].Value = desc;
+                param[6] = new SqlParameter("@note", SqlDbType.NVarChar);
+                param[6].Value = note;
+                param[7] = new SqlParameter("@typePayment", SqlDbType.NVarChar);
+                param[7].Value = typePayment;
+                param[8] = new SqlParameter("@isPaymentDone", SqlDbType.Int);
+                param[8].Value = isPaymentDone;
+                param[9] = new SqlParameter("@id", SqlDbType.Int);
+                param[9].Value = id;
+                connection.process("updateInvoice", param);
+                connection.cloes();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
         //==> 6 Update Product To Invoice
 
         //==> 7 Delete To Invoice
@@ -130,6 +164,26 @@ namespace SabreenCompany.Classes.Connection.InvoiceProcess
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+        }
+        //==> 8 Seaech To Invoice
+        public DataTable serachDataInvoice(string text)
+        {
+            DataTable dataInvoice = new DataTable();
+            try
+            {
+                connection.open();
+                SqlParameter[] param = new SqlParameter[1];
+                param[0] = new SqlParameter("@textSearch", SqlDbType.NVarChar);
+                param[0].Value = text;
+                dataInvoice = connection.Read_Data("serachDataInvoice", param);
+                connection.cloes();
+                return dataInvoice;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return dataInvoice;
             }
         }
     }

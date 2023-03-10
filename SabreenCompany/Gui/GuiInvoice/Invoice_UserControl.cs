@@ -65,10 +65,10 @@ namespace SabreenCompany.Gui.GuiInvoice
                 {
                     id = Convert.ToInt32(dataGridViewInvoice.CurrentRow.Cells[0].Value);
                     nameCustomer = dataGridViewInvoice.CurrentRow.Cells[1].Value.ToString();
-                    totalAmount = dataGridViewInvoice.CurrentRow.Cells[2].Value.ToString().Replace('$', ' ');
-                    discount = dataGridViewInvoice.CurrentRow.Cells[3].Value.ToString().Replace('$', ' ');
-                    receivedAmount = dataGridViewInvoice.CurrentRow.Cells[4].Value.ToString().Replace('$', ' ');
-                    remainingAmount = dataGridViewInvoice.CurrentRow.Cells[5].Value.ToString().Replace('$', ' ');
+                    totalAmount = dataGridViewInvoice.CurrentRow.Cells[2].Value.ToString();
+                    discount = dataGridViewInvoice.CurrentRow.Cells[3].Value.ToString().Replace('$', ' ').Trim() ;
+                    receivedAmount = dataGridViewInvoice.CurrentRow.Cells[4].Value.ToString().Replace('$', ' ').Trim();
+                    remainingAmount = dataGridViewInvoice.CurrentRow.Cells[5].Value.ToString();
                     typePayment = dataGridViewInvoice.CurrentRow.Cells[6].Value.ToString();
                     description = dataGridViewInvoice.CurrentRow.Cells[7].Value.ToString();
                     note = dataGridViewInvoice.CurrentRow.Cells[8].Value.ToString();
@@ -147,6 +147,57 @@ namespace SabreenCompany.Gui.GuiInvoice
         private void dataGridViewInvoice_Click(object sender, EventArgs e)
         {
             getDataFromDGV();
+        }
+
+        private void BTN_Update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                if (id != 0)
+                {
+                    addInvoice = new Form_AddInvoice(id, nameCustomer, totalAmount, discount, receivedAmount,
+                        remainingAmount, typePayment, description, note, date, isPaymentDone);
+                    addInvoice.ShowDialog();
+                    getData();
+                    addInvoice.Dispose();
+                }
+                else
+                {
+                    ClsMessageCollections.showWarningIdSelectMessageData();
+                }
+            }
+            catch
+            {
+                ClsMessageCollections.showWarningIdSelectMessageData();
+            }
+        }
+
+        private void TX_Serarch_TextChanged(object sender, EventArgs e)
+        {
+            if (TX_Serarch.Text != "")
+            {
+                dataGridViewInvoice.DataSource = action.serachDataInvoice(TX_Serarch.Text);
+
+            }
+            else
+            {
+                getData();
+            }
+        }
+
+        private void BTN_Search_Click(object sender, EventArgs e)
+        {
+            if (TX_Serarch.Text != "")
+            {
+                dataGridViewInvoice.DataSource = action.serachDataInvoice(TX_Serarch.Text);
+
+            }
+            else
+            {
+                ClsMessageCollections.showEmptySearchMessageData();
+            }
         }
     }
 }

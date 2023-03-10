@@ -88,11 +88,29 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ايداع.
+        /// </summary>
+        internal static string CaptionQuitionDepositData {
+            get {
+                return ResourceManager.GetString("CaptionQuitionDepositData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to تعديل.
         /// </summary>
         internal static string CaptionQuitionUpdateData {
             get {
                 return ResourceManager.GetString("CaptionQuitionUpdateData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to سحب.
+        /// </summary>
+        internal static string CaptionQuitionwithdrawalData {
+            get {
+                return ResourceManager.GetString("CaptionQuitionwithdrawalData", resourceCulture);
             }
         }
         
@@ -312,6 +330,16 @@ namespace SabreenCompany.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_deposit_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_deposit_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Download_From_Cloud_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_Download_From_Cloud_32px", resourceCulture);
@@ -502,6 +530,16 @@ namespace SabreenCompany.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Withdrawal_32px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Withdrawal_32px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_x_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_x_32px", resourceCulture);
@@ -528,6 +566,15 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to هل تريد ايداع المبلغ بالتأكيد.
+        /// </summary>
+        internal static string QuitionDepositData {
+            get {
+                return ResourceManager.GetString("QuitionDepositData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to هل تريد حفظ الفاتورة؟.
         /// </summary>
         internal static string QuitionSaveInvoiceData {
@@ -546,6 +593,15 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to هل تريد سحب المبلغ بالتأكيد.
+        /// </summary>
+        internal static string QuitionWithdrawalData {
+            get {
+                return ResourceManager.GetString("QuitionWithdrawalData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to تمت الإضافة بنجاح.
         /// </summary>
         internal static string SuccessAddData {
@@ -560,6 +616,15 @@ namespace SabreenCompany.Properties {
         internal static string SuccessDeleteData {
             get {
                 return ResourceManager.GetString("SuccessDeleteData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم الايداع بنجاح.
+        /// </summary>
+        internal static string SuccessDepositData {
+            get {
+                return ResourceManager.GetString("SuccessDepositData", resourceCulture);
             }
         }
         
@@ -587,6 +652,15 @@ namespace SabreenCompany.Properties {
         internal static string SuccessUpdateData {
             get {
                 return ResourceManager.GetString("SuccessUpdateData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم السحب بنجاح.
+        /// </summary>
+        internal static string SuccessWithdrawalData {
+            get {
+                return ResourceManager.GetString("SuccessWithdrawalData", resourceCulture);
             }
         }
         
@@ -681,6 +755,15 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to لا يوجد مبلغ كافي.
+        /// </summary>
+        internal static string WarningNotEnoughAmount {
+            get {
+                return ResourceManager.GetString("WarningNotEnoughAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap اعدادات_المستخدم {
@@ -716,6 +799,16 @@ namespace SabreenCompany.Properties {
         internal static System.Drawing.Bitmap الزبائن {
             get {
                 object obj = ResourceManager.GetObject("الزبائن", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap الصندوق {
+            get {
+                object obj = ResourceManager.GetObject("الصندوق", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -176,6 +176,7 @@ namespace SabreenCompany.Forms
             this.BTN_BoxMoney.Text = "الصندوق";
             this.BTN_BoxMoney.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_BoxMoney.UseVisualStyleBackColor = false;
+            this.BTN_BoxMoney.Click += new System.EventHandler(this.BTN_BoxMoney_Click);
             // 
             // BTN_Setting
             // 

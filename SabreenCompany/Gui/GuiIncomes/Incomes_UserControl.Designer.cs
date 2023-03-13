@@ -37,7 +37,6 @@ namespace SabreenCompany.Gui.GuiIncomes
             this.dataGridViewIncomes = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.BTN_Add = new System.Windows.Forms.Button();
-            this.BTN_Update = new System.Windows.Forms.Button();
             this.BTN_Delete = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TX_Serarch = new System.Windows.Forms.TextBox();
@@ -98,7 +97,6 @@ namespace SabreenCompany.Gui.GuiIncomes
             this.dataGridViewIncomes.Size = new System.Drawing.Size(1278, 479);
             this.dataGridViewIncomes.StandardTab = true;
             this.dataGridViewIncomes.TabIndex = 16;
-            this.dataGridViewIncomes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewIncomes_CellDoubleClick);
             this.dataGridViewIncomes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewIncomes_CellFormatting);
             this.dataGridViewIncomes.SelectionChanged += new System.EventHandler(this.dataGridViewIncomes_SelectionChanged);
             this.dataGridViewIncomes.Click += new System.EventHandler(this.dataGridViewIncomes_Click);
@@ -108,7 +106,6 @@ namespace SabreenCompany.Gui.GuiIncomes
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(30)))), ((int)(((byte)(103)))));
             this.flowLayoutPanel1.Controls.Add(this.BTN_Add);
-            this.flowLayoutPanel1.Controls.Add(this.BTN_Update);
             this.flowLayoutPanel1.Controls.Add(this.BTN_Delete);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -133,28 +130,13 @@ namespace SabreenCompany.Gui.GuiIncomes
             this.BTN_Add.UseVisualStyleBackColor = false;
             this.BTN_Add.Click += new System.EventHandler(this.BTN_Add_Click);
             // 
-            // BTN_Update
-            // 
-            this.BTN_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
-            this.BTN_Update.ForeColor = System.Drawing.Color.Indigo;
-            this.BTN_Update.Image = global::SabreenCompany.Properties.Resources.icons8_Edit_32px;
-            this.BTN_Update.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Update.Location = new System.Drawing.Point(929, 8);
-            this.BTN_Update.Name = "BTN_Update";
-            this.BTN_Update.Size = new System.Drawing.Size(165, 55);
-            this.BTN_Update.TabIndex = 2;
-            this.BTN_Update.Text = "تعديل";
-            this.BTN_Update.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Update.UseVisualStyleBackColor = false;
-            this.BTN_Update.Click += new System.EventHandler(this.BTN_Update_Click);
-            // 
             // BTN_Delete
             // 
             this.BTN_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
             this.BTN_Delete.ForeColor = System.Drawing.Color.Indigo;
             this.BTN_Delete.Image = global::SabreenCompany.Properties.Resources.icons8_Delete_Trash_32px;
             this.BTN_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Delete.Location = new System.Drawing.Point(758, 8);
+            this.BTN_Delete.Location = new System.Drawing.Point(929, 8);
             this.BTN_Delete.Name = "BTN_Delete";
             this.BTN_Delete.Size = new System.Drawing.Size(165, 55);
             this.BTN_Delete.TabIndex = 3;
@@ -168,7 +150,7 @@ namespace SabreenCompany.Gui.GuiIncomes
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.TX_Serarch);
             this.panel1.Controls.Add(this.BTN_Search);
-            this.panel1.Location = new System.Drawing.Point(326, 8);
+            this.panel1.Location = new System.Drawing.Point(497, 8);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(426, 55);
@@ -272,7 +254,6 @@ namespace SabreenCompany.Gui.GuiIncomes
         private System.Windows.Forms.DataGridView dataGridViewIncomes;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button BTN_Add;
-        private System.Windows.Forms.Button BTN_Update;
         private System.Windows.Forms.Button BTN_Delete;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TX_Serarch;

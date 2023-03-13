@@ -197,6 +197,7 @@ namespace SabreenCompany.Forms.FormsIncomes
             this.TX_AmountReceived_Income.Name = "TX_AmountReceived_Income";
             this.TX_AmountReceived_Income.Size = new System.Drawing.Size(503, 45);
             this.TX_AmountReceived_Income.TabIndex = 21;
+            this.TX_AmountReceived_Income.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TX_AmountReceived_Income.TextChanged += new System.EventHandler(this.TX_AmountReceived_Income_TextChanged);
             this.TX_AmountReceived_Income.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TX_AmountReceived_Income_KeyPress);
             // 
@@ -272,6 +273,7 @@ namespace SabreenCompany.Forms.FormsIncomes
             this.BTN_Save_Close.Text = "حفظ وإغلاق";
             this.BTN_Save_Close.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Save_Close.UseVisualStyleBackColor = false;
+            this.BTN_Save_Close.Click += new System.EventHandler(this.BTN_Save_Close_Click);
             // 
             // BTN_Close
             // 
@@ -287,6 +289,7 @@ namespace SabreenCompany.Forms.FormsIncomes
             this.BTN_Close.Text = "إغلاق";
             this.BTN_Close.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Close.UseVisualStyleBackColor = false;
+            this.BTN_Close.Click += new System.EventHandler(this.BTN_Close_Click);
             // 
             // Form_AddIncomes
             // 
@@ -306,7 +309,7 @@ namespace SabreenCompany.Forms.FormsIncomes
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "اضافة/تعديل ايراد";
+            this.Text = "إضافة ايراد";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);

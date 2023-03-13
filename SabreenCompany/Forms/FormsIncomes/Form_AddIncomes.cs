@@ -18,14 +18,15 @@ namespace SabreenCompany.Forms.FormsIncomes
 {
     public partial class Form_AddIncomes : DevExpress.XtraEditors.XtraForm
     {
+        #region Variables
         float amountRemaining;
+        private bool isClose;
+        private int id;
         Cls_CustomerDB customerDB = new Cls_CustomerDB();
         Cls_IvoiceDB ivoiceDB = new Cls_IvoiceDB();
         Cls_IncomesDB action = new Cls_IncomesDB();
         Cls_BoxMoneyDB boxMoneyDB = new Cls_BoxMoneyDB();
-        private bool isClose;
-        private int id;
-
+        #endregion
         public Form_AddIncomes()
         {
             InitializeComponent();
@@ -33,14 +34,7 @@ namespace SabreenCompany.Forms.FormsIncomes
             loadIvoiceToCustomer();
             COMP_IdInvoice.SelectedIndex = -1;
         }
-        public Form_AddIncomes(int id, string nameCustomer,string idInvoice, string receivedAmount, DateTime date,float total)
-        {
-            InitializeComponent();
-            loadCustomer();
-            loadIvoiceToCustomer();
-            loadData(id, nameCustomer, idInvoice, receivedAmount, date, total);
-
-        }
+        #region Method
         private int getIdCustomer()
         {
             try
@@ -99,6 +93,22 @@ namespace SabreenCompany.Forms.FormsIncomes
                 }
          
         }
+        private void getInvoiceIndividualData()
+        {
+            if (getIdInvoice() != 0)
+            {
+                TX_TotalAmount.Text = ivoiceDB.getInvoiceIndividualData(getIdInvoice()).Rows[0][0].ToString();
+                TX_AmountReceived.Text = ivoiceDB.getInvoiceIndividualData(getIdInvoice()).Rows[0][1].ToString();
+                TX_RemainingAmount.Text = ivoiceDB.getInvoiceIndividualData(getIdInvoice()).Rows[0][2].ToString();
+                amountRemaining = Convert.ToSingle(TX_RemainingAmount.Text.Replace('$', ' '));
+            }
+            else
+            {
+                TX_TotalAmount.Clear();
+                TX_AmountReceived.Clear();
+                TX_RemainingAmount.Clear();
+            }
+        }
         private void loadCustomer()
         {
             COMP_NameCustomer.DataSource = customerDB.getDataCustomer();
@@ -115,43 +125,6 @@ namespace SabreenCompany.Forms.FormsIncomes
             COMP_IdInvoice.DisplayMember = "المعرف";
             COMP_IdInvoice.ValueMember = "المعرف";
 
-        }
-        private void loadData(int id, string nameCustomer, string idInvoice, string receivedAmount, DateTime date ,float total)
-        {
-            this.id = id;
-            COMP_NameCustomer.Text = nameCustomer;
-            COMP_IdInvoice.Text = idInvoice;
-            TX_AmountReceived_Income.Text = receivedAmount;
-            dateTimePicker_Income.Value = date;
-          /*  if (total == 0)
-            {
-                BTN_Save_Close.Enabled = false;
-                BTN_Save.Enabled = false;
-                groupBox1.Enabled = false;
-
-            }
-            else
-            {
-                BTN_Save_Close.Enabled = true;
-                BTN_Save.Enabled = true;
-                groupBox1.Enabled = true;
-            }*/
-        }
-        private void getInvoiceIndividualData()
-        {
-            if (getIdInvoice() != 0)
-            {
-                TX_TotalAmount.Text = ivoiceDB.getInvoiceIndividualData(getIdInvoice()).Rows[0][0].ToString();
-                TX_AmountReceived.Text = ivoiceDB.getInvoiceIndividualData(getIdInvoice()).Rows[0][1].ToString();
-                TX_RemainingAmount.Text = ivoiceDB.getInvoiceIndividualData(getIdInvoice()).Rows[0][2].ToString();
-                 amountRemaining = Convert.ToSingle(TX_RemainingAmount.Text.Replace('$', ' '));
-            }
-            else
-            {
-                TX_TotalAmount.Clear();
-                TX_AmountReceived.Clear();
-                TX_RemainingAmount.Clear();
-            }
         }
         private  void changeTotalAmount()
         {
@@ -223,6 +196,8 @@ namespace SabreenCompany.Forms.FormsIncomes
             }
         
         }
+        #endregion
+        #region Event
         private void COMP_NameCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadIvoiceToCustomer();
@@ -231,21 +206,28 @@ namespace SabreenCompany.Forms.FormsIncomes
         {
             getInvoiceIndividualData();
         }
-
         private void TX_AmountReceived_Income_TextChanged(object sender, EventArgs e)
         {
             changeTotalAmount();
         }
-
         private void TX_AmountReceived_Income_KeyPress(object sender, KeyPressEventArgs e)
         {
             ClsMessageCollections.checkInputTextBoxNumber(sender, e);
         }
-
         private void BTN_Save_Click(object sender, EventArgs e)
         {
             isClose = false;
             addData();
         }
+        private void BTN_Save_Close_Click(object sender, EventArgs e)
+        {
+            isClose = true;
+            addData();
+        }
+        private void BTN_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
     }
 }

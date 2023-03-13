@@ -19,11 +19,8 @@ namespace SabreenCompany.Gui.GuiIncomes
     {  //==> Var Info To Update Or Delete 
         #region Variables
         private int id;
-        private string nameCustomer = "";
-        private string idInvoice= "";
+        private string idInvoice = "";
         private string receivedAmount = "";
-        DateTime date;
-        private float total;
         private static Incomes_UserControl incomes_UserControl;
         Cls_IncomesDB action = new Cls_IncomesDB();
         Cls_BoxMoneyDB boxMoneyDB = new Cls_BoxMoneyDB();
@@ -37,6 +34,7 @@ namespace SabreenCompany.Gui.GuiIncomes
             InitializeComponent();
             getData();
         }
+        #region Method
         public static Incomes_UserControl Instance()
         {
             //==> Freeing resources and not cloning more than once
@@ -53,11 +51,8 @@ namespace SabreenCompany.Gui.GuiIncomes
                 if (dataGridViewIncomes.CurrentRow != null)
                 {
                     id = Convert.ToInt32(dataGridViewIncomes.CurrentRow.Cells[0].Value);
-                    nameCustomer = dataGridViewIncomes.CurrentRow.Cells[1].Value.ToString();
                     idInvoice = dataGridViewIncomes.CurrentRow.Cells[2].Value.ToString();
-                    receivedAmount = dataGridViewIncomes.CurrentRow.Cells[3].Value.ToString().Replace('$',' ');
-                    date = Convert.ToDateTime(dataGridViewIncomes.CurrentRow.Cells[4].Value.ToString());
-                    total = Convert.ToSingle(dataGridViewIncomes.CurrentRow.Cells[5].Value.ToString().Replace('$', ' '));
+                    receivedAmount = dataGridViewIncomes.CurrentRow.Cells[3].Value.ToString().Replace('$', ' ');
                 }
             }
             catch
@@ -66,34 +61,12 @@ namespace SabreenCompany.Gui.GuiIncomes
          
             }
         }
-        private void updateData()
-        {
-            try
-            {
-                if (id != 0)
-                {
-                    addIncomes = new Form_AddIncomes(id, nameCustomer, idInvoice,receivedAmount,date, total);
-                    addIncomes.ShowDialog();
-                    getData();
-                    addIncomes.Dispose();
-                }
-                else
-                {
-                    ClsMessageCollections.showWarningIdSelectMessageData();
-                }
-            }
-            catch
-            {
-             
-                ClsMessageCollections.showWarningIdSelectMessageData();
-            }
-        }
-
+        #endregion
+        #region Event
         private void timer1_Tick(object sender, EventArgs e)
         {
             Date.Text = DateTime.Now.ToString("d/MM/yyyy");
         }
-
         private void BTN_Add_Click(object sender, EventArgs e)
         {
             addIncomes = new Form_AddIncomes();
@@ -102,7 +75,6 @@ namespace SabreenCompany.Gui.GuiIncomes
             addIncomes.Dispose();
            
         }
-
         private void BTN_Delete_Click(object sender, EventArgs e)
         {
             try
@@ -122,17 +94,6 @@ namespace SabreenCompany.Gui.GuiIncomes
                             id = 0;
                         }
                     }
-               /*     else if(action.getIDIncome_FKFromMoneyBox(id).Rows.Count == 0)
-                    {
-                        if (ClsMessageCollections.showQuitionDeleteMessageData() == DialogResult.OK)
-                        {
-                            action.deleteIncome(id);
-                            ClsMessageCollections.showSuccessDeleteMessageData();
-                            getData();
-                            id = 0;
-                        }
-                    }*/
-                 
                 }
                 else
                 {
@@ -144,17 +105,14 @@ namespace SabreenCompany.Gui.GuiIncomes
                 ClsMessageCollections.showWarningIdSelectMessageData();
             }
         }
-
         private void dataGridViewIncomes_Click(object sender, EventArgs e)
         {
             getDataFromDGV();
         }
-
         private void dataGridViewIncomes_SelectionChanged(object sender, EventArgs e)
         {
             getDataFromDGV();
         }
-
         private void TX_Serarch_TextChanged(object sender, EventArgs e)
         {
             if (TX_Serarch.Text != "")
@@ -167,7 +125,6 @@ namespace SabreenCompany.Gui.GuiIncomes
                 getData();
             }
         }
-
         private void BTN_Search_Click(object sender, EventArgs e)
         {
             if (TX_Serarch.Text != "")
@@ -180,7 +137,6 @@ namespace SabreenCompany.Gui.GuiIncomes
                 ClsMessageCollections.showEmptySearchMessageData();
             }
         }
-
         private void dataGridViewIncomes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             foreach (DataGridViewRow row in dataGridViewIncomes.Rows)
@@ -188,7 +144,6 @@ namespace SabreenCompany.Gui.GuiIncomes
                 float val = Convert.ToSingle(row.Cells[5].Value.ToString().Replace('$',' '));
                 if (val == 0)
                 {
-                    /*row.DefaultCellStyle.BackColor= Color.FromArgb(48, 30, 103);*/
                     row.DefaultCellStyle.BackColor = Color.FromArgb(191, 220, 229);
                     row.DefaultCellStyle.ForeColor = Color.Indigo;
                 }
@@ -199,15 +154,6 @@ namespace SabreenCompany.Gui.GuiIncomes
                 }
             }
         }
-
-        private void BTN_Update_Click(object sender, EventArgs e)
-        {
-            updateData();
-        }
-
-        private void dataGridViewIncomes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            updateData();
-        }
+        #endregion
     }
 }

@@ -307,6 +307,9 @@
   <data name="SuccessWithdrawalData" xml:space="preserve">
     <value>تم السحب بنجاح</value>
   </data>
+  <data name="WarningAmountReceivedGreaterRemainingAmount" xml:space="preserve">
+    <value>المبلغ المقبوض اكبر من المتبقي</value>
+  </data>
   <data name="WarningAmountReceivedGreaterTotalAmount" xml:space="preserve">
     <value>المبلغ المقبوض اكبر من الكلي</value>
   </data>
@@ -318,6 +321,9 @@
   </data>
   <data name="WarningIgnoreCountProduct" xml:space="preserve">
     <value>تم تجاهل القطع المضافة</value>
+  </data>
+  <data name="WarningIncomeExisteInInvoice" xml:space="preserve">
+    <value>الدفعة موجود بأحد الفواتير</value>
   </data>
   <data name="WarningInputAlreadyPassword" xml:space="preserve">
     <value>لم تقم بتغيير كلمة السر</value>
@@ -340,11 +346,17 @@
   <data name="WarningNotEnoughAmount" xml:space="preserve">
     <value>لا يوجد مبلغ كافي</value>
   </data>
+  <data name="WarningProductExisteInInvoice" xml:space="preserve">
+    <value>المنتج موجود بأحد الفواتير</value>
+  </data>
   <data name="اعدادات_المستخدم" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\اعدادات المستخدم.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="الأصناف" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\الأصناف.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="الايرادات" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\الايرادات.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="الرئيسية" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\الرئيسية.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

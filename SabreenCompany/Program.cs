@@ -22,8 +22,8 @@ namespace SabreenCompany
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_Login());
         }
-     /*   Forms.FormsInvoice.Form_AddInvoice()*/
-        /*Forms.FormsProducts.Form_AddProducts()*/
+        /*   Forms.FormsInvoice.Form_AddInvoice()*/
+        /*Forms.FormsProducts.Form_AddProducts()  Forms.FormsIncomes.Form_AddIncomes()*/
         /*    Forms.FormsSuppliers.Form__AddSuppliers()*/
     }
 }

@@ -117,5 +117,25 @@ namespace SabreenCompany.Classes.Connection.CustomerProcess
                 return dataCategory;
             }
         }
+        //==> 6 Get Invoice To Customer
+        public DataTable getInvoiceToCustomer(int id)
+        {
+            DataTable dataCustomer = new DataTable();
+            try
+            {
+                connection.open();
+                SqlParameter[] param = new SqlParameter[1];
+                param[0] = new SqlParameter("@id", SqlDbType.Int);
+                param[0].Value = id;
+                dataCustomer = connection.Read_Data("getInvoiceToCustomer", param);
+                connection.cloes();
+                return dataCustomer;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return dataCustomer;
+            }
+        }
     }
 }

@@ -221,5 +221,26 @@ namespace SabreenCompany.Classes.Connection.ProductsProcess
                 return dataProducts;
             }
         }
+
+        //==> 10 Get IDPro_FK To From Invoice Details
+        public DataTable getIDPRoduct_FKFromInvoice(int id)
+        {
+            DataTable dataProducts = new DataTable();
+            try
+            {
+                connection.open();
+                SqlParameter[] param = new SqlParameter[1];
+                param[0] = new SqlParameter("@id_pro", SqlDbType.Int);
+                param[0].Value = id;
+                dataProducts = connection.Read_Data("getIDPRoduct_FKFromInvoice", param);
+                connection.cloes();
+                return dataProducts;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return dataProducts;
+            }
+        }
     }
 }

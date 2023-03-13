@@ -33,6 +33,7 @@ namespace SabreenCompany.Forms.FormsProducts
             InitializeComponent();
             loadCategory();
             loadTotalAmountBoxMoney();
+            panelToUpdateNuber.Visible = false;
         }
         public Form_AddProducts(int id,string name,string cat,string pri, string num, string totalAmount,string desc, MemoryStream m)
         {
@@ -94,6 +95,7 @@ namespace SabreenCompany.Forms.FormsProducts
         }
         private void loadData(int id,string name, string cat, string pri, string num, string totalAmount, string desc, MemoryStream me)
         {
+            panelToUpdateNuber.Visible = true;
             this.id = id;
             TX_Name_Product.Text = name;
             COMP_Name_Category.Text = cat;

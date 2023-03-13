@@ -67,6 +67,7 @@ namespace SabreenCompany.Gui.GuiProducts
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1278, 73);
             this.flowLayoutPanel1.TabIndex = 12;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // BTN_Add
             // 
@@ -123,6 +124,7 @@ namespace SabreenCompany.Gui.GuiProducts
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(426, 55);
             this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // TX_Serarch
             // 
@@ -165,6 +167,7 @@ namespace SabreenCompany.Gui.GuiProducts
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1278, 55);
             this.panel3.TabIndex = 11;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // Date
             // 
@@ -177,6 +180,7 @@ namespace SabreenCompany.Gui.GuiProducts
             this.Date.Size = new System.Drawing.Size(115, 45);
             this.Date.TabIndex = 9;
             this.Date.Text = "DateHear";
+            this.Date.Click += new System.EventHandler(this.Date_Click);
             // 
             // pictureBox5
             // 
@@ -188,6 +192,7 @@ namespace SabreenCompany.Gui.GuiProducts
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // timer1
             // 
@@ -239,6 +244,7 @@ namespace SabreenCompany.Gui.GuiProducts
             this.dataGridViewProducts.Size = new System.Drawing.Size(1278, 479);
             this.dataGridViewProducts.StandardTab = true;
             this.dataGridViewProducts.TabIndex = 13;
+            this.dataGridViewProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProducts_CellContentClick);
             this.dataGridViewProducts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProducts_CellDoubleClick);
             this.dataGridViewProducts.SelectionChanged += new System.EventHandler(this.dataGridViewProducts_SelectionChanged);
             // 

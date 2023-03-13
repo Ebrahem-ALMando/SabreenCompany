@@ -1,4 +1,5 @@
 ﻿using SabreenCompany.Classes;
+using SabreenCompany.Classes.Connection.BoxMoneyProcess;
 using SabreenCompany.Classes.Connection.ProductsProcess;
 using SabreenCompany.Forms.FormsProducts;
 using System;
@@ -29,6 +30,8 @@ namespace SabreenCompany.Gui.GuiProducts
         private static Products_UserControl products_UserControl;
         Form_AddProducts addCategory = new Form_AddProducts();
         Cls_ProductDB action = new Cls_ProductDB();
+        Cls_BoxMoneyDB boxMoneyDB = new Cls_BoxMoneyDB();
+        private int idBox;
         #endregion
         //<============================================>
         //<============================================>
@@ -49,6 +52,7 @@ namespace SabreenCompany.Gui.GuiProducts
         {
             dataGridViewProducts.DataSource = action.getDataProducts();
             dataGridViewProducts.Columns["الصورة"].Visible = false;
+            idBox = Convert.ToInt32(boxMoneyDB.getDataBoxMoney().Rows[0][0]);
         }
         private void updateData()
         {
@@ -115,12 +119,22 @@ namespace SabreenCompany.Gui.GuiProducts
             {
                 if (id != 0)
                 {
-                    if (ClsMessageCollections.showQuitionDeleteMessageData() == DialogResult.OK)
+                    if (action.getIDPRoduct_FKFromInvoice(id).Rows.Count == 0)
+                    { 
+
+                     if (ClsMessageCollections.showQuitionDeleteMessageData() == DialogResult.OK)
+                      {
+                            boxMoneyDB.depositBoxMony(idBox, 0, id,
+                           Convert.ToSingle(totalAmount.Replace('$', ' ')), 1, 0);
+                            action.deleteProduct(id);
+                            ClsMessageCollections.showSuccessDeleteMessageData();
+                            getData();
+                            id = 0;
+                      }
+                     }
+                    else
                     {
-                        action.deleteProduct(id);
-                        ClsMessageCollections.showSuccessDeleteMessageData();
-                        getData();
-                        id = 0;
+                        ClsMessageCollections.showWarningProductExisteInInvoiceMessageData();
                     }
                 }
                 else
@@ -162,5 +176,35 @@ namespace SabreenCompany.Gui.GuiProducts
             updateData();
         }
         #endregion
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Date_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

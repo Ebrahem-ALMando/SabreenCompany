@@ -68,6 +68,7 @@
     <Compile Include="Classes\Connection\CategoryProcess\Cls_CategoryDB.cs" />
     <Compile Include="Classes\Connection\Cls_AccessLayer_DB.cs" />
     <Compile Include="Classes\Connection\CustomerProcess\Cls_CustomerDB.cs" />
+    <Compile Include="Classes\Connection\IncomesProcess\Cls_IncomesDB.cs" />
     <Compile Include="Classes\Connection\InvoiceProcess\Cls_IvoiceDB.cs" />
     <Compile Include="Classes\Connection\ProductsProcess\Cls_ProductDB.cs" />
     <Compile Include="Classes\Connection\SettingsProcess\Cls_SettingsDB.cs" />
@@ -86,6 +87,12 @@
     </Compile>
     <Compile Include="Forms\FormsCustomers\Form_AddCustomer.Designer.cs">
       <DependentUpon>Form_AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsIncomes\Form_AddIncomes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsIncomes\Form_AddIncomes.Designer.cs">
+      <DependentUpon>Form_AddIncomes.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormsInvoice\Form_AddInvoice.cs">
       <SubType>Form</SubType>
@@ -147,6 +154,12 @@
     <Compile Include="Gui\GuiHome\Home_UserControl.Designer.cs">
       <DependentUpon>Home_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\GuiIncomes\Incomes_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\GuiIncomes\Incomes_UserControl.Designer.cs">
+      <DependentUpon>Incomes_UserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\GuiInvoice\Invoice_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -191,6 +204,9 @@
     <EmbeddedResource Include="Forms\FormsCustomers\Form_AddCustomer.resx">
       <DependentUpon>Form_AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsIncomes\Form_AddIncomes.resx">
+      <DependentUpon>Form_AddIncomes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsInvoice\Form_AddInvoice.resx">
       <DependentUpon>Form_AddInvoice.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\GuiHome\Home_UserControl.resx">
       <DependentUpon>Home_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GuiIncomes\Incomes_UserControl.resx">
+      <DependentUpon>Incomes_UserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\GuiInvoice\Invoice_UserControl.resx">
       <DependentUpon>Invoice_UserControl.cs</DependentUpon>
@@ -458,6 +477,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Withdrawal_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الايرادات.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

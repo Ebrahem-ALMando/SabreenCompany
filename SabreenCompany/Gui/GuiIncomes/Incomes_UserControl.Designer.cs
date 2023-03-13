@@ -1,7 +1,7 @@
 ﻿
-namespace SabreenCompany.Gui.GuiInvoice
+namespace SabreenCompany.Gui.GuiIncomes
 {
-    partial class Invoice_UserControl
+    partial class Incomes_UserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -34,12 +34,11 @@ namespace SabreenCompany.Gui.GuiInvoice
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGridViewInvoice = new System.Windows.Forms.DataGridView();
+            this.dataGridViewIncomes = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.BTN_Add = new System.Windows.Forms.Button();
             this.BTN_Update = new System.Windows.Forms.Button();
             this.BTN_Delete = new System.Windows.Forms.Button();
-            this.BTN_Print = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TX_Serarch = new System.Windows.Forms.TextBox();
             this.BTN_Search = new System.Windows.Forms.Button();
@@ -47,20 +46,20 @@ namespace SabreenCompany.Gui.GuiInvoice
             this.Date = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInvoice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIncomes)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridViewInvoice
+            // dataGridViewIncomes
             // 
-            this.dataGridViewInvoice.AllowUserToAddRows = false;
-            this.dataGridViewInvoice.AllowUserToDeleteRows = false;
-            this.dataGridViewInvoice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewInvoice.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewInvoice.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewIncomes.AllowUserToAddRows = false;
+            this.dataGridViewIncomes.AllowUserToDeleteRows = false;
+            this.dataGridViewIncomes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewIncomes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewIncomes.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo", 12F);
@@ -68,8 +67,8 @@ namespace SabreenCompany.Gui.GuiInvoice
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewInvoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewIncomes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewIncomes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo", 12F);
@@ -77,11 +76,11 @@ namespace SabreenCompany.Gui.GuiInvoice
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewInvoice.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewInvoice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewInvoice.Location = new System.Drawing.Point(0, 128);
-            this.dataGridViewInvoice.Name = "dataGridViewInvoice";
-            this.dataGridViewInvoice.ReadOnly = true;
+            this.dataGridViewIncomes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewIncomes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewIncomes.Location = new System.Drawing.Point(0, 128);
+            this.dataGridViewIncomes.Name = "dataGridViewIncomes";
+            this.dataGridViewIncomes.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Cairo", 12F);
@@ -89,19 +88,20 @@ namespace SabreenCompany.Gui.GuiInvoice
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewInvoice.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewInvoice.RowHeadersWidth = 20;
+            this.dataGridViewIncomes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewIncomes.RowHeadersWidth = 20;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewInvoice.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewInvoice.RowTemplate.Height = 26;
-            this.dataGridViewInvoice.RowTemplate.ReadOnly = true;
-            this.dataGridViewInvoice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewInvoice.Size = new System.Drawing.Size(1278, 479);
-            this.dataGridViewInvoice.StandardTab = true;
-            this.dataGridViewInvoice.TabIndex = 19;
-            this.dataGridViewInvoice.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewInvoice_CellFormatting);
-            this.dataGridViewInvoice.SelectionChanged += new System.EventHandler(this.dataGridViewInvoice_SelectionChanged);
-            this.dataGridViewInvoice.Click += new System.EventHandler(this.dataGridViewInvoice_Click);
+            this.dataGridViewIncomes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewIncomes.RowTemplate.Height = 26;
+            this.dataGridViewIncomes.RowTemplate.ReadOnly = true;
+            this.dataGridViewIncomes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewIncomes.Size = new System.Drawing.Size(1278, 479);
+            this.dataGridViewIncomes.StandardTab = true;
+            this.dataGridViewIncomes.TabIndex = 16;
+            this.dataGridViewIncomes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewIncomes_CellDoubleClick);
+            this.dataGridViewIncomes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewIncomes_CellFormatting);
+            this.dataGridViewIncomes.SelectionChanged += new System.EventHandler(this.dataGridViewIncomes_SelectionChanged);
+            this.dataGridViewIncomes.Click += new System.EventHandler(this.dataGridViewIncomes_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -110,14 +110,13 @@ namespace SabreenCompany.Gui.GuiInvoice
             this.flowLayoutPanel1.Controls.Add(this.BTN_Add);
             this.flowLayoutPanel1.Controls.Add(this.BTN_Update);
             this.flowLayoutPanel1.Controls.Add(this.BTN_Delete);
-            this.flowLayoutPanel1.Controls.Add(this.BTN_Print);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 55);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1278, 73);
-            this.flowLayoutPanel1.TabIndex = 18;
+            this.flowLayoutPanel1.TabIndex = 15;
             // 
             // BTN_Add
             // 
@@ -164,26 +163,12 @@ namespace SabreenCompany.Gui.GuiInvoice
             this.BTN_Delete.UseVisualStyleBackColor = false;
             this.BTN_Delete.Click += new System.EventHandler(this.BTN_Delete_Click);
             // 
-            // BTN_Print
-            // 
-            this.BTN_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(220)))), ((int)(((byte)(229)))));
-            this.BTN_Print.ForeColor = System.Drawing.Color.Indigo;
-            this.BTN_Print.Image = global::SabreenCompany.Properties.Resources.icons8_print_32px;
-            this.BTN_Print.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Print.Location = new System.Drawing.Point(587, 8);
-            this.BTN_Print.Name = "BTN_Print";
-            this.BTN_Print.Size = new System.Drawing.Size(165, 55);
-            this.BTN_Print.TabIndex = 8;
-            this.BTN_Print.Text = "طباعة";
-            this.BTN_Print.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Print.UseVisualStyleBackColor = false;
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.TX_Serarch);
             this.panel1.Controls.Add(this.BTN_Search);
-            this.panel1.Location = new System.Drawing.Point(155, 8);
+            this.panel1.Location = new System.Drawing.Point(326, 8);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(426, 55);
@@ -229,7 +214,7 @@ namespace SabreenCompany.Gui.GuiInvoice
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1278, 55);
-            this.panel3.TabIndex = 17;
+            this.panel3.TabIndex = 14;
             // 
             // Date
             // 
@@ -246,7 +231,7 @@ namespace SabreenCompany.Gui.GuiInvoice
             // pictureBox5
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox5.Image = global::SabreenCompany.Properties.Resources.الفواتير;
+            this.pictureBox5.Image = global::SabreenCompany.Properties.Resources.الايرادات;
             this.pictureBox5.Location = new System.Drawing.Point(587, -9);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(130, 76);
@@ -259,19 +244,19 @@ namespace SabreenCompany.Gui.GuiInvoice
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Invoice_UserControl
+            // Incomes_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridViewInvoice);
+            this.Controls.Add(this.dataGridViewIncomes);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Cairo", 12F);
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.Name = "Invoice_UserControl";
+            this.Name = "Incomes_UserControl";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Size = new System.Drawing.Size(1278, 607);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInvoice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIncomes)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -284,7 +269,7 @@ namespace SabreenCompany.Gui.GuiInvoice
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridViewInvoice;
+        private System.Windows.Forms.DataGridView dataGridViewIncomes;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button BTN_Add;
         private System.Windows.Forms.Button BTN_Update;
@@ -296,6 +281,5 @@ namespace SabreenCompany.Gui.GuiInvoice
         private System.Windows.Forms.Label Date;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button BTN_Print;
     }
 }

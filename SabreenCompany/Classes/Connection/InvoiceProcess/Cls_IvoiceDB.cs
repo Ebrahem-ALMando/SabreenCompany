@@ -186,5 +186,25 @@ namespace SabreenCompany.Classes.Connection.InvoiceProcess
                 return dataInvoice;
             }
         }
+        //==> 9 Get Individual Invoice 
+        public DataTable getInvoiceIndividualData(int id)
+        {
+            DataTable dataInvoice = new DataTable();
+            try
+            {
+                connection.open();
+                SqlParameter[] param = new SqlParameter[1];
+                param[0] = new SqlParameter("@id", SqlDbType.Int);
+                param[0].Value = id;
+                dataInvoice = connection.Read_Data("getInvoiceIndividualData", param);
+                connection.cloes();
+                return dataInvoice;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return dataInvoice;
+            }
+        }
     }
 }

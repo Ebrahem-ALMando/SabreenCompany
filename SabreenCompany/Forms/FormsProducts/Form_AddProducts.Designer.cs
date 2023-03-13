@@ -30,6 +30,13 @@ namespace SabreenCompany.Forms.FormsProducts
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panelToUpdateNuber = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.COM_TypeProcess = new System.Windows.Forms.ComboBox();
+            this.TX_Number = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.COMP_Name_Category = new System.Windows.Forms.ComboBox();
             this.new_Category = new System.Windows.Forms.LinkLabel();
             this.BTN_RemoveImage = new System.Windows.Forms.Button();
@@ -51,15 +58,15 @@ namespace SabreenCompany.Forms.FormsProducts
             this.BTN_Save = new System.Windows.Forms.Button();
             this.BTN_Save_Close = new System.Windows.Forms.Button();
             this.BTN_Close = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.panelToUpdateNuber.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePhoto_Product)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.panelToUpdateNuber);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.COMP_Name_Category);
@@ -82,10 +89,87 @@ namespace SabreenCompany.Forms.FormsProducts
             this.groupBox1.ForeColor = System.Drawing.Color.Indigo;
             this.groupBox1.Location = new System.Drawing.Point(12, -9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(560, 645);
+            this.groupBox1.Size = new System.Drawing.Size(560, 699);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "معلومات المنتج ";
+            // 
+            // panelToUpdateNuber
+            // 
+            this.panelToUpdateNuber.Controls.Add(this.label11);
+            this.panelToUpdateNuber.Controls.Add(this.COM_TypeProcess);
+            this.panelToUpdateNuber.Controls.Add(this.TX_Number);
+            this.panelToUpdateNuber.Controls.Add(this.label10);
+            this.panelToUpdateNuber.Location = new System.Drawing.Point(17, 213);
+            this.panelToUpdateNuber.Name = "panelToUpdateNuber";
+            this.panelToUpdateNuber.Size = new System.Drawing.Size(470, 58);
+            this.panelToUpdateNuber.TabIndex = 39;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Crimson;
+            this.label11.Location = new System.Drawing.Point(333, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 37);
+            this.label11.TabIndex = 43;
+            this.label11.Text = "العملية";
+            // 
+            // COM_TypeProcess
+            // 
+            this.COM_TypeProcess.BackColor = System.Drawing.SystemColors.Window;
+            this.COM_TypeProcess.DropDownHeight = 170;
+            this.COM_TypeProcess.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.COM_TypeProcess.FormattingEnabled = true;
+            this.COM_TypeProcess.IntegralHeight = false;
+            this.COM_TypeProcess.Items.AddRange(new object[] {
+            "كلي",
+            "جزئي",
+            "مؤجل"});
+            this.COM_TypeProcess.Location = new System.Drawing.Point(189, 6);
+            this.COM_TypeProcess.MaxDropDownItems = 5;
+            this.COM_TypeProcess.Name = "COM_TypeProcess";
+            this.COM_TypeProcess.Size = new System.Drawing.Size(127, 45);
+            this.COM_TypeProcess.TabIndex = 42;
+            // 
+            // TX_Number
+            // 
+            this.TX_Number.Location = new System.Drawing.Point(0, 6);
+            this.TX_Number.Name = "TX_Number";
+            this.TX_Number.Size = new System.Drawing.Size(127, 45);
+            this.TX_Number.TabIndex = 40;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Crimson;
+            this.label10.Location = new System.Drawing.Point(128, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 37);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "العدد";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Cairo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Crimson;
+            this.label9.Location = new System.Drawing.Point(47, 389);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 29);
+            this.label9.TabIndex = 27;
+            this.label9.Text = " المتاح";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cairo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Crimson;
+            this.label8.Location = new System.Drawing.Point(38, 360);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 29);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "المبلغ المتاح";
             // 
             // COMP_Name_Category
             // 
@@ -95,7 +179,7 @@ namespace SabreenCompany.Forms.FormsProducts
             this.COMP_Name_Category.DropDownHeight = 170;
             this.COMP_Name_Category.FormattingEnabled = true;
             this.COMP_Name_Category.IntegralHeight = false;
-            this.COMP_Name_Category.Location = new System.Drawing.Point(17, 166);
+            this.COMP_Name_Category.Location = new System.Drawing.Point(17, 162);
             this.COMP_Name_Category.MaxDropDownItems = 5;
             this.COMP_Name_Category.Name = "COMP_Name_Category";
             this.COMP_Name_Category.Size = new System.Drawing.Size(503, 45);
@@ -104,7 +188,7 @@ namespace SabreenCompany.Forms.FormsProducts
             // new_Category
             // 
             this.new_Category.AutoSize = true;
-            this.new_Category.Location = new System.Drawing.Point(17, 133);
+            this.new_Category.Location = new System.Drawing.Point(17, 129);
             this.new_Category.Name = "new_Category";
             this.new_Category.Size = new System.Drawing.Size(55, 37);
             this.new_Category.TabIndex = 25;
@@ -118,7 +202,7 @@ namespace SabreenCompany.Forms.FormsProducts
             this.BTN_RemoveImage.ForeColor = System.Drawing.Color.Indigo;
             this.BTN_RemoveImage.Image = global::SabreenCompany.Properties.Resources.icons8_Remove_Image_32px;
             this.BTN_RemoveImage.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_RemoveImage.Location = new System.Drawing.Point(187, 558);
+            this.BTN_RemoveImage.Location = new System.Drawing.Point(187, 606);
             this.BTN_RemoveImage.Margin = new System.Windows.Forms.Padding(5);
             this.BTN_RemoveImage.Name = "BTN_RemoveImage";
             this.BTN_RemoveImage.Size = new System.Drawing.Size(160, 55);
@@ -131,7 +215,7 @@ namespace SabreenCompany.Forms.FormsProducts
             // picturePhoto_Product
             // 
             this.picturePhoto_Product.Image = global::SabreenCompany.Properties.Resources.icons8_aliexpress_500px;
-            this.picturePhoto_Product.Location = new System.Drawing.Point(17, 516);
+            this.picturePhoto_Product.Location = new System.Drawing.Point(17, 564);
             this.picturePhoto_Product.Name = "picturePhoto_Product";
             this.picturePhoto_Product.Size = new System.Drawing.Size(139, 119);
             this.picturePhoto_Product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -141,7 +225,7 @@ namespace SabreenCompany.Forms.FormsProducts
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(210, 492);
+            this.label7.Location = new System.Drawing.Point(210, 540);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 37);
             this.label7.TabIndex = 22;
@@ -152,7 +236,7 @@ namespace SabreenCompany.Forms.FormsProducts
             this.TX_TotalAmount_Product.Enabled = false;
             this.TX_TotalAmount_Product.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TX_TotalAmount_Product.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(93)))), ((int)(((byte)(255)))));
-            this.TX_TotalAmount_Product.Location = new System.Drawing.Point(17, 259);
+            this.TX_TotalAmount_Product.Location = new System.Drawing.Point(17, 307);
             this.TX_TotalAmount_Product.Name = "TX_TotalAmount_Product";
             this.TX_TotalAmount_Product.Size = new System.Drawing.Size(127, 45);
             this.TX_TotalAmount_Product.TabIndex = 21;
@@ -163,7 +247,7 @@ namespace SabreenCompany.Forms.FormsProducts
             this.BTN_LoadImage.ForeColor = System.Drawing.Color.Indigo;
             this.BTN_LoadImage.Image = global::SabreenCompany.Properties.Resources.icons8_image_file_add_32px;
             this.BTN_LoadImage.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_LoadImage.Location = new System.Drawing.Point(370, 558);
+            this.BTN_LoadImage.Location = new System.Drawing.Point(370, 606);
             this.BTN_LoadImage.Margin = new System.Windows.Forms.Padding(5);
             this.BTN_LoadImage.Name = "BTN_LoadImage";
             this.BTN_LoadImage.Size = new System.Drawing.Size(160, 55);
@@ -177,7 +261,7 @@ namespace SabreenCompany.Forms.FormsProducts
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Crimson;
-            this.label3.Location = new System.Drawing.Point(17, 219);
+            this.label3.Location = new System.Drawing.Point(17, 267);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 37);
             this.label3.TabIndex = 20;
@@ -186,7 +270,7 @@ namespace SabreenCompany.Forms.FormsProducts
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(223, 336);
+            this.label2.Location = new System.Drawing.Point(223, 384);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 37);
             this.label2.TabIndex = 19;
@@ -195,7 +279,7 @@ namespace SabreenCompany.Forms.FormsProducts
             // RI_Notes
             // 
             this.RI_Notes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RI_Notes.Location = new System.Drawing.Point(17, 376);
+            this.RI_Notes.Location = new System.Drawing.Point(17, 424);
             this.RI_Notes.Name = "RI_Notes";
             this.RI_Notes.Size = new System.Drawing.Size(503, 113);
             this.RI_Notes.TabIndex = 18;
@@ -204,16 +288,16 @@ namespace SabreenCompany.Forms.FormsProducts
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(237, 219);
+            this.label6.Location = new System.Drawing.Point(215, 267);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 37);
+            this.label6.Size = new System.Drawing.Size(111, 37);
             this.label6.TabIndex = 17;
-            this.label6.Text = "العدد";
+            this.label6.Text = "العدد الكلي";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(442, 219);
+            this.label5.Location = new System.Drawing.Point(442, 267);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 37);
             this.label5.TabIndex = 16;
@@ -221,7 +305,7 @@ namespace SabreenCompany.Forms.FormsProducts
             // 
             // TX_Number_Product
             // 
-            this.TX_Number_Product.Location = new System.Drawing.Point(206, 259);
+            this.TX_Number_Product.Location = new System.Drawing.Point(206, 307);
             this.TX_Number_Product.Name = "TX_Number_Product";
             this.TX_Number_Product.Size = new System.Drawing.Size(127, 45);
             this.TX_Number_Product.TabIndex = 15;
@@ -230,7 +314,7 @@ namespace SabreenCompany.Forms.FormsProducts
             // 
             // TX_Price_Product
             // 
-            this.TX_Price_Product.Location = new System.Drawing.Point(393, 259);
+            this.TX_Price_Product.Location = new System.Drawing.Point(393, 307);
             this.TX_Price_Product.Name = "TX_Price_Product";
             this.TX_Price_Product.Size = new System.Drawing.Size(127, 45);
             this.TX_Price_Product.TabIndex = 14;
@@ -240,7 +324,7 @@ namespace SabreenCompany.Forms.FormsProducts
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(213, 119);
+            this.label4.Location = new System.Drawing.Point(213, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 37);
             this.label4.TabIndex = 12;
@@ -269,7 +353,7 @@ namespace SabreenCompany.Forms.FormsProducts
             this.flowLayoutPanel1.Controls.Add(this.BTN_Save_Close);
             this.flowLayoutPanel1.Controls.Add(this.BTN_Close);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 652);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 696);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5, 5, 30, 5);
@@ -324,34 +408,12 @@ namespace SabreenCompany.Forms.FormsProducts
             this.BTN_Close.UseVisualStyleBackColor = false;
             this.BTN_Close.Click += new System.EventHandler(this.BTN_Close_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cairo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Crimson;
-            this.label8.Location = new System.Drawing.Point(38, 312);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 29);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "المبلغ المتاح";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cairo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Crimson;
-            this.label9.Location = new System.Drawing.Point(47, 341);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 29);
-            this.label9.TabIndex = 27;
-            this.label9.Text = " المتاح";
-            // 
             // Form_AddProducts
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 734);
+            this.ClientSize = new System.Drawing.Size(598, 778);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Font = new System.Drawing.Font("Cairo", 12F);
@@ -366,6 +428,8 @@ namespace SabreenCompany.Forms.FormsProducts
             this.Text = "اضافة /تعديل منتج";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panelToUpdateNuber.ResumeLayout(false);
+            this.panelToUpdateNuber.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePhoto_Product)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -398,5 +462,10 @@ namespace SabreenCompany.Forms.FormsProducts
         private System.Windows.Forms.LinkLabel new_Category;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panelToUpdateNuber;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox COM_TypeProcess;
+        private System.Windows.Forms.TextBox TX_Number;
+        private System.Windows.Forms.Label label10;
     }
 }

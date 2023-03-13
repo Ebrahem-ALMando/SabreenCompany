@@ -665,6 +665,15 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to المبلغ المقبوض اكبر من المتبقي.
+        /// </summary>
+        internal static string WarningAmountReceivedGreaterRemainingAmount {
+            get {
+                return ResourceManager.GetString("WarningAmountReceivedGreaterRemainingAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to المبلغ المقبوض اكبر من الكلي.
         /// </summary>
         internal static string WarningAmountReceivedGreaterTotalAmount {
@@ -697,6 +706,15 @@ namespace SabreenCompany.Properties {
         internal static string WarningIgnoreCountProduct {
             get {
                 return ResourceManager.GetString("WarningIgnoreCountProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to الدفعة موجود بأحد الفواتير.
+        /// </summary>
+        internal static string WarningIncomeExisteInInvoice {
+            get {
+                return ResourceManager.GetString("WarningIncomeExisteInInvoice", resourceCulture);
             }
         }
         
@@ -764,6 +782,15 @@ namespace SabreenCompany.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to المنتج موجود بأحد الفواتير.
+        /// </summary>
+        internal static string WarningProductExisteInInvoice {
+            get {
+                return ResourceManager.GetString("WarningProductExisteInInvoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap اعدادات_المستخدم {
@@ -779,6 +806,16 @@ namespace SabreenCompany.Properties {
         internal static System.Drawing.Bitmap الأصناف {
             get {
                 object obj = ResourceManager.GetObject("الأصناف", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap الايرادات {
+            get {
+                object obj = ResourceManager.GetObject("الايرادات", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

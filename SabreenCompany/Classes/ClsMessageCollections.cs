@@ -33,6 +33,13 @@ namespace SabreenCompany.Classes
             messageShow.Icon = MessageDialogIcon.Warning;
             messageShow.Show(Resources.WarningInputNumberProducts+ "\n ", Resources.CaptionWarningData);
         }
+        public static void showWarningProductExisteInInvoiceMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Light;
+            messageShow.Icon = MessageDialogIcon.Warning;
+            messageShow.Show(Resources.WarningProductExisteInInvoice + "\n ", Resources.CaptionWarningData);
+        }
         //==>Show Message Empty Data Serach
         public static void showEmptySearchMessageData()
         {
@@ -140,6 +147,13 @@ namespace SabreenCompany.Classes
             messageShow.Icon = MessageDialogIcon.Warning;
             messageShow.Show(Resources.WarningNotEnoughAmount + "\n ", Resources.CaptionWarningData);
         }
+        public static void showWarningReceivedGreaterRemainingMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OK;
+            messageShow.Style = MessageDialogStyle.Light;
+            messageShow.Icon = MessageDialogIcon.Warning;
+            messageShow.Show(Resources.WarningAmountReceivedGreaterRemainingAmount + "\n ", Resources.CaptionWarningData);
+        }
         //==>Show Message Quition Add Data
         public static void showWarningInputJustNumberMessageData()
         {
@@ -147,6 +161,15 @@ namespace SabreenCompany.Classes
             messageShow.Buttons = MessageDialogButtons.OK;
             messageShow.Icon = MessageDialogIcon.Warning;
             messageShow.Show(Resources.WarningInputJustNumber + "\n ", Resources.CaptionWarningData);
+        }
+        public static DialogResult showQuitionDeleteIncomeMessageData()
+        {
+            messageShow.Buttons = MessageDialogButtons.OKCancel;
+            messageShow.Style = MessageDialogStyle.Dark;
+            messageShow.Icon = MessageDialogIcon.Question;
+            DialogResult check = messageShow.Show(Resources.WarningIncomeExisteInInvoice + "\n "+
+                Resources.QuitionDeleteData + "\n ", Resources.CaptionQuitionDeleteData);
+            return check;
         }
         //==>Show Message Quition Delete Data
         public static DialogResult showQuitionDeleteMessageData()

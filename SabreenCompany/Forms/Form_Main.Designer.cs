@@ -163,6 +163,7 @@ namespace SabreenCompany.Forms
             this.BTN_Incomes.Text = "الايرادات";
             this.BTN_Incomes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTN_Incomes.UseVisualStyleBackColor = false;
+            this.BTN_Incomes.Click += new System.EventHandler(this.BTN_Incomes_Click);
             // 
             // BTN_BoxMoney
             // 
